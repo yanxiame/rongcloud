@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_msg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    android:layout_height="100dp"
+    android:background="@color/colorPrimaryDark"
+    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/rc_divider_color"
+        android:textSize="@dimen/rc_dimen_size_12"
+        android:text="标题"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/tv_store_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/rc_divider_color"
+        android:layout_marginLeft="13dp"
+        android:textSize="@dimen/rc_dimen_size_12"
+        android:text="内容"
+        android:layout_marginTop="36dp"
+        android:singleLine="true"
+        />
+    </RelativeLayout>
+</FrameLayout>

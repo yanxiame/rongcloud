@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name" translatable="false">satale</string>
+    <string name="sa_dialog_item_message_delete" translatable="false">转发</string>
+
+    <string name="sa_one" translatable="false">大鱼</string>
+    <string name="sa_two" translatable="false">双鱼</string>
+    <string name="sa_three" translatable="false">三鱼</string>
+    <string name="sa_more" translatable="false">多鱼</string>
+
+</resources>
