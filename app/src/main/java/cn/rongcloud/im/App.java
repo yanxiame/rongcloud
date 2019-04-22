@@ -43,6 +43,7 @@ public class App extends Application {
         RongPushClient.setPushConfig(config);
         //使用消息携带用户信息
         RongIM.getInstance().setMessageAttachedUserInfo(false);
+        //git
     }
 
     public static String getCurProcessName(Context context) {
