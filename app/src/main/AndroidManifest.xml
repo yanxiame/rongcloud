@@ -82,7 +82,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/MyTheme">
+        android:theme="@style/AppTheme">
 
 
         <!-- 高德地图-->
@@ -268,8 +268,20 @@
                 </intent-filter>
             </activity>
 
-        <activity android:name=".MainActivity">
-        </activity>
+            <activity
+                android:name=".MainActivity"
+                android:label="@string/app_name">
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW" />
+
+                    <category android:name="android.intent.category.DEFAULT" />
+
+                    <data
+                        android:host="cn.rongcloud.im"
+                        android:pathPrefix="/conversationlist"
+                        android:scheme="rong" />
+                </intent-filter>
+            </activity>
         <activity android:name=".ui.activity.MeetActivity"/>
         <activity android:name=".ui.activity.UserDetailActivity"/>
         <!--会话列表-->

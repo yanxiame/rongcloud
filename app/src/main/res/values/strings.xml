@@ -7,4 +7,7 @@
     <string name="sa_three" translatable="false">三鱼</string>
     <string name="sa_more" translatable="false">多鱼</string>
 
+    <string name="title_home" translatable="false">会话</string>
+    <string name="title_dashboard" translatable="false">联系人</string>
+    <string name="title_notifications" translatable="false">我的</string>
 </resources>

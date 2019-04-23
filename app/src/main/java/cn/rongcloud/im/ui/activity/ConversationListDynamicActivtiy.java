@@ -27,6 +27,9 @@ import io.rong.imlib.model.Message;
 import io.rong.imlib.model.MessageContent;
 import io.rong.message.TextMessage;
 
+/**
+ * 这个activity集成的会话列表
+ */
 public class ConversationListDynamicActivtiy extends FragmentActivity {
 
     @Override

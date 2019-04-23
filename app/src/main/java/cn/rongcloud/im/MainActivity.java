@@ -1,75 +1,128 @@
 package cn.rongcloud.im;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.annotation.SuppressLint;
+import android.app.ActivityManager;
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.internal.BottomNavigationMenuView;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.MenuItem;
 
-import cn.rongcloud.im.ui.apadper.ConversationListAdapterEx;
-import cn.rongcloud.im.ui.widget.BottomBar;
-import io.rong.imkit.RongContext;
-import io.rong.imkit.fragment.ConversationFragment;
+import java.lang.reflect.Field;
+
+import cn.rongcloud.im.ui.fragment.ContactsFragment;
 import io.rong.imkit.fragment.ConversationListFragment;
+import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends AppCompatActivity implements  BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener{
 
+    ViewPager viewPager;
+    BottomNavigationView navigation;
+    private MenuItem menuItem;
+    private ConversationListFragment listFragment;
 
-    private Conversation.ConversationType[] mConversationsTypes = null;
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-    private ConversationListFragment mConversationListFragment = null;
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.navigation_home:
+                    return true;
+                case R.id.navigation_dashboard:
+                    return true;
+                case R.id.navigation_notifications:
+                    return true;
+            }
+            return false;
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BottomBar bottomBar = findViewById(R.id.bottom_bar);
-        ConversationListFragment conversationListFragment=new ConversationListFragment();
-        ConversationFragment conversationFragment=new ConversationFragment();
-        bottomBar.setContainer(R.id.fl_container)
-                .setTitleBeforeAndAfterColor("#999999", "#ff5d5e")
-                .addItem(conversationListFragment,
-                        "首页",
-                        R.drawable.item1_before,
-                        R.drawable.item1_after)
-                .addItem(conversationFragment,
-                        "订单",
-                        R.drawable.item1_before,
-                        R.drawable.item1_before)
-                .addItem(null,
-                        "我的",
-                        R.drawable.item1_before,
-                        R.drawable.item1_before)
+
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        //disableShiftMode(navigation);
+        navigation.setOnNavigationItemSelectedListener(this);
+        viewPager.addOnPageChangeListener(this);
+        navigation.setSelectedItemId(R.id.navigation_home);
+        listFragment = new ConversationListFragment();
+        Uri uri = Uri.parse("rong://" + getApplicationInfo().packageName).buildUpon()
+                .appendPath("conversationlist")
+                .appendQueryParameter(Conversation.ConversationType.PRIVATE.getName(), "false") //设置私聊会话，该会话聚合显示
+                .appendQueryParameter(Conversation.ConversationType.GROUP.getName(), "false")//设置群组会话，该会话非聚合显示
                 .build();
+        listFragment.setUri(uri);
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
     }
-    private Fragment initConversationList() {
-        if (mConversationListFragment == null) {
-            ConversationListFragment listFragment = new ConversationListFragment();
-            listFragment.setAdapter(new ConversationListAdapterEx(RongContext.getInstance()));
-            Uri uri;
 
-                uri = Uri.parse("rong://" + getApplicationInfo().packageName).buildUpon()
-                        .appendPath("conversationlist")
-                        .appendQueryParameter(Conversation.ConversationType.PRIVATE.getName(), "false") //设置私聊会话是否聚合显示
-                        .appendQueryParameter(Conversation.ConversationType.GROUP.getName(), "false")//群组
-                        .appendQueryParameter(Conversation.ConversationType.PUBLIC_SERVICE.getName(), "false")//公共服务号
-                        .appendQueryParameter(Conversation.ConversationType.APP_PUBLIC_SERVICE.getName(), "false")//订阅号
-                        .appendQueryParameter(Conversation.ConversationType.SYSTEM.getName(), "true")//系统
-                        .build();
-                mConversationsTypes = new Conversation.ConversationType[]{Conversation.ConversationType.PRIVATE,
-                        Conversation.ConversationType.GROUP,
-                        Conversation.ConversationType.PUBLIC_SERVICE,
-                        Conversation.ConversationType.APP_PUBLIC_SERVICE,
-                        Conversation.ConversationType.SYSTEM
-                };
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int itemId = menuItem.getItemId();
+        switch (itemId){
+            case R.id.navigation_home:
+                viewPager.setCurrentItem(0);
+                break;
+            case R.id.navigation_dashboard:
+                viewPager.setCurrentItem(1);
+                break;
+            case R.id.navigation_notifications:
+                viewPager.setCurrentItem(2);
+                break;
+        }
+        return false;
+    }
 
-            listFragment.setUri(uri);
-            mConversationListFragment = listFragment;
-            return listFragment;
-        } else {
-            return mConversationListFragment;
+    @Override
+    public void onPageScrolled(int i, float v, int i1) {
+
+    }
+
+    @Override
+    public void onPageSelected(int i) {
+        menuItem = navigation.getMenu().getItem(i);
+        menuItem.setChecked(true);
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int i) {
+
+    }
+
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+
+
+        private Fragment[] mFragments = new Fragment[]{listFragment, new ContactsFragment(), new ConversationListFragment()};
+
+        public ViewPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragments[position];
+        }
+
+        @Override
+        public int getCount() {
+            return 3;
         }
     }
+
+
 }

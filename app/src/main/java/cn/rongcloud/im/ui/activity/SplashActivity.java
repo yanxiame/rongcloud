@@ -35,35 +35,7 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
         context = this;
         SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
-        //if (!TextUtils.isEmpty(cacheToken)) {
         connect("wA3wFI6kSYbJjWfmuNGHu3xpRjANxKgfakOnYLFljI/OtA5W8boG66fwh+Andndnz8N8q00tQ6b+F83vgH7ejQ==");
-
-        //} else {
-        //    handler.postDelayed(new Runnable() {
-        //        @Override
-        //        public void run() {
-        //            goToLogin();
-        //        }
-        //    }, 800);
-        //}
-        //startConversationList();
-    }
-    private void startConversationList() {
-        Map<String, Boolean> map = new HashMap<>();
-        map.put(Conversation.ConversationType.PRIVATE.getName(), true); // 会话列表需要显示私聊会话, 第二个参数 true 代表私聊会话需要聚合显示
-        map.put(Conversation.ConversationType.GROUP.getName(), false);  // 会话列表需要显示群组会话, 第二个参数 false 代表群组会话不需要聚合显示
-
-        RongIM.getInstance().startConversationList(this.getApplicationContext(), map);
-    }
-
-    private void goToMain() {
-        startActivity(new Intent(context, MainActivity.class));
-        finish();
-    }
-
-    private void goToLogin() {
-        startActivity(new Intent(context, LoginActivity.class));
-        finish();
     }
 
     private boolean isNetworkConnected(Context context) {
@@ -94,14 +66,20 @@ public class SplashActivity extends Activity {
                 public void onSuccess(String userid) {
                     Log.d("TAG", "--onSuccess" + userid);
                     //参数设置为 true，由 IMKit 来缓存用户信息。
-                    RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
+                    runOnUiThread(new Runnable() {
                         @Override
-                        public UserInfo getUserInfo(String s) {
-                            return findUserById(s);
+                        public void run() {
+                            RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
+                                @Override
+                                public UserInfo getUserInfo(String s) {
+                                    return findUserById(s);
+                                }
+                            },false);
+                            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                            finish();
                         }
-                    },false);
-                    startActivity(new Intent(SplashActivity.this, ConversationListDynamicActivtiy.class));
-                    finish();
+                    });
+
                     //startActivity(new Intent(SplashActivity.this, ConversationListActivity.class));
                     //finish();
                 }
