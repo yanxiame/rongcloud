@@ -4,15 +4,18 @@ import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 import android.net.Uri;
+import android.util.Log;
 
 import cn.rongcloud.im.ui.Listener.MyConversationClickListener;
 import cn.rongcloud.im.ui.Listener.MyConversationListBehaviorListener;
 import cn.rongcloud.im.ui.widget.plugin.ApkExtensionModule;
 import cn.rongcloud.im.ui.widget.plugin.ApkItemProvider;
 import cn.rongcloud.im.ui.widget.plugin.ApkMessage;
+import io.rong.imkit.DefaultExtensionModule;
 import io.rong.imkit.RongExtensionManager;
 import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;
+import io.rong.imlib.model.Message;
 import io.rong.imlib.model.UserInfo;
 import io.rong.push.RongPushClient;
 import io.rong.push.pushconfig.PushConfig;
@@ -22,12 +25,11 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         RongIM.init(this);
-        RongIMClient.init(this);
 
         //自定义消息
         RongIM.registerMessageTemplate(new ApkItemProvider());
         RongIM.registerMessageType(ApkMessage.class);
-
+        RongExtensionManager.getInstance().unregisterExtensionModule(new DefaultExtensionModule());
         //自定义plugin
         RongExtensionManager.getInstance().registerExtensionModule(new ApkExtensionModule());
         //会话列表
@@ -43,7 +45,8 @@ public class App extends Application {
         RongPushClient.setPushConfig(config);
         //使用消息携带用户信息
         RongIM.getInstance().setMessageAttachedUserInfo(false);
-        //git
+
+
     }
 
     public static String getCurProcessName(Context context) {

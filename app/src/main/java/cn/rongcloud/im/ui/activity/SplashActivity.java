@@ -18,6 +18,7 @@ import java.util.Map;
 import cn.rongcloud.im.App;
 import cn.rongcloud.im.MainActivity;
 import cn.rongcloud.im.R;
+import cn.rongcloud.im.util.RongGenerate;
 import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
@@ -26,7 +27,7 @@ import io.rong.imlib.model.UserInfo;
 public class SplashActivity extends Activity {
     private Context context;
     private android.os.Handler handler = new android.os.Handler();
-
+    private String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
         context = this;
         SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
-        connect("wA3wFI6kSYbJjWfmuNGHu3xpRjANxKgfakOnYLFljI/OtA5W8boG66fwh+Andndnz8N8q00tQ6b+F83vgH7ejQ==");
+        connect("2EWeL2nBdlnGMY6EYeLtfXHte7+VrAhsnSjOcYQ3SKP0EHUSc/FnS8sMXLFmvizg0dsYRNvxZh46EY0DeEjyZg==");
     }
 
     private boolean isNetworkConnected(Context context) {
@@ -43,73 +44,85 @@ public class SplashActivity extends Activity {
         NetworkInfo ni = cm.getActiveNetworkInfo();
         return ni != null && ni.isConnectedOrConnecting();
     }
+
     private void connect(String token) {
 
         //if (getApplicationInfo().packageName.equals(App.getCurProcessName(getApplicationContext()))) {
 
-            RongIM.connect(token, new RongIMClient.ConnectCallback() {
+        RongIM.connect(token, new RongIMClient.ConnectCallback() {
 
-                /**
-                 * Token 错误。可以从下面两点检查 1.  Token 是否过期，如果过期您需要向 App Server 重新请求一个新的 Token
-                 *                  2.  token 对应的 appKey 和工程里设置的 appKey 是否一致
-                 */
-                @Override
-                public void onTokenIncorrect() {
-                    Log.i("TAG","111111");
-                }
+            /**
+             * Token 错误。可以从下面两点检查 1.  Token 是否过期，如果过期您需要向 App Server 重新请求一个新的 Token
+             *                  2.  token 对应的 appKey 和工程里设置的 appKey 是否一致
+             */
+            @Override
+            public void onTokenIncorrect() {
 
-                /**
-                 * 连接融云成功
-                 * @param userid 当前 token 对应的用户 id
-                 */
-                @Override
-                public void onSuccess(String userid) {
-                    Log.d("TAG", "--onSuccess" + userid);
-                    //参数设置为 true，由 IMKit 来缓存用户信息。
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
-                                @Override
-                                public UserInfo getUserInfo(String s) {
-                                    return findUserById(s);
-                                }
-                            },false);
-                            startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                            finish();
-                        }
-                    });
+            }
 
-                    //startActivity(new Intent(SplashActivity.this, ConversationListActivity.class));
-                    //finish();
-                }
+            /**
+             * 连接融云成功
+             * @param userid 当前 token 对应的用户 id
+             */
+            @Override
+            public void onSuccess(String userid) {
+                Log.d("TAG", "--onSuccess" + userid);
+                //参数设置为 true，由 IMKit 来缓存用户信息。
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
+                            @Override
+                            public UserInfo getUserInfo(String s) {
+                                return findUserById(s);
+                            }
+                        }, true);
+                        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                        finish();
+                    }
+                });
 
-                /**
-                 * 连接融云失败
-                 * @param errorCode 错误码，可到官网 查看错误码对应的注释
-                 */
-                @Override
-                public void onError(RongIMClient.ErrorCode errorCode) {
-                    Log.d("TAG", "--onSuccess" + errorCode);
-                }
-            });
+                //startActivity(new Intent(SplashActivity.this, ConversationListActivity.class));
+                //finish();
+            }
+            /**
+             * 连接融云失败
+             * @param errorCode 错误码，可到官网 查看错误码对应的注释
+             */
+            @Override
+            public void onError(RongIMClient.ErrorCode errorCode) {
+                Log.d("TAG", "--onSuccess" + errorCode);
+            }
+        });
         //}
     }
 
+    //网络图片 没缓存 如果需要请求的图片要缓存。要刷新。
     private UserInfo findUserById(String s) {
-        switch (s){
+
+//        switch (s){
+//            case "10001":
+//                return new UserInfo("userId", "大鱼", Uri.parse("https://www.baidu.com/img/bd_logo1.png"));
+//            case "10002":
+//                return new UserInfo("userId", "双鱼", Uri.parse("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3709603467,2914885303&fm=58&bpow=512&bpoh=512"));
+//            case "10003":
+//                return new UserInfo("userId", "三鱼", Uri.parse("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2967361950,4205462985&fm=58&bpow=802&bpoh=652"));
+//        }
+        switch (s) {
             case "10001":
-                return new UserInfo("userId", "大鱼", Uri.parse("https://www.baidu.com/img/bd_logo1.png"));
+                name = "大鱼";
+                break;
             case "10002":
-                return new UserInfo("userId", "双鱼", Uri.parse("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3709603467,2914885303&fm=58&bpow=512&bpoh=512"));
+                name = "双鱼";
+                break;
             case "10003":
-                return new UserInfo("userId", "三鱼", Uri.parse("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2967361950,4205462985&fm=58&bpow=802&bpoh=652"));
-
+                name = "三鱼";
+                break;
+            default:
+                name = "鱼群";
+                break;
         }
-        return new UserInfo("userId", "多鱼", Uri.parse("https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1066474367,396145276&fm=58&bpow=708&bpoh=708"));
-
-
+        Uri portrait = Uri.parse(RongGenerate.generateDefaultAvatar(name, s));
+        return new UserInfo(s, name, portrait);
     }
-
-
 }
