@@ -26,15 +26,18 @@ public class ApkExtensionModule extends DefaultExtensionModule {
         List<IPluginModule> pluginModuleList = new ArrayList<>();
         IPluginModule image = new ImagePlugin();
         IPluginModule apk =new ApkPlugin();
+        IPluginModule insert =new InsertMessagePlugin();
         IPluginModule file =new FilePlugin();
         LocationPlugin locationPlugin =new LocationPlugin();
         if (conversationType.equals(Conversation.ConversationType.GROUP) ||
                 conversationType.equals(Conversation.ConversationType.DISCUSSION) ||
                 conversationType.equals(Conversation.ConversationType.PRIVATE)) {
-                    //pluginModuleList.add(image);
-                    //pluginModuleList.add(apk);
-                    pluginModuleList.remove(file);
-                    pluginModuleList.remove(locationPlugin);
+                    pluginModuleList.add(image);
+                    pluginModuleList.add(apk);
+                    pluginModuleList.add(insert);
+//                    pluginModuleList.remove(file);
+//                    pluginModuleList.remove(locationPlugin);
+
         } else {
             //pluginModuleList.add(image);
         }

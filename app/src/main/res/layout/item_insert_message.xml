@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="220dp"
+        android:layout_height="140dp"
+        android:background="@color/rc_divider_color"
+        >
+    <ListView
+        android:id="@+id/lv_messsage"
+        android:layout_width="match_parent"
+        android:fastScrollEnabled="false"
+        android:divider="#00000000"
+        android:dividerHeight="0dip"
+        android:layout_height="wrap_content">
+
+    </ListView>
+    </RelativeLayout>
+</FrameLayout>

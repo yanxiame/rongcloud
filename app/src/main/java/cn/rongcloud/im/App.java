@@ -11,6 +11,8 @@ import cn.rongcloud.im.ui.Listener.MyConversationListBehaviorListener;
 import cn.rongcloud.im.ui.widget.plugin.ApkExtensionModule;
 import cn.rongcloud.im.ui.widget.plugin.ApkItemProvider;
 import cn.rongcloud.im.ui.widget.plugin.ApkMessage;
+import cn.rongcloud.im.ui.widget.plugin.InsertItemProvider;
+import cn.rongcloud.im.ui.widget.plugin.InsertMessage;
 import io.rong.imkit.DefaultExtensionModule;
 import io.rong.imkit.RongExtensionManager;
 import io.rong.imkit.RongIM;
@@ -28,7 +30,10 @@ public class App extends Application {
 
         //自定义消息
         RongIM.registerMessageTemplate(new ApkItemProvider());
+        RongIM.registerMessageTemplate(new InsertItemProvider());
         RongIM.registerMessageType(ApkMessage.class);
+        RongIM.registerMessageType(InsertMessage.class);
+
         RongExtensionManager.getInstance().unregisterExtensionModule(new DefaultExtensionModule());
         //自定义plugin
         RongExtensionManager.getInstance().registerExtensionModule(new ApkExtensionModule());
