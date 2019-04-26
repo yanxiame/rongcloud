@@ -76,21 +76,6 @@ public class InsertItemProvider extends IContainerItemProvider.MessageProvider<I
         TextMessage textMessage=TextMessage.obtain(city[i]);
         Message.ReceivedStatus receivedStatus = new Message.ReceivedStatus(1);
 
-        RongIM.getInstance().sendMessage(textMessage, null, null, new IRongCallback.ISendMessageCallback() {
-
-            @Override
-            public void onAttached(Message message) {
-            }
-            @Override
-            public void onSuccess(Message message) {
-
-            }
-
-            @Override
-            public void onError(Message message, RongIMClient.ErrorCode errorCode) {
-                Log.i("TAG!!!",message.getContent()+"!"+errorCode.getMessage());
-            }
-        });
 
 
 //        RongIM.getInstance().sendmessage(Conversation.ConversationType.PRIVATE, uiMessage.getTargetId(), uiMessage.getSenderUserId(), receivedStatus, textMessage, new RongIMClient.ResultCallback<Message>() {
