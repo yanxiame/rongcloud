@@ -354,7 +354,15 @@
                     android:scheme="rong" />
             </intent-filter>
         </activity>
-
+        <receiver
+            android:name=".SaNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.THIRD_PARTY_PUSH_STATE" />
+            </intent-filter>
+        </receiver>
 
 
 

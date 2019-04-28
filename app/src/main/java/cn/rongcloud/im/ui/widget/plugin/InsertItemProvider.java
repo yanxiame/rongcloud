@@ -77,7 +77,6 @@ public class InsertItemProvider extends IContainerItemProvider.MessageProvider<I
         Message.ReceivedStatus receivedStatus = new Message.ReceivedStatus(1);
 
 
-
 //        RongIM.getInstance().sendmessage(Conversation.ConversationType.PRIVATE, uiMessage.getTargetId(), uiMessage.getSenderUserId(), receivedStatus, textMessage, new RongIMClient.ResultCallback<Message>() {
 //            @Override
 //            public void onSuccess(Message message) {

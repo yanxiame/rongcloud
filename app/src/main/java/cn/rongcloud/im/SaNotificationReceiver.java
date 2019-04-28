@@ -15,6 +15,9 @@ public class SaNotificationReceiver extends PushMessageReceiver {
 
     @Override
     public boolean onNotificationMessageClicked(Context context, PushType pushType, PushNotificationMessage message) {
+        Log.i("TAG","11111");
+
+
         return false;
     }
 

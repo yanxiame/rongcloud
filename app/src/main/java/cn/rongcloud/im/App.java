@@ -4,6 +4,7 @@ import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 import android.net.Uri;
+import android.os.health.SystemHealthManager;
 import android.util.Log;
 
 import cn.rongcloud.im.ui.Listener.MyConversationClickListener;
@@ -16,10 +17,13 @@ import cn.rongcloud.im.ui.widget.plugin.InsertMessage;
 import io.rong.imkit.DefaultExtensionModule;
 import io.rong.imkit.RongExtensionManager;
 import io.rong.imkit.RongIM;
+import io.rong.imkit.RongNotificationManager;
 import io.rong.imlib.RongIMClient;
+import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.Message;
 import io.rong.imlib.model.UserInfo;
 import io.rong.push.RongPushClient;
+import io.rong.push.notification.PushNotificationMessage;
 import io.rong.push.pushconfig.PushConfig;
 
 public class App extends Application {
@@ -50,7 +54,17 @@ public class App extends Application {
         RongPushClient.setPushConfig(config);
         //使用消息携带用户信息
         RongIM.getInstance().setMessageAttachedUserInfo(false);
-
+        RongIM.setOnReceiveMessageListener(new RongIMClient.OnReceiveMessageListener() {
+            @Override
+            public boolean onReceived(Message message, int i) {
+                if(message.getConversationType()== Conversation.ConversationType.SYSTEM){
+                    //做自己的操作  发送本地通知//
+                    //Log.i("TAG",message.getContent().getSearchableWord().get(0));
+                    //RongNotificationManager.getInstance().onReceiveMessageFromApp(message, 0);
+                }
+                return false;
+            }
+        });
 
     }
 
