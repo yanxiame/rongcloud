@@ -22,6 +22,7 @@ import cn.rongcloud.im.util.RongGenerate;
 import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
+import io.rong.imlib.model.Group;
 import io.rong.imlib.model.UserInfo;
 
 public class SplashActivity extends Activity {
@@ -71,6 +72,13 @@ public class SplashActivity extends Activity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        RongIM.setGroupInfoProvider(new RongIM.GroupInfoProvider() {
+                            @Override
+                            public Group getGroupInfo(String s) {
+                                return new Group(s,"群聊",Uri.parse("https://www.baidu.com/img/bd_logo1.png"));
+                            }
+                        },true);
+
                         RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
                             @Override
                             public UserInfo getUserInfo(String s) {

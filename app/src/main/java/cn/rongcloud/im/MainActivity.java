@@ -3,6 +3,7 @@ package cn.rongcloud.im;
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,8 +15,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.lang.reflect.Field;
 
@@ -25,6 +30,9 @@ import io.rong.imkit.RongIM;
 import io.rong.imkit.fragment.ConversationListFragment;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
+import io.rong.push.RongPushClient;
+import io.rong.push.common.RLog;
+import io.rong.push.notification.PushNotificationMessage;
 
 public class MainActivity extends AppCompatActivity implements  BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener{
 
@@ -86,6 +94,50 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
                 .build();
         listFragment.setUri(uri);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
+
+        //hw推送
+        if (getIntent() != null) {
+            uploadPushEvent(getIntent());
+        }
+    }
+    private void uploadPushEvent(Intent intent) {
+        //通过intent.getData().getQueryParameter("push") 为true，判断是否是push消息
+        if (intent.getData() != null && intent.getData().getScheme() != null
+                && intent.getData().getScheme().equals("rong") && intent.getData().getQueryParameter("isFromPush") != null
+                && intent.getData().getQueryParameter("isFromPush").equals("true")) {
+            recordHWNotificationEvent(intent);
+        }
+    }
+    public void recordHWNotificationEvent(Intent intent) {
+        if (intent != null) {
+            String options = intent.getStringExtra("options");
+            if (!TextUtils.isEmpty(options)) {
+                try {
+                    JSONObject jsonObject = new JSONObject(options);
+                    if (jsonObject.has("rc")) {
+                        JSONObject rc = jsonObject.getJSONObject("rc");
+                        String pushId = rc.optString("id");
+                        Log.i("TAG",pushId);
+                        if (TextUtils.isEmpty(pushId)) {
+                            RLog.d("TAG", "pushId is empty,recordNotificationEvent is failure");
+                            return;
+                        }
+
+                        String objectName = rc.optString("objectName");
+                        String userId = rc.optString("tId");
+                        String type = rc.optString("sourceType");
+                        PushNotificationMessage.PushSourceType sourceType = PushNotificationMessage.PushSourceType.FROM_ADMIN;
+                        if (!TextUtils.isEmpty(type)) {
+                            sourceType = PushNotificationMessage.PushSourceType.values()[Integer.parseInt(type)];
+                        }
+
+                    }
+                } catch (JSONException var9) {
+                    var9.printStackTrace();
+                }
+            }
+
+        }
     }
 
     @Override

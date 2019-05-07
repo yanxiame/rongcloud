@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.os.health.SystemHealthManager;
 import android.util.Log;
 
+import java.util.List;
+
 import cn.rongcloud.im.ui.Listener.MyConversationClickListener;
 import cn.rongcloud.im.ui.Listener.MyConversationListBehaviorListener;
 import cn.rongcloud.im.ui.widget.plugin.ApkExtensionModule;
@@ -30,6 +32,10 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        PushConfig config = new PushConfig.Builder()
+                .enableHWPush(true)  // 配置华为推送
+                .build();
+        RongPushClient.setPushConfig(config);
         RongIM.init(this);
 
         //自定义消息
@@ -46,12 +52,7 @@ public class App extends Application {
         //会话界面
         RongIM.getInstance().setConversationClickListener(new MyConversationClickListener());
 
-        //华为推送成功  小米推送没有 appid
-        PushConfig config = new PushConfig.Builder()
-                .enableHWPush(true)
-                .enableFCM(true)
-                .build();
-        RongPushClient.setPushConfig(config);
+
         //使用消息携带用户信息
         RongIM.getInstance().setMessageAttachedUserInfo(false);
         RongIM.setOnReceiveMessageListener(new RongIMClient.OnReceiveMessageListener() {
@@ -59,12 +60,15 @@ public class App extends Application {
             public boolean onReceived(Message message, int i) {
                 if(message.getConversationType()== Conversation.ConversationType.SYSTEM){
                     //做自己的操作  发送本地通知//
-                    //Log.i("TAG",message.getContent().getSearchableWord().get(0));
+                    Log.i("TAG",message.getContent().getSearchableWord().get(0));
                     //RongNotificationManager.getInstance().onReceiveMessageFromApp(message, 0);
+                    Log.i("TAG",message.getUId());
+                    Log.i("TAG","1");
                 }
                 return false;
             }
         });
+
 
     }
 

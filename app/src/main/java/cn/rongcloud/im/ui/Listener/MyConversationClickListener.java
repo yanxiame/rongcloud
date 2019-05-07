@@ -83,12 +83,14 @@ public class MyConversationClickListener implements RongIM.ConversationClickList
     @Override
     public boolean onMessageClick(Context context, View view, Message message) {
         Log.i("TAG", message.getMessageId() + "<<<");
-        ApkMessage msg = (ApkMessage) message.getContent();
+        if(message.getContent() instanceof ApkMessage) {
+            ApkMessage msg = (ApkMessage) message.getContent();
 
-        msg.setExtra("1");
-        Intent intent = new Intent(context, MeetActivity.class);
-        context.startActivity(intent);
-        RongContext.getInstance().getEventBus().post(message);
+            msg.setExtra("1");
+            Intent intent = new Intent(context, MeetActivity.class);
+            context.startActivity(intent);
+            RongContext.getInstance().getEventBus().post(message);
+        }
         return true;
     }
 
