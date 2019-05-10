@@ -24,6 +24,7 @@ import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.Message;
 import io.rong.imlib.model.UserInfo;
+import io.rong.message.InformationNotificationMessage;
 import io.rong.push.RongPushClient;
 import io.rong.push.notification.PushNotificationMessage;
 import io.rong.push.pushconfig.PushConfig;
@@ -41,7 +42,7 @@ public class App extends Application {
         //自定义消息
         RongIM.registerMessageTemplate(new ApkItemProvider());
         RongIM.registerMessageTemplate(new InsertItemProvider());
-        RongIM.registerMessageType(ApkMessage.class);
+            RongIM.registerMessageType(ApkMessage.class);
         RongIM.registerMessageType(InsertMessage.class);
 
         RongExtensionManager.getInstance().unregisterExtensionModule(new DefaultExtensionModule());
@@ -58,6 +59,22 @@ public class App extends Application {
         RongIM.setOnReceiveMessageListener(new RongIMClient.OnReceiveMessageListener() {
             @Override
             public boolean onReceived(Message message, int i) {
+
+                Log.i("TAG","111111");
+                if(message.getContent() instanceof InformationNotificationMessage){
+                    int[] nums2 = new int[message.getMessageId()];
+                    RongIM.getInstance().deleteMessages(nums2, new RongIMClient.ResultCallback<Boolean>() {
+                        @Override
+                        public void onSuccess(Boolean aBoolean) {
+
+                        }
+
+                        @Override
+                        public void onError(RongIMClient.ErrorCode errorCode) {
+
+                        }
+                    });
+                }
                 if(message.getConversationType()== Conversation.ConversationType.SYSTEM){
                     //做自己的操作  发送本地通知//
                     Log.i("TAG",message.getContent().getSearchableWord().get(0));
@@ -68,6 +85,7 @@ public class App extends Application {
                 return false;
             }
         });
+
 
 
     }

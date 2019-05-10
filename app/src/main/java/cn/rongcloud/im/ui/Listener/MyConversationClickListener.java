@@ -91,7 +91,7 @@ public class MyConversationClickListener implements RongIM.ConversationClickList
             context.startActivity(intent);
             RongContext.getInstance().getEventBus().post(message);
         }
-        return true;
+        return false;
     }
 
     /**
