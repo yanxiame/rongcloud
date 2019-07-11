@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <cn.rongcloud.im.ui.widget.SideBar
+    <cn.sa.im.ui.widget.SideBar
         android:id="@+id/sideBar"
         android:layout_width="30dp"
         android:layout_height="match_parent"

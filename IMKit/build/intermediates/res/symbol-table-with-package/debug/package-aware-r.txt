@@ -956,6 +956,7 @@ id volume_animation
 id whole_layout
 integer cancel_button_image_alpha
 integer rc_audio_encoding_bit_rate
+integer rc_audio_wb_encoding_bit_rate
 integer rc_chatroom_first_pull_message_count
 integer rc_custom_service_evaluation_interval
 integer rc_extension_emoji_count_per_page
@@ -1131,6 +1132,7 @@ string rc_ad_folder_no_files
 string rc_ad_send_file_no_select_file
 string rc_ad_send_file_select_file
 string rc_admin_recalled_a_message
+string rc_admin_recalled_message
 string rc_afternoon_format
 string rc_android_permission_ACCESS_COARSE_LOCATION
 string rc_android_permission_ACCESS_FINE_LOCATION
@@ -1158,7 +1160,6 @@ string rc_conversation_list_default_discussion_name
 string rc_conversation_list_dialog_cancel_top
 string rc_conversation_list_dialog_remove
 string rc_conversation_list_dialog_set_top
-string rc_conversation_list_dialog_set_top1
 string rc_conversation_list_empty_prompt
 string rc_conversation_list_my_chatroom
 string rc_conversation_list_my_customer_service
@@ -1207,6 +1208,12 @@ string rc_discussion_nt_msg_for_removed
 string rc_discussion_nt_msg_for_rename
 string rc_discussion_nt_msg_for_who_removed
 string rc_discussion_nt_msg_for_you
+string rc_discussion_nt_msg_for_you_add
+string rc_discussion_nt_msg_for_you_added
+string rc_discussion_nt_msg_for_you_exit
+string rc_discussion_nt_msg_for_you_is_open_invite_close
+string rc_discussion_nt_msg_for_you_is_open_invite_open
+string rc_discussion_nt_msg_for_you_rename
 string rc_emoji_alarm_clock
 string rc_emoji_alien
 string rc_emoji_anger
@@ -1387,6 +1394,11 @@ string rc_item_remove_group_member
 string rc_item_remove_self
 string rc_item_to_join_group
 string rc_item_you
+string rc_item_you_change_group_name
+string rc_item_you_created_group
+string rc_item_you_invitation
+string rc_item_you_remove_group_member
+string rc_item_you_remove_self
 string rc_join_chatroom_failure
 string rc_kicked_from_chatroom
 string rc_location_fail

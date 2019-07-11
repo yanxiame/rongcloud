@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--设置 AMR_NB 语音消息的码率 (单位 bps)-->
+    <integer name="rc_audio_encoding_bit_rate">7950</integer>
+
+    <!--设置 AMR_WB 语音消息的码率 (单位 bps)-->
+    <integer name="rc_audio_wb_encoding_bit_rate">12650</integer>
+
     <!-- 设置聊天室一次拉取消息数目 -->
     <integer name="rc_chatroom_first_pull_message_count">10</integer>
 
@@ -20,7 +26,7 @@
     <string name="rc_image_default_saved_path">/RongCloud/Image/</string>
 
     <!-- 设置是否支持消息撤回-->
-    <bool name="rc_enable_message_recall">false</bool>
+    <bool name="rc_enable_message_recall">true</bool>
     <!-- 消息撤回有效时间（单位：秒）-->
     <integer name="rc_message_recall_interval">180</integer>
 

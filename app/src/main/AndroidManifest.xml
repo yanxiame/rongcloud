@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.rongcloud.im">
+    package="cn.sa.im">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -33,15 +33,15 @@
 
     <!-- ⼩米 配置开始 < -->
     <permission
-        android:name="cn.rongcloud.im.permission.MIPUSH_RECEIVE"
+        android:name="cn.sa.im.permission.MIPUSH_RECEIVE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="cn.rongcloud.im.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="cn.sa.im.permission.MIPUSH_RECEIVE" />
     <!-- ⼩米 配置结束 < -->
     <!-- GCM 配置开始 < -->
     <permission
-        android:name="cn.rongcloud.im.permission.C2D_MESSAGE"
+        android:name="cn.sa.im.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="cn.rongcloud.im.permission.C2D_MESSAGE" />
+    <uses-permission android:name="cn.sa.im.permission.C2D_MESSAGE" />
     <!-- GCM 配置结束 < -->
     <!-- 华为 配置开始 < -->
     <!--HMS-SDK引导升级HMS功能，访问OTA服务器需要网络权限-->
@@ -63,9 +63,9 @@
     <!-- 兼容 flyme5.0 以下版本，魅族内部集成 pushSDK 必填，不然无法收到 消息-->
     <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" />
     <permission
-        android:name="cn.rongcloud.im.push.permission.MESSAGE"
+        android:name="cn.sa.im.push.permission.MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="cn.rongcloud.im.push.permission.MESSAGE" />
+    <uses-permission android:name="cn.sa.im.push.permission.MESSAGE" />
     <!-- 兼容 flyme3.0 配置权限-->
     <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
     <!-- MeiZu 配置结束 < -->
@@ -73,6 +73,11 @@
     <!-- OPPPO 权限配置-->
     <uses-permission android:name="com.coloros.mcs.permission.SEND_MCS_MESSAGE" />
     <!-- OPPO 配置结束-->
+
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
 
     <application
@@ -93,7 +98,7 @@
 
         <provider
             android:name="com.huawei.hms.update.provider.UpdateProvider"
-            android:authorities="cn.rongcloud.im.hms.update.provider"
+            android:authorities="cn.sa.im.hms.update.provider"
             android:exported="false"
             android:grantUriPermissions="true"></provider>
         <!-- 第三方相关 :接收Push消息（注册、Push消息、Push连接状态）广播 -->
@@ -115,7 +120,7 @@
 
         <!-- 解决华为移动服务升级问题的透明界面（必须声明）-->
         <activity
-            android:name="com.huawei.android.hms.agent.common.HMSAgentActivity"
+            android:name="io.rong.push.platform.hms.common.HMSAgentActivity"
             android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
             android:excludeFromRecents="true"
             android:exported="false"
@@ -128,7 +133,7 @@
 
         <provider
             android:name="com.huawei.hms.update.provider.UpdateProvider"
-            android:authorities="cn.rongcloud.im.hms.update.provider"
+            android:authorities="cn.sa.im.hms.update.provider"
             android:exported="false"
             android:grantUriPermissions="true">
         </provider>
@@ -158,7 +163,7 @@
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <category android:name="cn.rongcloud.im" />
+                <category android:name="cn.sa.im" />
                 &lt;!&ndash; 替换为自己的packagename < &ndash;&gt;
             </intent-filter>
         </receiver>
@@ -203,7 +208,7 @@
                 <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
                 <action android:name="com.meizu.c2dm.intent.RECEIVE" />
 
-                <category android:name="cn.rongcloud.im" />
+                <category android:name="cn.sa.im" />
             </intent-filter>
         </receiver>
         <!-- MeiZu 配置结束 < -->
@@ -212,7 +217,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="cn.rongcloud.im.FileProvider"
+            android:authorities="cn.sa.im.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -277,7 +282,7 @@
                     <category android:name="android.intent.category.DEFAULT" />
 
                     <data
-                        android:host="cn.rongcloud.im"
+                        android:host="cn.sa.im"
                         android:pathPrefix="/conversationlist"
                         android:scheme="rong" />
                 </intent-filter>
@@ -296,7 +301,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="cn.rongcloud.im"
+                    android:host="cn.sa.im"
                     android:pathPrefix="/conversationlist"
                     android:scheme="rong" />
             </intent-filter>
@@ -314,7 +319,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="cn.rongcloud.im"
+                    android:host="cn.sa.im"
                     android:pathPrefix="/conversationlist"
                     android:scheme="rong" />
             </intent-filter>
@@ -333,7 +338,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="cn.rongcloud.im"
+                    android:host="cn.sa.im"
                     android:pathPrefix="/conversation/"
                     android:scheme="rong" />
             </intent-filter>
@@ -349,11 +354,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="cn.rongcloud.im"
+                    android:host="cn.sa.im"
                     android:pathPrefix="/subconversationlist"
                     android:scheme="rong" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.activity.TakingPicturesExActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
         <receiver
             android:name=".SaNotificationReceiver"
             android:exported="true">

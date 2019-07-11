@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auto_start">自启动权限</string>
+    <string name="dialog_btn_no">取消</string>
+    <string name="dialog_btn_yes">确定</string>
+    <string name="dialog_manual_set">为了您更好的体验，请去“%1$s”手动开启%2$s</string>
+    <string name="dialog_message">为了您更好的体验，请您去设置“%1$s”</string>
+    <string name="dialog_title">%1$s</string>
+    <string name="dialog_to_set_failed">跳转失败</string>
+    <string name="float_window">悬浮窗权限</string>
+    <string name="huawei_auto_start">设置->权限管理->自启动管理</string>
+    <string name="huawei_no_clean">设置->高级设置->电池管理->受保护应用</string>
+    <string name="huawei_notifi">设置->通知和状态栏->通知中心</string>
+    <string name="lemobile_auto_start">设置->隐私授权->允许应用自启动</string>
+    <string name="lemobile_no_clean">电池->省电管理->应用保护</string>
+    <string name="lemobile_notifi">设置->通知管理</string>
+    <string name="m360_auto_start">设置，权限管理，应用启动管理</string>
+    <string name="m360_no_clean"> 设置，权限管理，锁屏清理白名单</string>
+    <string name="m360_notifi">设置，通知栏和状态栏，应用通知管理</string>
+    <string name="meizu_no_clean">设置->应用管理->选择应用->后台管理->允许后台运行</string>
+    <string name="meizu_notifi">设置->通知与状态栏->通知管理</string>
+    <string name="no_clean">保持应用运行</string>
+    <string name="notifi">通知权限</string>
+    <string name="nubia_auto_start">手机管家->自启动管理</string>
+    <string name="nubia_no_clean">设置->电池->耗电保护</string>
+    <string name="nubia_notifi">设置->通知与状态栏->通知管理</string>
+    <string name="oppo_auto_start">手机管家->自启动管理</string>
+    <string name="oppo_no_clean">设置->电池->耗电保护</string>
+    <string name="oppo_notifi">设置->通知与状态栏->通知管理</string>
+    <string name="samsung_auto_start">桌面智能管理器->自动运行应用程序</string>
+    <string name="samsung_notifi">设置->通知</string>
+    <string name="smartisan_auto_start">设置->应用管理->选择应用->权限管理->允许被系统启动</string>
+    <string name="smartisan_no_clean">设置->应用管理->选择应用->电量与优化</string>
+    <string name="smartisan_notifi">设置->通知中心</string>
+    <string name="vivo_auto_start">设置->更多设置->权限管理->单项权限设置</string>
+    <string name="vivo_no_clean">设置->电池->后台高耗电</string>
+    <string name="vivo_notifi">设置->状态栏与通知->管理通知</string>
+    <string name="xiaomi_auto_start">设置->授权管理->自启动管理</string>
+    <string name="xiaomi_notifi">设置->状态栏与通知->管理通知</string>
+    <string name="yulong_auto_start">酷管家->自启动管理</string>
+    <string name="yulong_notifi">任务栏下滑->自定义通知</string>
+    <string name="zet_auto_start">设置->权限管理->自启动管理</string>
+    <string name="zet_notifi">设置->通知栏和状态栏->通知管理</string>
+</resources>

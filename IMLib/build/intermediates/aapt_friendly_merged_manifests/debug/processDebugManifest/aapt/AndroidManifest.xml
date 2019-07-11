@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.rong.imlib"
-    android:versionCode="2019022217"
-    android:versionName="2.9.11 Stable" >
+    android:versionCode="2019052416"
+    android:versionName="2.9.17 Stable" >
 
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="23" />
 
+    <!-- 保存图片，拍照等 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 网络 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 消息通道保活 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 定位，如果您不需要定位相关的功能，可以删掉 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application>
@@ -20,11 +24,11 @@
         <!-- imlib config begin -->
         <meta-data
             android:name="RONG_CLOUD_APP_KEY"
-            android:value="n19jmcy59f1q9" />
+            android:value="pvxdm17jpof6r" />
 
         <service
             android:name="io.rong.imlib.ipc.RongService"
-            android:exported="true"
+            android:exported="false"
             android:process=":ipc" />
 
         <receiver

@@ -73,7 +73,6 @@ id text
 id text2
 id time
 id title
-integer rc_audio_encoding_bit_rate
 integer rc_image_quality
 integer rc_image_size
 integer rc_max_original_image_size

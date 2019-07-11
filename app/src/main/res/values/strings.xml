@@ -10,4 +10,5 @@
     <string name="title_home" translatable="false">会话</string>
     <string name="title_dashboard" translatable="false">联系人</string>
     <string name="title_notifications" translatable="false">我的</string>
+    <string name="rc_conversation_list_dialog_set_top1">sa</string>
 </resources>
