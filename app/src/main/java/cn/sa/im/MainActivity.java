@@ -22,17 +22,13 @@ import android.view.MenuItem;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Field;
-
 import cn.sa.im.ui.fragment.ContactsFragment;
-import cn.sa.im.ui.fragment.ConversationListSaFragment;
-import cn.sa.im.ui.fragment.ConversationSaFragment;
+import cn.sa.im.ui.fragment.ConversationListManFragment;
+import cn.sa.im.ui.fragment.ConversationListWoManFragment;
 import io.rong.imkit.RongIM;
 import io.rong.imkit.fragment.ConversationListFragment;
-import io.rong.imkit.widget.adapter.ConversationListAdapter;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
-import io.rong.push.RongPushClient;
 import io.rong.push.common.RLog;
 import io.rong.push.notification.PushNotificationMessage;
 
@@ -41,7 +37,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     ViewPager viewPager;
     BottomNavigationView navigation;
     private MenuItem menuItem;
-    private ConversationListSaFragment listFragment;
+    private ConversationListManFragment ManFragment;
+    private ConversationListWoManFragment WomanFragment;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -73,8 +70,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         navigation.setOnNavigationItemSelectedListener(this);
         viewPager.addOnPageChangeListener(this);
         navigation.setSelectedItemId(R.id.navigation_home);
-        listFragment = new ConversationListSaFragment();
-
+        ManFragment = new ConversationListManFragment();
+        WomanFragment =new ConversationListWoManFragment();
         RongIM.getInstance().joinChatRoom("1", 0, new RongIMClient.OperationCallback() {
             @Override
             public void onSuccess() {
@@ -94,7 +91,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 .appendQueryParameter(Conversation.ConversationType.GROUP.getName(), "false")//设置群组会话，该会话非聚合显示
                 .appendQueryParameter(Conversation.ConversationType.SYSTEM.getName(), "false")
                 .build();
-        listFragment.setUri(uri);
+        ManFragment.setUri(uri);
+        WomanFragment.setUri(uri);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
 
         //hw推送
@@ -180,7 +178,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     class ViewPagerAdapter extends FragmentPagerAdapter {
 
 
-        private Fragment[] mFragments = new Fragment[]{listFragment, new ContactsFragment(), new ConversationListFragment()};
+        private Fragment[] mFragments = new Fragment[]{ManFragment, new ContactsFragment(), WomanFragment};
 
         public ViewPagerAdapter(FragmentManager fm) {
             super(fm);

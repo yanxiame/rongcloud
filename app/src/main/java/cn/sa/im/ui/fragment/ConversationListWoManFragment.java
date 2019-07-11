@@ -8,7 +8,7 @@ import java.util.List;
 
 import io.rong.imkit.fragment.ConversationListFragment;
 
-public class ConversationListSaFragment extends ConversationListFragment {
+public class ConversationListWoManFragment extends ConversationListFragment {
 
 
     @Override
