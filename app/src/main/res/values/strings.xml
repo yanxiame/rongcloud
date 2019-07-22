@@ -11,4 +11,7 @@
     <string name="title_dashboard" translatable="false">联系人</string>
     <string name="title_notifications" translatable="false">我的</string>
     <string name="rc_conversation_list_dialog_set_top1">sa</string>
+
+    <string name="conversatinolist_top_title">需要修改 token 和 appkey ，使用融云后台 api 调用发送消息</string>
+
 </resources>

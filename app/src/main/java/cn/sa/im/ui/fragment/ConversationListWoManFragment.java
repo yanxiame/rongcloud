@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import cn.sa.im.R;
 import io.rong.imkit.fragment.ConversationListFragment;
 
 public class ConversationListWoManFragment extends ConversationListFragment {
@@ -16,7 +17,7 @@ public class ConversationListWoManFragment extends ConversationListFragment {
         List<View> headerViews = super.onAddHeaderView();
         TextView textView = new TextView(this.getActivity());
         textView.setGravity(Gravity.CENTER);
-        textView.setText("这是添加的头部布局");
+        textView.setText(getString(R.string.conversatinolist_top_title));
         headerViews.add(textView);
         return headerViews;
     }

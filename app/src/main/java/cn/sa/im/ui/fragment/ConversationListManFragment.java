@@ -7,6 +7,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.sa.im.R;
 import io.rong.imkit.fragment.ConversationListFragment;
 import io.rong.imkit.fragment.IHistoryDataResultCallback;
 import io.rong.imlib.RongIMClient;
@@ -20,7 +21,7 @@ public class ConversationListManFragment extends ConversationListFragment {
         List<View> headerViews = super.onAddHeaderView();
         TextView textView = new TextView(this.getActivity());
         textView.setGravity(Gravity.CENTER);
-        textView.setText("这是添加的头部布局");
+        textView.setText(getString(R.string.conversatinolist_top_title));
         headerViews.add(textView);
         return headerViews;
     }
@@ -32,7 +33,6 @@ public class ConversationListManFragment extends ConversationListFragment {
             @Override
             public void onSuccess(List<Conversation> conversations) {
                 //在这里移除掉不想要的会话。
-                conversations.remove(0);
                 if (getActivity() == null || getActivity().isFinishing()) {
                     return;
                 }

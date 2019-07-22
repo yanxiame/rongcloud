@@ -1,1 +1,1 @@
-include ':app', ':IMKit', ':android-push-settings-advisor-master', ':IMLib', ':CallLib', ':CallKit'
+include ':app', ':IMKit', ':IMLib', ':CallLib', ':CallKit'
