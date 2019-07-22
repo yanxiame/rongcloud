@@ -74,19 +74,19 @@ public class SplashActivity extends Activity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-//                        RongIM.setGroupInfoProvider(new RongIM.GroupInfoProvider() {
-//                            @Override
-//                            public Group getGroupInfo(String s) {
-//                                return new Group(s,"群聊",Uri.parse("https://www.baidu.com/img/bd_logo1.png"));
-//                            }
-//                        },true);
-//                        RongIM.setGroupUserInfoProvider(new RongIM.GroupUserInfoProvider() {
-//                            @Override
-//                            public GroupUserInfo getGroupUserInfo(String s, String s1) {
-//
-//                                return null;
-//                            }
-//                        },true);
+                        RongIM.setGroupInfoProvider(new RongIM.GroupInfoProvider() {
+                            @Override
+                            public Group getGroupInfo(String s) {
+                                return new Group(s,"群聊",Uri.parse("https://www.baidu.com/img/bd_logo1.png"));
+                            }
+                        },true);
+                        RongIM.setGroupUserInfoProvider(new RongIM.GroupUserInfoProvider() {
+                            @Override
+                            public GroupUserInfo getGroupUserInfo(String s, String s1) {
+
+                                return null;
+                            }
+                        },true);
                         RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
                             @Override
                             public UserInfo getUserInfo(String s) {
