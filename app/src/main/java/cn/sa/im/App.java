@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.health.SystemHealthManager;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cn.sa.im.ui.Listener.MyConversationClickListener;
@@ -27,6 +28,7 @@ import io.rong.imlib.model.Message;
 import io.rong.imlib.model.UserInfo;
 import io.rong.message.ImageMessage;
 import io.rong.message.InformationNotificationMessage;
+import io.rong.push.PushType;
 import io.rong.push.RongPushClient;
 import io.rong.push.notification.PushNotificationMessage;
 import io.rong.push.pushconfig.PushConfig;
@@ -38,8 +40,13 @@ public class App extends Application {
         PushConfig config = new PushConfig.Builder()
                 .enableHWPush(true)  // 配置华为推送
                 .build();
+        //返回配置的推送类型
+        ArrayList<PushType> s= config.getEnabledPushTypes();
+
+
         RongPushClient.setPushConfig(config);
         RongIM.init(this);
+
 
         //自定义消息
         RongIM.registerMessageTemplate(new ApkItemProvider());

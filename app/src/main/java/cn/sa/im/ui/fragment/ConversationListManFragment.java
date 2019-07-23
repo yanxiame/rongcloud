@@ -1,5 +1,6 @@
 package cn.sa.im.ui.fragment;
 
+import android.content.Context;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
@@ -8,8 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.sa.im.R;
+import cn.sa.im.ui.apadper.ConversationListAdapterEx;
 import io.rong.imkit.fragment.ConversationListFragment;
 import io.rong.imkit.fragment.IHistoryDataResultCallback;
+import io.rong.imkit.widget.adapter.ConversationListAdapter;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 
@@ -26,6 +29,10 @@ public class ConversationListManFragment extends ConversationListFragment {
         return headerViews;
     }
 
+    @Override
+    public ConversationListAdapter onResolveAdapter(Context context) {
+        return new ConversationListAdapterEx(context);
+    }
 
     @Override
     public void getConversationList(Conversation.ConversationType[] conversationTypes, final IHistoryDataResultCallback<List<Conversation>> callback) {
