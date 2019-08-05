@@ -77,8 +77,8 @@ public class MyConversationClickListener implements RongIM.ConversationClickList
     @Override
     public boolean onUserPortraitLongClick(Context context, Conversation.ConversationType conversationType, UserInfo user, String targetId) {
 
-        Toast.makeText(context, "长按消息时执行。", Toast.LENGTH_LONG).show();
-        return true;
+        //Toast.makeText(context, "长按消息时执行。", Toast.LENGTH_LONG).show();
+        return false;
     }
 
     /**
@@ -173,7 +173,7 @@ public class MyConversationClickListener implements RongIM.ConversationClickList
         }).show();
 
 
-        return true;
+        return false;
     }
 
     private static void setMessageItemLongClickAction(Context context) {

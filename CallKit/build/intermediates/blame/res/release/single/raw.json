@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/CallKit/build/intermediates/res/merged/release/raw/voip_outgoing_ring.mp3",
+        "source": "/Users/sa/AndroidStudioProjects/rongcloud/CallKit/src/main/res/raw/voip_outgoing_ring.mp3"
+    },
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/CallKit/build/intermediates/res/merged/release/raw/voip_network_error_sound.wav",
+        "source": "/Users/sa/AndroidStudioProjects/rongcloud/CallKit/src/main/res/raw/voip_network_error_sound.wav"
+    }
+]
