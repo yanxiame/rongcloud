@@ -150,17 +150,27 @@
             android:name="io.rong.imkit.activity.CSLeaveMessageActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.activity.GIFPreviewActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="io.rong.imkit.intent.action.gifrview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="android.support.VERSION"
-            android:value="26.0.0" /> <!-- imlib config begin -->
+            android:value="26.1.0" /> <!-- imlib config begin -->
         <meta-data
             android:name="RONG_CLOUD_APP_KEY"
-            android:value="pvxdm17jpof6r" />
+            android:value="此处添加APP_KEY" />
 
         <service
             android:name="io.rong.imlib.ipc.RongService"
-            android:exported="false"
+            android:exported="true"
             android:process=":ipc" />
 
         <receiver

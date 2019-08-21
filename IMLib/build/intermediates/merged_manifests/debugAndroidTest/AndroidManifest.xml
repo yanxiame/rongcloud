@@ -25,11 +25,11 @@
         <!-- imlib config begin -->
         <meta-data
             android:name="RONG_CLOUD_APP_KEY"
-            android:value="pvxdm17jpof6r" />
+            android:value="此处添加APP_KEY" />
 
         <service
             android:name="io.rong.imlib.ipc.RongService"
-            android:exported="false"
+            android:exported="true"
             android:process=":ipc" />
 
         <receiver
@@ -63,7 +63,10 @@
 
         <meta-data
             android:name="android.support.VERSION"
-            android:value="26.0.0" />
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
     </application>
 
 </manifest>

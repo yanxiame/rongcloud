@@ -250,4 +250,6 @@
     <string name="rc_toast_message_destruct">The message cannot be viewed due to automatically destroyed</string>
     <string name="rc_receive_new_message">You have received a new message</string>
     <string name="rc_notification_error_ssl_cert_invalid">The webpage certificate you visited is invalid. Continue to visit?</string>
+    <string name="rc_loadmore_loading">Loading...</string>
+
 </resources>

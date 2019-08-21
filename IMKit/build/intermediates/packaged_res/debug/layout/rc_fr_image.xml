@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
-    
+
     <TextView
         android:id="@+id/rc_count_down"
         android:layout_width="32dp"

@@ -270,4 +270,5 @@
     <string name="rc_toast_message_destruct">该消息已自动销毁，无法继续查看</string>
     <string name="rc_receive_new_message">你收到一条新消息</string>
     <string name="rc_notification_error_ssl_cert_invalid">您访问的网页证书无效。是否继续访问?</string>
+    <string name="rc_loadmore_loading">正在加载</string>
 </resources>

@@ -25,6 +25,7 @@ attr RCMaxWidth
 attr RCMinShortSideSize
 attr RCShape
 attr RCStyle
+attr coordinatorLayoutStyle
 attr font
 attr fontProviderAuthority
 attr fontProviderCerts
@@ -34,7 +35,16 @@ attr fontProviderPackage
 attr fontProviderQuery
 attr fontStyle
 attr fontWeight
+attr keylines
+attr layout_anchor
+attr layout_anchorGravity
+attr layout_behavior
+attr layout_dodgeInsetEdges
+attr layout_insetEdge
+attr layout_keyline
+attr statusBarBackground
 bool abc_action_bar_embed_tabs
+bool rc_enable_automatic_download_voice_msg
 bool rc_enable_mentioned_message
 bool rc_enable_message_recall
 bool rc_enable_sync_read_status
@@ -45,6 +55,7 @@ bool rc_media_selector_contain_video
 bool rc_open_https_certificate
 bool rc_play_audio_continuous
 bool rc_read_receipt
+bool rc_set_java_script_enabled
 bool rc_stop_custom_service_when_quit
 bool rc_typing_status
 bool rc_wipe_out_notification_message
@@ -75,6 +86,11 @@ color primary_text_default_material_dark
 color rc_ad_file_list_no_select_file_text_state
 color rc_ad_file_list_select_file_text_state
 color rc_btn_file_list_send
+color rc_common_phrases_bg_color
+color rc_common_phrases_divider_color
+color rc_common_phrases_list_item_color
+color rc_common_phrases_stroke_color
+color rc_common_phrases_title_color
 color rc_conversation_list_divider_color
 color rc_conversation_top_bg
 color rc_divider_color
@@ -150,6 +166,8 @@ dimen callkit_dimen_size_12
 dimen callkit_dimen_size_13
 dimen callkit_dimen_size_14
 dimen callkit_dimen_size_48
+dimen callkit_dimen_size_60
+dimen callkit_dimen_size_80
 dimen callkit_textsize18sp
 dimen callkit_userNameMarginTop17dp
 dimen compat_button_inset_horizontal_material
@@ -212,6 +230,7 @@ drawable callkit_mute_unavailable
 drawable callkit_select_ic_nav_back_x
 drawable callkit_selector_icon_search
 drawable callkit_voip_iphone
+drawable def_gif_bg
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -278,6 +297,7 @@ drawable rc_btn_voice_hover
 drawable rc_btn_voice_normal
 drawable rc_complete
 drawable rc_complete_hover
+drawable rc_conner_gray_shape
 drawable rc_conversation_list_empty
 drawable rc_conversation_list_msg_send_failure
 drawable rc_conversation_list_msg_sending
@@ -389,6 +409,9 @@ drawable rc_fr_file_list_ad_icon_file
 drawable rc_fr_file_list_ad_icon_folder
 drawable rc_grid_camera
 drawable rc_grid_image_default
+drawable rc_hq_loading
+drawable rc_hq_voice_message_download_error
+drawable rc_hq_voice_message_downloading_style
 drawable rc_ic_bubble_left
 drawable rc_ic_bubble_left_file
 drawable rc_ic_bubble_no_left
@@ -458,6 +481,8 @@ drawable rc_icon_rt_message_right
 drawable rc_icon_video_play
 drawable rc_icon_video_tag
 drawable rc_image_default
+drawable rc_image_download
+drawable rc_image_download_failed
 drawable rc_image_error
 drawable rc_img_camera
 drawable rc_input_sub_menu_bg
@@ -743,8 +768,8 @@ drawable u270b
 drawable u270c
 drawable u270f
 drawable u2744
+drawable u2764
 drawable u2b50
-drawable ufe0f
 id C
 id CE
 id EC
@@ -762,6 +787,7 @@ id actions
 id async
 id back
 id blocking
+id bottom
 id calkit_list_view_select_member
 id callkit_btn_ok
 id callkit_callhang_up_left
@@ -779,14 +805,17 @@ id countdown_time_receive
 id countdown_time_send
 id description
 id edit_search
+id end
 id end_padder
 id enter
 id et_search
 id evaluate_text
+id ext_common_phrases
 id ext_main_bar
 id follow
 id forever
 id func
+id glide_custom_view_target_tag
 id gridlist
 id icon
 id icon_group
@@ -813,6 +842,7 @@ id layout_conference_call_select
 id layout_head
 id layout_praise
 id layout_praise_area
+id left
 id letter
 id line1
 id line3
@@ -824,6 +854,7 @@ id media_actions
 id memberItem
 id message_check
 id name
+id none
 id normal
 id notification_background
 id notification_main_column
@@ -914,6 +945,8 @@ id rc_debounceClick_last_timestamp
 id rc_description
 id rc_dialog_popup_item_name
 id rc_divider
+id rc_download_failed
+id rc_download_progress
 id rc_edit_text
 id rc_emoticon_tab_add
 id rc_emoticon_tab_iv
@@ -940,6 +973,9 @@ id rc_fm_tv_no_file_message
 id rc_fm_tv_storage_folder_list_load_message
 id rc_fragment
 id rc_frame
+id rc_gif_preview
+id rc_gif_progress
+id rc_gifview
 id rc_icon
 id rc_img
 id rc_img_header_network
@@ -964,6 +1000,7 @@ id rc_layout_item_message
 id rc_layout_msg_list
 id rc_layout_network
 id rc_left
+id rc_length
 id rc_list
 id rc_list_dialog_popup_options
 id rc_list_nearby
@@ -971,6 +1008,7 @@ id rc_listview_select_member
 id rc_local_user_view
 id rc_location_marker_title
 id rc_logo
+id rc_main
 id rc_menu_bar
 id rc_menu_icon
 id rc_menu_item_text
@@ -997,17 +1035,20 @@ id rc_pager_fragment
 id rc_participant_portait_container
 id rc_participant_portait_container_1
 id rc_photoView
+id rc_phrases_tv
 id rc_play_video
 id rc_plugin_layout
 id rc_plugin_toggle
 id rc_popup_bg
 id rc_portrait
 id rc_portrait_right
+id rc_pre_progress
 id rc_progress
 id rc_rating_bar
 id rc_read_receipt
 id rc_read_receipt_request
 id rc_read_receipt_status
+id rc_refresh
 id rc_remote_user_container
 id rc_remote_user_container_1
 id rc_remote_user_container_2
@@ -1033,6 +1074,7 @@ id rc_sight_operation_icon
 id rc_sight_progress
 id rc_sight_tag
 id rc_sight_thumb
+id rc_start_download
 id rc_status_bar
 id rc_status_bar_image
 id rc_status_bar_text
@@ -1069,6 +1111,7 @@ id rc_user_portrait
 id rc_user_portrait_layout
 id rc_user_text
 id rc_view_pager
+id rc_voice_download_error
 id rc_voice_toggle
 id rc_voice_unread
 id rc_voip_add_btn
@@ -1125,6 +1168,7 @@ id real_time_location_text
 id refresh_loading_indicator
 id rel_group_intro
 id reltive_voip_outgoing_audio_title
+id right
 id right_icon
 id right_side
 id rl_actionbar
@@ -1135,13 +1179,16 @@ id search_bar
 id select_check
 id selected
 id send
+id start
 id status_bar_latest_event_content
+id tag_transition_group
 id text
 id text2
 id time
 id title
 id toolbar_bottom
 id toolbar_top
+id top
 id tv_callState
 id tv_custom_nav_option
 id tv_custom_nav_sub_title
@@ -1170,12 +1217,14 @@ id voipItemWhiteboard
 id volume_animation
 id whole_layout
 integer cancel_button_image_alpha
+integer rc_audio_aac_encoding_bit_rate
 integer rc_audio_encoding_bit_rate
 integer rc_audio_wb_encoding_bit_rate
 integer rc_chatroom_first_pull_message_count
 integer rc_custom_service_evaluation_interval
 integer rc_extension_emoji_count_per_page
 integer rc_extension_plugin_count_per_page
+integer rc_gifmsg_auto_download_size
 integer rc_image_quality
 integer rc_image_size
 integer rc_max_original_image_size
@@ -1237,6 +1286,8 @@ layout rc_ext_extension_bar
 layout rc_ext_indicator
 layout rc_ext_input_edit_text
 layout rc_ext_menu_container
+layout rc_ext_phrases_list_item
+layout rc_ext_phrases_pager
 layout rc_ext_plugin_grid_view
 layout rc_ext_plugin_item
 layout rc_ext_plugin_pager
@@ -1256,6 +1307,7 @@ layout rc_fr_public_service_inf
 layout rc_fr_public_service_search
 layout rc_fr_public_service_sub_list
 layout rc_fragment_base_setting
+layout rc_gif_preview
 layout rc_icon_rt_location_marker
 layout rc_input_pager_layout
 layout rc_item_app_service_conversation
@@ -1265,8 +1317,10 @@ layout rc_item_conversation_member
 layout rc_item_discussion_conversation
 layout rc_item_discussion_notification_message
 layout rc_item_file_message
+layout rc_item_gif_message
 layout rc_item_group_conversation
 layout rc_item_group_information_notification_message
+layout rc_item_hq_voice_message
 layout rc_item_image_message
 layout rc_item_information_notification_message
 layout rc_item_location_message
@@ -1343,6 +1397,7 @@ layout rc_wi_block_popup
 layout rc_wi_file_list_adapter
 layout rc_wi_notice
 layout rc_wi_vo_popup
+layout view_footer
 raw voip_network_error_sound
 raw voip_outgoing_ring
 string callkit_selected_contacts_count
@@ -1607,6 +1662,7 @@ string rc_ext_search
 string rc_ext_search_no_result
 string rc_ext_send
 string rc_ext_warning
+string rc_extension_common_phrases
 string rc_file_not_exist
 string rc_forbidden_in_chatroom
 string rc_fr_file_category_title_audio
@@ -1654,6 +1710,7 @@ string rc_item_you_remove_group_member
 string rc_item_you_remove_self
 string rc_join_chatroom_failure
 string rc_kicked_from_chatroom
+string rc_loadmore_loading
 string rc_location_fail
 string rc_location_fetching
 string rc_location_sharing_ended
@@ -1710,6 +1767,7 @@ string rc_picprev_select
 string rc_picsel_catalog_allpic
 string rc_picsel_catalog_number
 string rc_picsel_pictype
+string rc_picsel_selected_max_gif_size_span_with_param
 string rc_picsel_selected_max_pic_count
 string rc_picsel_selected_max_time_span
 string rc_picsel_selected_max_time_span_with_param
@@ -1798,6 +1856,7 @@ string rc_voip_camera
 string rc_voip_camera_mic
 string rc_voip_cancel
 string rc_voip_close
+string rc_voip_connecting
 string rc_voip_cpu_error
 string rc_voip_disable_camera
 string rc_voip_enable_camera
@@ -1869,6 +1928,7 @@ style TextAppearance_Compat_Notification_Title
 style TextAppearance_Compat_Notification_Title_Media
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
+style Widget_Support_CoordinatorLayout
 style callkit_voip_imagebutton_65_centerCrop
 style callkit_voip_text_style_18spWhite
 style horizontal_light_thin_divider
@@ -1883,7 +1943,9 @@ style vertical_light_thin_divider
 styleable AsyncImageView RCCornerRadius RCDefDrawable RCMask RCMinShortSideSize RCShape
 styleable AutoLinkTextView RCMaxWidth
 styleable CallUserGridView CallGridViewChildrenPerLine CallGridViewOrientation
+styleable CoordinatorLayout keylines statusBarBackground
+styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
-styleable FontFamilyFont font fontStyle fontWeight
+styleable FontFamilyFont android_font android_fontStyle android_fontWeight font fontStyle fontWeight
 styleable RongExtension RCStyle
 xml rc_file_path

@@ -34,35 +34,4 @@ public class ConversationListManFragment extends ConversationListFragment {
         return new ConversationListAdapterEx(context);
     }
 
-    @Override
-    public void getConversationList(Conversation.ConversationType[] conversationTypes, final IHistoryDataResultCallback<List<Conversation>> callback) {
-        RongIMClient.getInstance().getConversationList(new RongIMClient.ResultCallback<List<Conversation>>() {
-            @Override
-            public void onSuccess(List<Conversation> conversations) {
-                //在这里移除掉不想要的会话。
-                if (getActivity() == null || getActivity().isFinishing()) {
-                    return;
-                }
-                if (callback != null) {
-                    List<Conversation> resultConversations = new ArrayList<>();
-                    if (conversations != null) {
-                        for (Conversation conversation : conversations) {
-                            if (!shouldFilterConversation(conversation.getConversationType(), conversation.getTargetId())) {
-                                resultConversations.add(conversation);
-                            }
-
-                        }
-                    }
-                    callback.onResult(resultConversations);
-                }
-            }
-
-            @Override
-            public void onError(RongIMClient.ErrorCode e) {
-                if (callback != null) {
-                    callback.onError();
-                }
-            }
-        }, conversationTypes);
-    }
 }

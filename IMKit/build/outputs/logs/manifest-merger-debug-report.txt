@@ -1,23 +1,23 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-121:12
-INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-121:12
-INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-121:12
-INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-121:12
-INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-121:12
-INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-121:12
-INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-121:12
+ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-130:12
+INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-130:12
+INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-130:12
+INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-130:12
+INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-130:12
+INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-130:12
+INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-130:12
 	package
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:3:5-28
 		INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml
 		INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml
-		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-121:12
+		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-130:12
 		INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml
-		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-121:12
+		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:1-130:12
 		INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:2:11-69
@@ -82,7 +82,7 @@ ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManif
 	android:name
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:30:22-63
 application
-ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:32:5-119:19
+ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:32:5-128:19
 activity#io.rong.imkit.plugin.location.AMapLocationActivity
 ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:34:9-36:52
 	android:screenOrientation
@@ -211,6 +211,20 @@ ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManif
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:105:13-63
 	android:name
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:104:13-60
+activity#io.rong.imkit.activity.GIFPreviewActivity
+ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:108:9-116:20
+	android:exported
+		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:110:13-37
+	android:theme
+		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:111:13-71
+	android:name
+		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:109:13-69
+intent-filter#action:name:io.rong.imkit.intent.action.gifrview+category:name:android.intent.category.DEFAULT
+ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:112:13-115:29
+action#io.rong.imkit.intent.action.gifrview
+ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:113:17-79
+	android:name
+		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:113:25-76
 uses-sdk
 INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml

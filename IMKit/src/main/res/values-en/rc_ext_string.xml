@@ -35,10 +35,12 @@
     <string name="rc_picsel_selected_max_pic_count">You can only choose 9 pictures at most.</string>
     <string name="rc_picsel_selected_max_time_span">Can\'t share the video longer than 5 minutes.</string>
     <string name="rc_picsel_selected_max_time_span_with_param">Can\'t share the video longer than %d minutes.</string>
+    <string name="rc_picsel_selected_max_gif_size_span_with_param">GIF image size too Iarge. Unable to send.</string>
     <string name="rc_picsel_video_corrupted">Unable to share damaged video.</string>
     <string name="rc_picsel_take_picture">Take picture</string>
     <string name="rc_picsel_catalog_allpic">All pictures</string>
     <string name="rc_picsel_catalog_number">%d</string>
+    <string name="rc_voip_call_video_start_fail">Video call is on. Try again later.</string>
 
     <!-- PicturePreviewActivity -->
     <string name="rc_picprev_origin">Full Image</string>
@@ -189,4 +191,5 @@
     <string name="rc_emoji_love_heart">Love</string><!--130-->
 
     <!--emoji description 128 total end-->
+    <string name="rc_extension_common_phrases">Universal</string>
 </resources>

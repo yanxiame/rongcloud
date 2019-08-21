@@ -45,6 +45,7 @@ public class App extends Application {
 
 
         RongPushClient.setPushConfig(config);
+        //RongIM.setServerInfo("navsg01.cn.ronghub.com","");
         RongIM.init(this);
 
 

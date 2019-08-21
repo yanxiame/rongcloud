@@ -58,7 +58,7 @@ ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMLib/AndroidManifest.xml:2
 	android:process
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMLib/AndroidManifest.xml:25:13-35
 	android:exported
-		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMLib/AndroidManifest.xml:24:13-37
+		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMLib/AndroidManifest.xml:24:13-36
 	android:name
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMLib/AndroidManifest.xml:23:13-57
 receiver#io.rong.imlib.ConnectChangeReceiver

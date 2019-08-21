@@ -29,7 +29,6 @@ public class RongGenerate {
 
 
     public static String generateDefaultAvatar(String username, String userid) {
-
         String s = null;
         if (!TextUtils.isEmpty(username)) {
             s = String.valueOf(username.charAt(0));
@@ -60,6 +59,21 @@ public class RongGenerate {
         int textTop = (int) (height - width / 2 + Math.abs(fm.ascent) / 2 - 25);
         canvas.drawText(s, textLeft, textTop, paint);
         return saveBitmap(bitmap, string + "_" + userid);
+    }
+    public static String generate(Bitmap bitmap,String username, String userid) {
+        String s = null;
+        if (!TextUtils.isEmpty(username)) {
+            s = String.valueOf(username.charAt(0));
+        }
+        if (s == null) {
+            s = "A";
+        }
+        createDir(SAVEADDRESS);
+        File f = new File(SAVEADDRESS, username + "_" + userid);
+        if (f.exists()) {
+            return SCHEMA + f.getPath();
+        }
+        return saveBitmap(bitmap, username + "_" + userid);
     }
 
     public static String generateDefaultAvatar(UserInfo userInfo) {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.rong.callkit"
-    android:versionCode="2019052416"
-    android:versionName="2.9.17 Stable" >
+    android:versionCode="2019081615"
+    android:versionName="2.9.22 release" >
 
     <uses-sdk
         android:minSdkVersion="16"

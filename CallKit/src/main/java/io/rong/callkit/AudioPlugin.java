@@ -76,9 +76,7 @@ public class AudioPlugin implements IPluginModule, IPluginRequestPermissionResul
                     .show();
             return;
         }
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = cm.getActiveNetworkInfo();
-        if (networkInfo == null || !networkInfo.isConnected() || !networkInfo.isAvailable()) {
+        if (!CallKitUtils.isNetworkAvailable(context)) {
             Toast.makeText(context, currentFragment.getString(R.string.rc_voip_call_network_error), Toast.LENGTH_SHORT).show();
             return;
         }
@@ -93,7 +91,7 @@ public class AudioPlugin implements IPluginModule, IPluginRequestPermissionResul
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             Log.i(TAG,"getPackageName==="+context.getPackageName());
             intent.setPackage(context.getPackageName());
-            context.getApplicationContext().startActivity(intent);
+            context.startActivity(intent);
         } else if (conversationType.equals(Conversation.ConversationType.DISCUSSION)) {
             RongIM.getInstance().getDiscussion(targetId, new RongIMClient.ResultCallback<Discussion>() {
                 @Override
@@ -145,7 +143,7 @@ public class AudioPlugin implements IPluginModule, IPluginRequestPermissionResul
         intent.putStringArrayListExtra("observers",observers);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.setPackage(context.getPackageName());
-        context.getApplicationContext().startActivity(intent);
+        context.startActivity(intent);
     }
 
     @Override

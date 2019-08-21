@@ -15,7 +15,7 @@
     <bool name="rc_extension_history">false</bool>
     <bool name="rc_typing_status">false</bool>
     <integer name="rc_image_quality">85</integer>
-    <integer name="rc_image_size">960</integer>
+    <integer name="rc_image_size">1080</integer>
     <integer name="rc_max_original_image_size">200</integer>
     <integer name="rc_resume_file_transfer_size_each_slice">1048576</integer>
     <string name="push_heartbeat_timer">240000</string>

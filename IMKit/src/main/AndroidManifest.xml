@@ -105,6 +105,15 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name="io.rong.imkit.activity.GIFPreviewActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="io.rong.imkit.intent.action.gifrview" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <!-- 此部分代码需要移植到您的 app 下的 manifest，并且 authorities 指定您的包名。例如：com.android.FileProvider -->
         <!-- 否则使用拍照功能时，会崩溃 -->
         <!--<provider-->

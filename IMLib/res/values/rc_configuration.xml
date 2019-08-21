@@ -3,7 +3,7 @@
     <!--原图压缩比例-->
     <integer name="rc_image_quality">85</integer>
     <!--原图压缩宽、高-->
-    <integer name="rc_image_size">960</integer>
+    <integer name="rc_image_size">1080</integer>
 
     <!--配置发送图片时，如果图片大小不超过 200k 则发送原图-->
     <integer name="rc_max_original_image_size">200</integer>

@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -139,7 +141,9 @@ public class SplashActivity extends Activity {
                 name = "鱼群";
                 break;
         }
-        Uri portrait = Uri.parse(RongGenerate.generateDefaultAvatar(name, s));
-        return new UserInfo(s, name, portrait);
+        //Uri portrait = Uri.parse(RongGenerate.generateDefaultAvatar(name, s));
+        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.rc_loading);
+        Uri uri= Uri.parse(RongGenerate.generate(bitmap,name,s));
+        return new UserInfo(s, name, uri);
     }
 }

@@ -15,6 +15,12 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
 
+    <ImageView
+        android:id="@+id/rc_gifview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+
     <ImageButton
         android:id="@+id/rc_play_video"
         android:layout_width="80dp"

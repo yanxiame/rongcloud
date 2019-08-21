@@ -37,6 +37,8 @@
     <dimen name="callkit_dimen_size_13">13dp</dimen>
     <dimen name="callkit_dimen_size_14">14dp</dimen>
     <dimen name="callkit_dimen_size_48">48dp</dimen>
+    <dimen name="callkit_dimen_size_60">60dp</dimen>
+    <dimen name="callkit_dimen_size_80">80dp</dimen>
     <dimen name="callkit_textsize18sp">18sp</dimen>
     <dimen name="callkit_userNameMarginTop17dp">17dp</dimen>
     <dimen name="userNameMarginTop17dp">17dp</dimen>
@@ -74,6 +76,7 @@
     <string name="rc_voip_camera_mic">摄像头和麦克风</string>
     <string name="rc_voip_cancel">取消</string>
     <string name="rc_voip_close">关闭</string>
+    <string name="rc_voip_connecting">连接中...</string>
     <string name="rc_voip_disable_camera">关闭摄像头</string>
     <string name="rc_voip_enable_camera">开启摄像头</string>
     <string name="rc_voip_engine_notfound">开通的音视频服务没有及时生效或音视频服务已关闭，请等待3-5小时后重新安装应用或开启音视频服务再进行测试.</string>

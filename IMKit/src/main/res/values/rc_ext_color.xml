@@ -19,6 +19,11 @@
     <color name="rc_divider_line">#ababad</color>
 
     <!-- Extension -->
+    <color name="rc_common_phrases_bg_color">#f2f2f2</color>
+    <color name="rc_common_phrases_list_item_color">#333333</color>
+    <color name="rc_common_phrases_stroke_color">#979797</color>
+    <color name="rc_common_phrases_title_color">#666666</color>
+    <color name="rc_common_phrases_divider_color">#B4B6BA</color>
     <color name="rc_divider_color">#d9d9d9</color>
     <color name="rc_emoji_grid_item_bg">#ebebeb</color>
 

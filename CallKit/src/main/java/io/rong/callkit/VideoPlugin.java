@@ -74,9 +74,7 @@ public class VideoPlugin implements IPluginModule, IPluginRequestPermissionResul
                     .show();
             return;
         }
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = cm.getActiveNetworkInfo();
-        if (networkInfo == null || !networkInfo.isConnected() || !networkInfo.isAvailable()) {
+        if (!CallKitUtils.isNetworkAvailable(context)) {
             Toast.makeText(context, context.getString(R.string.rc_voip_call_network_error), Toast.LENGTH_SHORT).show();
             return;
         }

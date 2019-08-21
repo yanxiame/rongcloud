@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 import java.util.Locale;
 
 import cn.sa.im.R;
+import cn.sa.im.ui.fragment.ConversationSaFragment;
 import io.rong.imkit.fragment.ConversationFragment;
 import io.rong.imlib.model.Conversation;
 
@@ -29,7 +30,7 @@ public class ConversationDynamicActivity extends FragmentActivity {
         mConversationType = Conversation.ConversationType.valueOf(intent.getData().getLastPathSegment().toUpperCase());
 
         /* 新建 ConversationFragment 实例，通过 setUri() 设置相关属性*/
-        ConversationFragment fragment = new ConversationFragment();
+        ConversationSaFragment fragment = new ConversationSaFragment();
         Uri uri = Uri.parse("rong://" + getApplicationInfo().packageName).buildUpon()
                 .appendPath("conversation").appendPath(mConversationType.getName().toLowerCase())
                 .appendQueryParameter("targetId", mTargetId).build();

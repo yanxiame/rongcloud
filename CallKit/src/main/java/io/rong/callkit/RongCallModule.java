@@ -97,10 +97,17 @@ public class RongCallModule implements IExternalModule {
 
     @Override
     public void onConnected(String token) {
+        /**
+         * 是否纹理采集,默认是
+         * * @param isTexture 设置视频采集方式 :
+         * true:texture方式采集，该采集模式下回调方法返回对象{@link io.rong.rongcall.CallVideoFrame}中视频数据体现在{@link io.rong.rongcall.CallVideoFrame#oesTextureId},而{@link io.rong.rongcall.CallVideoFrame#data}byte数据为空;
+         * false:yuv方式采集，该采集模式下回调方法返回对象{@link io.rong.rongcall.CallVideoFrame}中视频数据体现在{@link io.rong.rongcall.CallVideoFrame#data},而{@link io.rong.rongcall.CallVideoFrame#oesTextureId}oesTextureId为0;
+         */
+        RongCallClient.getInstance().setCaptureType(true);
         RongCallClient.getInstance().setVoIPCallListener(RongCallProxy.getInstance());
         // 开启音视频日志，如果不需要开启，则去掉下面这句。
         RongCallClient.getInstance().setEnablePrintLog(true);
-        RongCallClient.getInstance().setVideoProfile(RongCallCommon.CallVideoProfile.VIDEO_PROFILE_720P);
+        RongCallClient.getInstance().setVideoProfile(RongCallCommon.CallVideoProfile.VD_480x640_15f);
     }
 
     @Override

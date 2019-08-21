@@ -6,6 +6,9 @@
     <!--设置 AMR_WB 语音消息的码率 (单位 bps)-->
     <integer name="rc_audio_wb_encoding_bit_rate">12650</integer>
 
+    <!--设置 AAC 语音消息的码率 (单位 bps)-->
+    <integer name="rc_audio_aac_encoding_bit_rate">16000</integer>
+
     <!-- 设置聊天室一次拉取消息数目 -->
     <integer name="rc_chatroom_first_pull_message_count">10</integer>
 
@@ -26,7 +29,7 @@
     <string name="rc_image_default_saved_path">/RongCloud/Image/</string>
 
     <!-- 设置是否支持消息撤回-->
-    <bool name="rc_enable_message_recall">true</bool>
+    <bool name="rc_enable_message_recall">false</bool>
     <!-- 消息撤回有效时间（单位：秒）-->
     <integer name="rc_message_recall_interval">180</integer>
 
@@ -52,4 +55,15 @@
 
     <!--进入会话或会话列表界面，是否清除通知栏通知-->
     <bool name="rc_wipe_out_notification_message">true</bool>
+
+
+    <!--是否允许 WebView 加载 JavaScript-->
+    <bool name="rc_set_java_script_enabled">false</bool>
+
+    <!--在线时是否自动下载高质量语音消息-->
+    <bool name="rc_enable_automatic_download_voice_msg">true</bool>
+
+    <!--gif 自动下载的最大值， 超过就需点击手动下载（单位 KB）-->
+    <integer name="rc_gifmsg_auto_download_size">1024</integer>
+
 </resources>
