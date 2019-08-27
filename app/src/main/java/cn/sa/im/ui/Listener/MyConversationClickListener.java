@@ -51,6 +51,7 @@ public class MyConversationClickListener implements RongIM.ConversationClickList
      */
     @Override
     public boolean onUserPortraitClick(Context context, Conversation.ConversationType conversationType, UserInfo userInfo, String targetId) {
+        Log.i("TAG",userInfo.getUserId());
         if (conversationType == Conversation.ConversationType.CUSTOMER_SERVICE || conversationType == Conversation.ConversationType.PUBLIC_SERVICE || conversationType == Conversation.ConversationType.APP_PUBLIC_SERVICE) {
             return false;
         }
