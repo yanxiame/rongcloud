@@ -33,8 +33,6 @@ public class MyConversationListBehaviorListener implements RongIM.ConversationLi
 
     @Override
     public boolean onConversationLongClick(final Context context, View view, final UIConversation uiConversation) {
-
-
         String[] items = new String[]{view.getContext().getResources().getString(R.string.rc_dialog_item_message_delete)};
         /**
          * newInstance() 初始化OptionsPopupDialog

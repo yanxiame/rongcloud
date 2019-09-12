@@ -12,5 +12,4 @@ public class ConversationActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.conversation);
     }
-
 }

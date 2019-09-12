@@ -3,6 +3,7 @@ package cn.sa.im.ui.fragment;
 import android.content.Context;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class ConversationListManFragment extends ConversationListFragment {
     @Override
     protected List<View> onAddHeaderView() {
         List<View> headerViews = super.onAddHeaderView();
+        //View view=View.inflate(getContext(), R.layout.item_apk_message, null);
         TextView textView = new TextView(this.getActivity());
         textView.setGravity(Gravity.CENTER);
         textView.setText(getString(R.string.conversatinolist_top_title));

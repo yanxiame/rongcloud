@@ -1,6 +1,7 @@
 package cn.sa.im.ui.widget.plugin;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.text.Spannable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,9 +10,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import cn.sa.im.R;
+import io.rong.imkit.RongContext;
 import io.rong.imkit.model.ProviderTag;
 import io.rong.imkit.model.UIMessage;
 import io.rong.imkit.widget.provider.IContainerItemProvider;
+import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Message;
 
 @ProviderTag(
@@ -35,7 +38,7 @@ public class ApkItemProvider extends IContainerItemProvider.MessageProvider<ApkM
     }
 
     @Override
-    public void bindView(View view, int i, cn.sa.im.ui.widget.plugin.ApkMessage apkMessage, UIMessage message) {
+    public void bindView(View view, int i, ApkMessage apkMessage, UIMessage message) {
 
         //根据需求，适配数据
         ViewHolder holder = (ViewHolder) view.getTag();
@@ -47,11 +50,13 @@ public class ApkItemProvider extends IContainerItemProvider.MessageProvider<ApkM
         }
         Log.i("TAG",""+message.getMessageId()+"{{{{{");
         Log.i("TAG",apkMessage.getExtra()+"}}}}}}");
-        if(apkMessage.getExtra()!=null&&!apkMessage.getExtra().equals("")) {
-            if (1 == Integer.valueOf(apkMessage.getExtra())) {
-                holder.tvTitle.setText(apkMessage.getPhoneNum());
-                holder.tvStoreName.setText(apkMessage.getUserName());
+        Log.i("TAG",message.getExtra()+"@@@@@@@");
 
+        if(message.getExtra()!=null&&!message.getExtra().equals("")) {
+            if ("isopen".equals(message.getExtra())) {
+                holder.tvTitle.setText("¥1.00");
+                holder.tvTitle.setTextColor(Color.RED);
+                holder.tvStoreName.setText("转账给你");
             } else {
                 holder.tvTitle.setText("¥1.00");
                 holder.tvStoreName.setText("转账给你");
@@ -70,12 +75,13 @@ public class ApkItemProvider extends IContainerItemProvider.MessageProvider<ApkM
 
     @Override
     public void onItemClick(View view, int i, ApkMessage redPackageMessage, UIMessage uiMessage) {
-        Log.i("TAG","TAG"+uiMessage.getMessageId());
+        uiMessage.setExtra("isopen");
+        RongIMClient.getInstance().setMessageExtra(uiMessage.getMessageId(), "isopen", null);
+        RongContext.getInstance().getEventBus().post(uiMessage);
     }
 
     @Override
     public void onItemLongClick(final View view, int i, ApkMessage redPackageMessage, UIMessage uiMessage) {
-
 
     }
 

@@ -36,13 +36,11 @@ public class ApkPlugin implements IPluginModule {
 
     @Override
     public void onClick(final Fragment fragment, RongExtension rongExtension) {
-
-        Intent intent=new Intent(fragment.getActivity(), TakingPicturesExActivity.class);
-        fragment.getActivity().startActivity(intent);
         Toast.makeText(rongExtension.getContext(),"发送一条自定义消息",Toast.LENGTH_LONG).show();
         final cn.sa.im.ui.widget.plugin.ApkMessage apkMessage =new cn.sa.im.ui.widget.plugin.ApkMessage();
-        apkMessage.setUserName("我的手机号：131111111111");
-        apkMessage.setPhoneNum("我约见的地址：海淀区");
+        apkMessage.setUserName("$111");
+        apkMessage.setPhoneNum("转账给您");
+        apkMessage.setExtra("1");
         Message message = Message.obtain(rongExtension.getTargetId(), rongExtension.getConversationType(),apkMessage);
         RongIM.getInstance().sendMessage(message, null, null, new IRongCallback.ISendMessageCallback() {
 
@@ -53,13 +51,6 @@ public class ApkPlugin implements IPluginModule {
 
             @Override
             public void onSuccess(Message message) {
-//                if(message.getContent() instanceof ApkMessage){
-//
-//                    ApkMessage msg = (ApkMessage)message.getContent();
-//
-//                    msg.setExtra("1");
-//
-//                }
                 Log.i("TAG",message.getMessageId()+"!!!");
             }
 

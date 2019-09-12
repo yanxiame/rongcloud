@@ -41,6 +41,7 @@ public class SplashActivity extends Activity {
         context = this;
         SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
         connect("rbdI/5jrPxR4aQ2078HhWnHte7+VrAhsnSjOcYQ3SKOCXhodQlcZYZ5acv4syCtN0dsYRNvxZh44fo4VR5s+6A==");
+
     }
 
     private boolean isNetworkConnected(Context context) {
