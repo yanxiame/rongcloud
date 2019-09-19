@@ -24,6 +24,7 @@ import io.rong.imkit.DefaultExtensionModule;
 import io.rong.imkit.RongExtensionManager;
 import io.rong.imkit.RongIM;
 import io.rong.imkit.RongNotificationManager;
+import io.rong.imkit.manager.IUnReadMessageObserver;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.Message;
@@ -77,6 +78,12 @@ public class App extends Application {
 
         //使用消息携带用户信息
         RongIM.getInstance().setMessageAttachedUserInfo(false);
+        RongIM.getInstance().addUnReadMessageCountChangedObserver(new IUnReadMessageObserver() {
+            @Override
+            public void onCountChanged(int i) {
+                Log.i("TAG","!!!!"+i);
+            }
+        }, Conversation.ConversationType.PRIVATE);
         RongIM.setOnReceiveMessageListener(new RongIMClient.OnReceiveMessageListener() {
             @Override
             public boolean onReceived(Message message, int i) {
