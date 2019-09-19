@@ -21,6 +21,7 @@ allprojects {
             name 'Google'
         }
         maven {url 'http://developer.huawei.com/repo/'}
+        maven {url  "https://dl.bintray.com/rongcloud/maven"}
         google()
     }
 }

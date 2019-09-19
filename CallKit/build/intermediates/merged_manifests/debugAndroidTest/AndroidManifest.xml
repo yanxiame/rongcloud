@@ -16,11 +16,9 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 发送位置消息，实时位置共享 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 拍照 -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- 拍照等 -->
@@ -166,7 +164,7 @@
             android:value="26.1.0" /> <!-- imlib config begin -->
         <meta-data
             android:name="RONG_CLOUD_APP_KEY"
-            android:value="8brlm7uf8ijw3" />
+            android:value="此处添加APP_KEY" />
 
         <service
             android:name="io.rong.imlib.ipc.RongService"

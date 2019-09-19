@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 .appendPath("conversationlist")
                 .appendQueryParameter(Conversation.ConversationType.PRIVATE.getName(), "false") //设置私聊会话，该会话聚合显示
                 .appendQueryParameter(Conversation.ConversationType.GROUP.getName(), "false")//设置群组会话，该会话非聚合显示
-                .appendQueryParameter(Conversation.ConversationType.SYSTEM.getName(), "false")
+                .appendQueryParameter(Conversation.ConversationType.SYSTEM.getName(), "true")
                 .build();
         ManFragment.setUri(uri);
         WomanFragment.setUri(uri);

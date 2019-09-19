@@ -9,6 +9,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import cn.sa.im.ui.Listener.MyConversationClickListener;
 import cn.sa.im.ui.Listener.MyConversationListBehaviorListener;
@@ -16,6 +17,7 @@ import cn.sa.im.ui.widget.RceRecallMessageItemProvider;
 import cn.sa.im.ui.widget.plugin.ApkExtensionModule;
 import cn.sa.im.ui.widget.plugin.ApkItemProvider;
 import cn.sa.im.ui.widget.plugin.ApkMessage;
+import cn.sa.im.ui.widget.plugin.ContactNotificationMessageProvider;
 import cn.sa.im.ui.widget.plugin.InsertItemProvider;
 import cn.sa.im.ui.widget.plugin.InsertMessage;
 import io.rong.imkit.DefaultExtensionModule;
@@ -32,6 +34,7 @@ import io.rong.push.PushType;
 import io.rong.push.RongPushClient;
 import io.rong.push.notification.PushNotificationMessage;
 import io.rong.push.pushconfig.PushConfig;
+import io.rong.sight.SightExtensionModule;
 
 public class App extends Application {
     @Override
@@ -41,7 +44,7 @@ public class App extends Application {
                 .enableHWPush(true)  // 配置华为推送
                 .build();
         //返回配置的推送类型
-        ArrayList<PushType> s= config.getEnabledPushTypes();
+        Set<PushType> s= config.getEnabledPushTypes();
 
 
         RongPushClient.setPushConfig(config);
@@ -53,8 +56,12 @@ public class App extends Application {
         RongIM.registerMessageTemplate(new ApkItemProvider());
         RongIM.registerMessageTemplate(new InsertItemProvider());
         RongIM.registerMessageTemplate(new RceRecallMessageItemProvider());
+        RongIM.registerMessageTemplate(new ContactNotificationMessageProvider());
         RongIM.registerMessageType(ApkMessage.class);
         RongIM.registerMessageType(InsertMessage.class);
+
+        //小视频
+        RongExtensionManager.getInstance().registerExtensionModule(new SightExtensionModule());
 
         RongExtensionManager.getInstance().unregisterExtensionModule(new DefaultExtensionModule());
         //自定义plugin
@@ -99,7 +106,7 @@ public class App extends Application {
                 }
                 if (message.getConversationType() == Conversation.ConversationType.SYSTEM) {
                     //做自己的操作  发送本地通知//
-                    Log.i("TAG", message.getContent().getSearchableWord().get(0));
+                    //Log.i("TAG", message.getContent().getSearchableWord().get(0));
                     //RongNotificationManager.getInstance().onReceiveMessageFromApp(message, 0);
                     Log.i("TAG", message.getUId());
                     Log.i("TAG", "1");
