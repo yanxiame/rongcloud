@@ -17,7 +17,6 @@ import io.rong.imkit.plugin.ImagePlugin;
 import io.rong.imkit.widget.provider.FilePlugin;
 import io.rong.imkit.widget.provider.LocationPlugin;
 import io.rong.imlib.model.Conversation;
-import io.rong.signalingkit.VideoPlugin;
 
 public class ApkExtensionModule extends DefaultExtensionModule {
 
@@ -28,7 +27,7 @@ public class ApkExtensionModule extends DefaultExtensionModule {
         IPluginModule image = new ImagePlugin();
         IPluginModule apk =new ApkPlugin();
         IPluginModule insert =new InsertMessagePlugin();
-        VideoPlugin videoPlugin=new VideoPlugin();
+
         IPluginModule file =new FilePlugin();
         LocationPlugin locationPlugin =new LocationPlugin();
         if (conversationType.equals(Conversation.ConversationType.GROUP) ||
@@ -37,7 +36,7 @@ public class ApkExtensionModule extends DefaultExtensionModule {
                     pluginModuleList.add(image);
                     pluginModuleList.add(apk);
                     pluginModuleList.add(insert);
-                    pluginModuleList.add(videoPlugin);
+
 //                    pluginModuleList.remove(file);
 //                    pluginModuleList.remove(locationPlugin);
 

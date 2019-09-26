@@ -1,1 +1,1 @@
-include ':app', ':IMKit', ':IMLib', ':CallLib', ':CallKit', ':Sight','RongSignalingKit','RongSignalingLib'
+include ':app', ':IMKit', ':IMLib', ':CallLib', ':CallKit', ':Sight'

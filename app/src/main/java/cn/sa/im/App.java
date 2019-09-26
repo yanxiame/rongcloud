@@ -37,10 +37,6 @@ import io.rong.push.RongPushClient;
 import io.rong.push.notification.PushNotificationMessage;
 import io.rong.push.pushconfig.PushConfig;
 import io.rong.sight.SightExtensionModule;
-import io.rong.signalingkit.RCSCallClient;
-import io.rong.signalingkit.RCSCallModule;
-import io.rong.signalingkit.RCSCallSession;
-import io.rong.signalingkit.callmanager.IRCSReceivedCallListener;
 
 public class App extends Application {
     @Override
@@ -127,13 +123,7 @@ public class App extends Application {
                 return false;
             }
         });
-        RCSCallClient.getInstance().setReceivedCallListener(new IRCSReceivedCallListener() {
-            @Override
-            public void onReceivedCall(RCSCallSession callSession) {
-                Log.i("TAG","111");
-                RCSCallClient.getInstance().acceptCall();
-            }
-        });
+
 
 
     }
