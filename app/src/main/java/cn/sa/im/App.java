@@ -13,6 +13,7 @@ import java.util.Set;
 
 import cn.sa.im.ui.Listener.MyConversationClickListener;
 import cn.sa.im.ui.Listener.MyConversationListBehaviorListener;
+import cn.sa.im.ui.widget.GifMessagesaItemProvider;
 import cn.sa.im.ui.widget.RceRecallMessageItemProvider;
 import cn.sa.im.ui.widget.plugin.ApkExtensionModule;
 import cn.sa.im.ui.widget.plugin.ApkItemProvider;
@@ -36,6 +37,10 @@ import io.rong.push.RongPushClient;
 import io.rong.push.notification.PushNotificationMessage;
 import io.rong.push.pushconfig.PushConfig;
 import io.rong.sight.SightExtensionModule;
+import io.rong.signalingkit.RCSCallClient;
+import io.rong.signalingkit.RCSCallModule;
+import io.rong.signalingkit.RCSCallSession;
+import io.rong.signalingkit.callmanager.IRCSReceivedCallListener;
 
 public class App extends Application {
     @Override
@@ -50,20 +55,21 @@ public class App extends Application {
 
         RongPushClient.setPushConfig(config);
         //RongIM.setServerInfo("navsg01.cn.ronghub.com","");
-        RongIM.init(this);
-
+        //RongIM.init(this,"z3v5yqkbv8v30");
+        RongIM.init(this,"pvxdm17jpof6r");
 
         //自定义消息
         RongIM.registerMessageTemplate(new ApkItemProvider());
         RongIM.registerMessageTemplate(new InsertItemProvider());
         RongIM.registerMessageTemplate(new RceRecallMessageItemProvider());
         RongIM.registerMessageTemplate(new ContactNotificationMessageProvider());
+        //RongIM.registerMessageTemplate(new GifMessagesaItemProvider());
         RongIM.registerMessageType(ApkMessage.class);
         RongIM.registerMessageType(InsertMessage.class);
 
         //小视频
         RongExtensionManager.getInstance().registerExtensionModule(new SightExtensionModule());
-
+        //RongExtensionManager.getInstance().registerExtensionModule(new RCSCallModule());
         RongExtensionManager.getInstance().unregisterExtensionModule(new DefaultExtensionModule());
         //自定义plugin
         RongExtensionManager.getInstance().registerExtensionModule(new ApkExtensionModule());
@@ -119,6 +125,13 @@ public class App extends Application {
                     Log.i("TAG", "1");
                 }
                 return false;
+            }
+        });
+        RCSCallClient.getInstance().setReceivedCallListener(new IRCSReceivedCallListener() {
+            @Override
+            public void onReceivedCall(RCSCallSession callSession) {
+                Log.i("TAG","111");
+                RCSCallClient.getInstance().acceptCall();
             }
         });
 

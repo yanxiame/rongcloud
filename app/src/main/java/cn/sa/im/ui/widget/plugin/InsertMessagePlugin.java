@@ -48,6 +48,8 @@ public class InsertMessagePlugin implements IPluginModule {
         Log.i("TAG","222222");
 
 
+
+
 //        Toast.makeText(rongExtension.getContext(), "发送一条自定义消息", Toast.LENGTH_LONG).show();
 //        Uri uri = Uri.parse("file://https://ss3.bdstatic.com/yrwDcj7w0QhBkMak8IuT_XF5ehU5bvGh7c50/logopic/76a0982ed6098fc725849ece8b97e5c4_fullsize.jpg@s_1,w_484,h_484");
 //        ImageMessage imageMessage = ImageMessage.obtain(uri,uri,true);

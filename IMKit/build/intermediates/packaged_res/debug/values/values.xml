@@ -523,16 +523,19 @@
     <bool name="rc_enable_automatic_download_voice_msg">true</bool>
     <bool name="rc_enable_mentioned_message">false</bool>
     <bool name="rc_enable_message_recall">false</bool>
+    <bool name="rc_enable_send_combine_message">true</bool>
     <bool name="rc_enable_sync_read_status">false</bool>
     <bool name="rc_is_show_warning_notification">true</bool>
     <bool name="rc_location_2D">false</bool>
     <bool name="rc_media_selector_contain_video">false</bool>
+    <bool name="rc_open_destruct_plugin">true</bool>
     <bool name="rc_open_https_certificate">false</bool>
     <bool name="rc_play_audio_continuous">true</bool>
     <bool name="rc_read_receipt">false</bool>
     <bool name="rc_set_java_script_enabled">false</bool>
     <bool name="rc_stop_custom_service_when_quit">true</bool>
     <bool name="rc_wipe_out_notification_message">true</bool>
+    <color name="color_list_item_hover">#DFDFDD</color>
     <color name="rc_ad_file_list_no_select_file_text_state">#9fcdfd</color>
     <color name="rc_ad_file_list_select_file_text_state">#ffffff</color>
     <color name="rc_common_phrases_bg_color">#f2f2f2</color>
@@ -542,6 +545,7 @@
     <color name="rc_common_phrases_title_color">#666666</color>
     <color name="rc_conversation_list_divider_color">#dfdfdd</color>
     <color name="rc_conversation_top_bg">#f2faff</color>
+    <color name="rc_destruct_voice_color">#f4b50b</color>
     <color name="rc_divider_color">#d9d9d9</color>
     <color name="rc_divider_line">#ababad</color>
     <color name="rc_draft_color">#cb120f</color>
@@ -594,6 +598,8 @@
     <color name="rc_voice_color">#0195ff</color>
     <color name="rc_voice_color_left">#4385bf</color>
     <color name="rc_voice_color_right">#a2a2a2</color>
+    <color name="rc_voip_check_disable">#1f4a76</color>
+    <color name="rc_voip_check_enable">#0099ff</color>
     <color name="rc_web_progress_bar">#9fcdfd</color>
     <dimen name="rc_conversation_item_data_size">14sp</dimen>
     <dimen name="rc_conversation_item_name_size">16sp</dimen>
@@ -684,6 +690,7 @@
     <integer name="rc_extension_emoji_count_per_page">20</integer>
     <integer name="rc_extension_plugin_count_per_page">8</integer>
     <integer name="rc_gifmsg_auto_download_size">1024</integer>
+    <integer name="rc_max_message_selected_count">100</integer>
     <integer name="rc_message_recall_interval">180</integer>
     <integer name="rc_read_receipt_request_interval">120</integer>
     <string name="rc_ac_file_download_btn">开始下载</string>
@@ -736,12 +743,26 @@
     <string name="rc_audio_input_hover">松开 发送</string>
     <string name="rc_authorities_fileprovider">.FileProvider</string>
     <string name="rc_blacklist_prompt">您已被加入黑名单</string>
+    <string name="rc_burn_after_reading">阅后即焚</string>
+    <string name="rc_burn_hint">消息查看后自动销毁，消息禁止复制或转发，服务器不保留消息记录</string>
     <string name="rc_called_accept">对方接受了通话请求</string>
     <string name="rc_called_is_calling">对方正在通话中</string>
     <string name="rc_called_not_accept">对方未接听</string>
     <string name="rc_called_on_hook">对方已挂机</string>
     <string name="rc_cancel">取消</string>
     <string name="rc_choose_members">选择联系人</string>
+    <string name="rc_click_to_play">点击播放</string>
+    <string name="rc_click_to_view">点击查看</string>
+    <string name="rc_combine_and">和</string>
+    <string name="rc_combine_chat_history">聊天记录</string>
+    <string name="rc_combine_forwarding">合并转发</string>
+    <string name="rc_combine_group_chat">群聊的聊天记录</string>
+    <string name="rc_combine_history_deleted">聊天记录已被删除</string>
+    <string name="rc_combine_stepwise_forwarding">逐条转发</string>
+    <string name="rc_combine_the_group_chat_of">%s 的聊天记录</string>
+    <string name="rc_combine_unsupported">未发送成功、红包、阅后即焚消息不支持转发</string>
+    <string name="rc_combine_webview_download_failed">聊天记录加载失败</string>
+    <string name="rc_combine_webview_loading">聊天记录加载中...</string>
     <string name="rc_confirm">确认</string>
     <string name="rc_conversation_List_operation_failure">操作失败</string>
     <string name="rc_conversation_list_app_public_service">应用公众服务</string>
@@ -934,6 +955,7 @@
     <string name="rc_emoji_wrapped_gift">礼物</string>
     <string name="rc_emoji_zzz">ZZZ</string>
     <string name="rc_exceeded_max_limit">超出最大限制</string>
+    <string name="rc_exceeded_max_limit_100">聊天记录选择不能超过 100 条</string>
     <string name="rc_exit_calling">是否退出通话界面？</string>
     <string name="rc_ext_cancel">取消</string>
     <string name="rc_ext_exit_location_sharing">是否结束位置共享？</string>
@@ -959,6 +981,7 @@
     <string name="rc_fr_storage_folder_list_no_files">无法读取%1$s中的文件</string>
     <string name="rc_fr_storage_folder_list_search">搜索</string>
     <string name="rc_friday_format">周五</string>
+    <string name="rc_got_it">知道了</string>
     <string name="rc_image_default_saved_path">/RongCloud/Image/</string>
     <string name="rc_info_forbidden_to_talk">您当前在群组中被禁言</string>
     <string name="rc_info_not_in_chatroom">你不在该聊天室</string>
@@ -994,14 +1017,20 @@
     <string name="rc_location_fetching">获取中……</string>
     <string name="rc_location_sharing_exceed_max">超过最大位置共享人数</string>
     <string name="rc_location_temp_failed">定位失败，请稍后重试</string>
+    <string name="rc_message_content_burn">[阅后即焚]</string>
+    <string name="rc_message_content_card">[个人名片]</string>
+    <string name="rc_message_content_combine">[聊天记录]</string>
     <string name="rc_message_content_draft">[草稿]</string>
     <string name="rc_message_content_file">[文件]</string>
     <string name="rc_message_content_image">[图片]</string>
     <string name="rc_message_content_location">[位置]</string>
     <string name="rc_message_content_mentioned">[有人@我]</string>
     <string name="rc_message_content_rich_text">[图文]</string>
+    <string name="rc_message_content_rp">[红包]</string>
     <string name="rc_message_content_sight">[小视频]</string>
+    <string name="rc_message_content_sticker">[动态表情]</string>
     <string name="rc_message_content_voice">[语音]</string>
+    <string name="rc_message_content_vst">[音视频通话]</string>
     <string name="rc_message_unknown">当前版本暂不支持查看此消息</string>
     <string name="rc_message_unread_count">"···"</string>
     <string name="rc_monday_format">周一</string>
@@ -1014,6 +1043,7 @@
     <string name="rc_new_message_divider_content">以上是历史消息</string>
     <string name="rc_new_messages">条新消息</string>
     <string name="rc_night_format">晚上</string>
+    <string name="rc_no_plugin">无可用插件</string>
     <string name="rc_noon_format">中午</string>
     <string name="rc_notice_connecting">正在连接服务器</string>
     <string name="rc_notice_create_discussion">正在创建讨论组</string>
@@ -1051,6 +1081,7 @@
     <string name="rc_picsel_toolbar_send">发送</string>
     <string name="rc_picsel_toolbar_send_num">发送(%d/9)</string>
     <string name="rc_picsel_video_corrupted">不能分享损坏的视频</string>
+    <string name="rc_plugin_destruct">阅后即焚</string>
     <string name="rc_plugin_image">图片</string>
     <string name="rc_plugin_location">位置</string>
     <string name="rc_plugin_location_message">发送位置</string>
@@ -1071,6 +1102,7 @@
     <string name="rc_real_time_location_summary">我发起了位置共享</string>
     <string name="rc_recall_failed">撤回失败</string>
     <string name="rc_recall_failed_for_network_unavailable">撤回不成功，请检查网络连接</string>
+    <string name="rc_recall_success">消息已撤回</string>
     <string name="rc_recalled_a_message"> 撤回了一条消息</string>
     <string name="rc_receive_new_message">你收到一条新消息</string>
     <string name="rc_rejected_by_blacklist_prompt">您的消息已经发出，但被对方拒收</string>
@@ -1078,6 +1110,7 @@
     <string name="rc_save_picture">保存图片</string>
     <string name="rc_save_picture_at">图片保存成功</string>
     <string name="rc_search">搜索</string>
+    <string name="rc_select_from_album">从相册选取</string>
     <string name="rc_send_format">发送(%1$s)</string>
     <string name="rc_setting_clear_msg_fail">清空聊天失败</string>
     <string name="rc_setting_clear_msg_name">清空聊天信息</string>
@@ -1089,6 +1122,7 @@
     <string name="rc_setting_name">设置</string>
     <string name="rc_setting_set_top">置顶</string>
     <string name="rc_setting_set_top_fail">设置置顶失败</string>
+    <string name="rc_sight">小视频</string>
     <string name="rc_src_file_not_found">源文件不存在</string>
     <string name="rc_sunsay_format">周日</string>
     <string name="rc_thuresday_format">周四</string>
@@ -1176,6 +1210,9 @@
         <item name="android:windowNoTitle">false</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="dialogFullscreen">
+        <item name="android:windowFullscreen">true</item>
     </style>
     <style name="horizontal_light_thin_divider">
         <item name="android:layout_height">0.5dp</item>

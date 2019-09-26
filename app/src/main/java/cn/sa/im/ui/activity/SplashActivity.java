@@ -26,7 +26,9 @@ import io.rong.imkit.model.GroupUserInfo;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.Group;
+import io.rong.imlib.model.Message;
 import io.rong.imlib.model.UserInfo;
+import io.rong.message.TextMessage;
 
 public class SplashActivity extends Activity {
     private Context context;
@@ -41,7 +43,8 @@ public class SplashActivity extends Activity {
         context = this;
         SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
         connect("rbdI/5jrPxR4aQ2078HhWnHte7+VrAhsnSjOcYQ3SKOCXhodQlcZYZ5acv4syCtN0dsYRNvxZh44fo4VR5s+6A==");
-
+        //rtcu007
+        //connect("LWJRaOwl9//xX9RmkGGklbI6ZiT8q7s0UEaMPWY0lMzMWM3CRr9xPA2i+mjhFj7YQuWtiVix91mNyJRQHFdC7+RNKy+58WBU");
     }
 
     private boolean isNetworkConnected(Context context) {
@@ -77,12 +80,26 @@ public class SplashActivity extends Activity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        TextMessage textMessage= TextMessage.obtain("11");
+                        Message message=Message.obtain("rtcu013", Conversation.ConversationType.PRIVATE,textMessage);
+                        RongIM.getInstance().sendMessage(message, "", "", new RongIMClient.SendMessageCallback() {
+                            @Override
+                            public void onError(Integer integer, RongIMClient.ErrorCode errorCode) {
+
+                            }
+
+                            @Override
+                            public void onSuccess(Integer integer) {
+
+                            }
+                        });
                         RongIM.setGroupInfoProvider(new RongIM.GroupInfoProvider() {
                             @Override
                             public Group getGroupInfo(String s) {
                                 return new Group(s,"群聊",Uri.parse("https://www.baidu.com/img/bd_logo1.png"));
                             }
                         },true);
+                        //RongIM.getInstance().refreshGroupInfoCache();
                         RongIM.setGroupUserInfoProvider(new RongIM.GroupUserInfoProvider() {
                             @Override
                             public GroupUserInfo getGroupUserInfo(String s, String s1) {

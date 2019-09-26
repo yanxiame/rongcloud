@@ -86,6 +86,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="io.rong.imkit.tools.CombineWebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="io.rong.imkit.intent.action.combinewebview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="io.rong.imkit.widget.provider.TakingPicturesActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
@@ -116,6 +126,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="io.rong.imkit.activity.WebFilePreviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="io.rong.imkit.intent.action.openwebfile" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="io.rong.imkit.activity.CSLeaveMessageActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
@@ -129,6 +149,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name="io.rong.imkit.activity.SelectConversationActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

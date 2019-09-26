@@ -53,4 +53,8 @@
         <item name="android:minHeight">62.5dp</item>
         <item name="android:maxHeight">62.5dp</item>
     </style>
+
+    <style name="dialogFullscreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
 </resources>

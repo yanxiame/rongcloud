@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
     android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:paddingBottom="6dp"
     android:paddingLeft="8dp"
     android:paddingRight="8dp"
@@ -41,7 +43,7 @@
     </LinearLayout>
 
     <io.rong.imkit.widget.AsyncImageView
-        android:id="@id/rc_left"
+        android:id="@+id/rc_left"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_below="@id/rc_time"
@@ -52,7 +54,7 @@
         app:RCDefDrawable="@drawable/rc_ic_def_msg_portrait" />
 
     <io.rong.imkit.widget.AsyncImageView
-        android:id="@id/rc_right"
+        android:id="@+id/rc_right"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentRight="true"
@@ -78,6 +80,7 @@
         android:visibility="gone" />
 
     <FrameLayout
+        android:clipChildren="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/rc_title"
@@ -85,6 +88,7 @@
         android:layout_toRightOf="@id/rc_left">
 
         <LinearLayout
+            android:clipChildren="false"
             android:id="@id/rc_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -131,17 +135,6 @@
                 android:textColor="@color/rc_read_receipt_status"
                 android:textSize="12sp"
                 android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/countdown_time_send"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="4dp"
-                android:layout_gravity="bottom"
-                android:textColor="#A4A4A4"
-                android:textSize="12sp"/>
-
             <TextView
                 android:id="@id/rc_read_receipt_request"
                 android:layout_width="wrap_content"
@@ -169,24 +162,11 @@
 
             <io.rong.imkit.widget.ProviderContainerView
                 android:id="@id/rc_content"
+                android:clipChildren="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@android:color/transparent" />
-
-            <TextView
-                android:id="@+id/countdown_time_receive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="4dp"
-                android:layout_gravity="bottom"
-                android:textColor="#A4A4A4"
-                android:textSize="12sp"/>
-
         </LinearLayout>
-
     </FrameLayout>
-
-
 </RelativeLayout>

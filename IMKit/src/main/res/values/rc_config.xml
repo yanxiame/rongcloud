@@ -66,4 +66,13 @@
     <!--gif 自动下载的最大值， 超过就需点击手动下载（单位 KB）-->
     <integer name="rc_gifmsg_auto_download_size">1024</integer>
 
+    <!--是否启用阅后即焚插件-->
+    <bool name="rc_open_destruct_plugin">true</bool>
+
+    <!--多选时,最大多选消息数 -->
+    <integer name="rc_max_message_selected_count">100</integer>
+
+    <!--是否开启合并转发功能,默认关闭 // TODO: 现为测试打开 -->
+    <bool name="rc_enable_send_combine_message">true</bool>
+
 </resources>

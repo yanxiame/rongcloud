@@ -42,8 +42,7 @@ public class ConversationSaFragment extends ConversationFragment {
 
     @Override
     public void onSendToggleClick(View v, String text) {
-        Log.i("TAG","1");
-        SharedPreferences sp = getActivity().getSharedPreferences("**", MODE_PRIVATE);
+        super.onSendToggleClick(v,text);
     }
 }
 

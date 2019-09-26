@@ -38,5 +38,11 @@
 
     <color name="rc_read_receipt_status">#96c4ec</color>
     <color name="rc_new_message_divider_text_color">#B2B2B2</color>
+    <color name="rc_destruct_voice_color">#f4b50b</color>
+
+    <color name="color_list_item_hover">#DFDFDD</color>
+
+    <color name="rc_voip_check_disable">#1f4a76</color>
+    <color name="rc_voip_check_enable">#0099ff</color>
 
 </resources>

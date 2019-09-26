@@ -45,17 +45,25 @@
     <string name="rc_message_content_mentioned">[有人@我]</string>
     <string name="rc_message_content_file">[文件]</string>
     <string name="rc_message_content_sight">[小视频]</string>
+    <string name="rc_message_content_burn">[阅后即焚]</string>
+    <string name="rc_message_content_combine">[聊天记录]</string>
+    <string name="rc_message_content_card">[个人名片]</string>
+    <string name="rc_message_content_sticker">[动态表情]</string>
+    <string name="rc_message_content_rp">[红包]</string>
+    <string name="rc_message_content_vst">[音视频通话]</string>
 
     <string name="rc_dialog_item_message_delete">删除消息</string>
     <string name="rc_dialog_item_message_copy">复制消息</string>
     <string name="rc_dialog_item_message_recall">撤回消息</string>
     <string name="rc_dialog_item_message_more">更多&#8230;</string>
+    <string name="rc_recall_success">消息已撤回</string>
     <string name="rc_recall_failed">撤回失败</string>
     <string name="rc_you_recalled_a_message">你撤回了一条消息</string>
     <string name="rc_admin_recalled_a_message">管理员撤回了一条消息</string>
     <string name="rc_recalled_a_message">&#160;撤回了一条消息</string>
     <string name="rc_admin_recalled_message">管理员&#160;撤回了一条消息</string>
     <string name="rc_exceeded_max_limit">超出最大限制</string>
+    <string name="rc_exceeded_max_limit_100">聊天记录选择不能超过 100 条</string>
 
     <string name="rc_message_unread_count">"···"</string>
     <string name="rc_input_voice">按住 说话</string>
@@ -271,4 +279,27 @@
     <string name="rc_receive_new_message">你收到一条新消息</string>
     <string name="rc_notification_error_ssl_cert_invalid">您访问的网页证书无效。是否继续访问?</string>
     <string name="rc_loadmore_loading">正在加载</string>
+    <string name="rc_click_to_view">点击查看</string>
+    <string name="rc_click_to_play">点击播放</string>
+    <string name="rc_got_it">知道了</string>
+    <string name="rc_burn_after_reading">阅后即焚</string>
+    <string name="rc_burn_hint">消息查看后自动销毁，消息禁止复制或转发，服务器不保留消息记录</string>
+    <string name="rc_sight">小视频</string>
+    <string name="rc_select_from_album">从相册选取</string>
+    <string name="rc_no_plugin">无可用插件</string>
+
+    <!-- 合并转发-->
+    <string name="rc_combine_stepwise_forwarding">逐条转发</string>
+    <string name="rc_combine_forwarding">合并转发</string>
+    <string name="rc_combine_chat_history">聊天记录</string>
+    <string name="rc_combine_group_chat">群聊的聊天记录</string>
+    <string name="rc_combine_the_group_chat_of">%s 的聊天记录</string>
+    <string name="rc_combine_and">和</string>
+    <string name="rc_combine_unsupported">未发送成功、红包、阅后即焚消息不支持转发</string>
+    <string name="rc_combine_webview_loading">聊天记录加载中...</string>
+    <string name="rc_combine_webview_download_failed">聊天记录加载失败</string>
+    <string name="rc_combine_history_deleted">聊天记录已被删除</string>
+
+
+
 </resources>

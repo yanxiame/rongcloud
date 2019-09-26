@@ -5,6 +5,7 @@
 
     <string name="rc_plugin_location">位置</string>
     <string name="rc_plugin_image">图片</string>
+    <string name="rc_plugin_destruct">阅后即焚</string>
     <string name="rc_plugin_location_message">发送位置</string>
     <string name="rc_plugin_location_sharing">共享实时位置</string>
     <string name="rc_audio_input">按住 说话</string>
