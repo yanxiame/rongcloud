@@ -59,7 +59,7 @@ public class App extends Application {
         RongIM.registerMessageTemplate(new InsertItemProvider());
         RongIM.registerMessageTemplate(new RceRecallMessageItemProvider());
         RongIM.registerMessageTemplate(new ContactNotificationMessageProvider());
-        //RongIM.registerMessageTemplate(new GifMessagesaItemProvider());
+        RongIM.registerMessageTemplate(new GifMessagesaItemProvider());
         RongIM.registerMessageType(ApkMessage.class);
         RongIM.registerMessageType(InsertMessage.class);
 

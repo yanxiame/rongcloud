@@ -34,7 +34,7 @@
     <integer name="rc_message_recall_interval">180</integer>
 
     <!-- 是否打开 @ 功能-->
-    <bool name="rc_enable_mentioned_message">false</bool>
+    <bool name="rc_enable_mentioned_message">true</bool>
 
     <!-- 设置已读回执，目前仅支持单聊、群聊、讨论组 -->
     <bool name="rc_read_receipt">false</bool>
