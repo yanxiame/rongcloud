@@ -521,14 +521,14 @@
         <item>.docx</item>
     </array>
     <bool name="rc_enable_automatic_download_voice_msg">true</bool>
-    <bool name="rc_enable_mentioned_message">true</bool>
-    <bool name="rc_enable_message_recall">false</bool>
-    <bool name="rc_enable_send_combine_message">true</bool>
+    <bool name="rc_enable_mentioned_message">false</bool>
+    <bool name="rc_enable_message_recall">true</bool>
+    <bool name="rc_enable_send_combine_message">false</bool>
     <bool name="rc_enable_sync_read_status">false</bool>
     <bool name="rc_is_show_warning_notification">true</bool>
     <bool name="rc_location_2D">false</bool>
     <bool name="rc_media_selector_contain_video">false</bool>
-    <bool name="rc_open_destruct_plugin">true</bool>
+    <bool name="rc_open_destruct_plugin">false</bool>
     <bool name="rc_open_https_certificate">false</bool>
     <bool name="rc_play_audio_continuous">true</bool>
     <bool name="rc_read_receipt">false</bool>
@@ -536,6 +536,7 @@
     <bool name="rc_stop_custom_service_when_quit">true</bool>
     <bool name="rc_wipe_out_notification_message">true</bool>
     <color name="color_list_item_hover">#DFDFDD</color>
+    <color name="rc_EmoticonTab_bg_select_color">#d7d7d7</color>
     <color name="rc_ad_file_list_no_select_file_text_state">#9fcdfd</color>
     <color name="rc_ad_file_list_select_file_text_state">#ffffff</color>
     <color name="rc_common_phrases_bg_color">#f2f2f2</color>
@@ -1135,6 +1136,7 @@
     <string name="rc_voice_rec">手指上滑，取消发送</string>
     <string name="rc_voice_short">录音时间太短</string>
     <string name="rc_voice_too_long">录制时间超长</string>
+    <string name="rc_voip_call_audio_start_fail">正在进行语音通话，请稍后再试</string>
     <string name="rc_voip_call_video_start_fail">正在进行视频通话，请稍后再试</string>
     <string name="rc_voip_cpu_error">很抱歉，该功能暂时不支持您的机型</string>
     <string name="rc_voip_occupying">声音通道被占用，请稍后再试</string>

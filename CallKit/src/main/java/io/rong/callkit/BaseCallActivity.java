@@ -492,6 +492,9 @@ public class BaseCallActivity extends BaseNoActionBarActivity implements IRongCa
         try {
             RongCallSession session = RongCallClient.getInstance().getCallSession();
             if (session != null) {
+                if (session.getMediaType() == RongCallCommon.CallMediaType.VIDEO) {
+                    RongCallClient.getInstance().startCapture();
+                }
                 RongCallProxy.getInstance().setCallListener(this);
                 if (shouldRestoreFloat) {
                     CallFloatBoxView.hideFloatBox();
@@ -555,10 +558,24 @@ public class BaseCallActivity extends BaseNoActionBarActivity implements IRongCa
         if (wakeLock != null && wakeLock.isHeld()) {
             wakeLock.release();
         }
+
+        if (screenLock != null && screenLock.isHeld()) {
+            try {
+                screenLock.setReferenceCounted(false);
+                screenLock.release();
+            } catch (Exception e) {
+
+            }
+        }
     }
 
     @Override
     public void onRemoteCameraDisabled(String userId, boolean muted) {
+
+    }
+
+    @Override
+    public void onRemoteMicrophoneDisabled(String userId, boolean disabled) {
 
     }
 

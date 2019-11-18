@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:paddingLeft="14dp"
             android:dividerHeight="1dp"
-            android:scrollbars="none"
+            android:scrollbars="vertical"
             android:background="@android:color/white"
             android:divider="@color/rc_map_list_divider_color"/>
 

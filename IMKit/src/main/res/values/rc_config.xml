@@ -29,12 +29,12 @@
     <string name="rc_image_default_saved_path">/RongCloud/Image/</string>
 
     <!-- 设置是否支持消息撤回-->
-    <bool name="rc_enable_message_recall">false</bool>
+    <bool name="rc_enable_message_recall">true</bool>
     <!-- 消息撤回有效时间（单位：秒）-->
     <integer name="rc_message_recall_interval">180</integer>
 
     <!-- 是否打开 @ 功能-->
-    <bool name="rc_enable_mentioned_message">true</bool>
+    <bool name="rc_enable_mentioned_message">false</bool>
 
     <!-- 设置已读回执，目前仅支持单聊、群聊、讨论组 -->
     <bool name="rc_read_receipt">false</bool>
@@ -67,12 +67,12 @@
     <integer name="rc_gifmsg_auto_download_size">1024</integer>
 
     <!--是否启用阅后即焚插件-->
-    <bool name="rc_open_destruct_plugin">true</bool>
+    <bool name="rc_open_destruct_plugin">false</bool>
 
     <!--多选时,最大多选消息数 -->
     <integer name="rc_max_message_selected_count">100</integer>
 
-    <!--是否开启合并转发功能,默认关闭 // TODO: 现为测试打开 -->
-    <bool name="rc_enable_send_combine_message">true</bool>
+    <!--是否开启合并转发功能,默认关闭 -->
+    <bool name="rc_enable_send_combine_message">false</bool>
 
 </resources>

@@ -62,7 +62,7 @@ public class App extends Application {
         RongIM.registerMessageTemplate(new GifMessagesaItemProvider());
         RongIM.registerMessageType(ApkMessage.class);
         RongIM.registerMessageType(InsertMessage.class);
-
+·
         //小视频
         RongExtensionManager.getInstance().registerExtensionModule(new SightExtensionModule());
         //RongExtensionManager.getInstance().registerExtensionModule(new RCSCallModule());

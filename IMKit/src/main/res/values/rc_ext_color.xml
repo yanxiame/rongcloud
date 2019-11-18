@@ -41,4 +41,5 @@
     <color name="rc_map_list_text_color">#262626</color>
     <color name="rc_map_list_text_grey_color">#939393</color>
     <color name="rc_map_search_highlight_color">#0099ff</color>
+    <color name="rc_EmoticonTab_bg_select_color">#d7d7d7</color>
 </resources>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.rong.imlib"
-    android:versionCode="2019092015"
-    android:versionName="2.9.24 Dev" >
+    android:versionCode="2019102520"
+    android:versionName="2.10.0 release" >
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -24,7 +24,7 @@
         <!-- imlib config begin -->
         <meta-data
             android:name="RONG_CLOUD_APP_KEY"
-            android:value="pvxdm17jpof6r" />
+            android:value="此处添加APP_KEY" />
 
         <service
             android:name="io.rong.imlib.ipc.RongService"

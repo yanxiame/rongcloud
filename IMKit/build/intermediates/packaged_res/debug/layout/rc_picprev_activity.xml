@@ -91,6 +91,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:orientation="horizontal"
+            android:background="@color/rc_draft_color"
             android:paddingRight="16dp">
 
             <ImageView

@@ -23,6 +23,7 @@ import io.rong.imageloader.utils.L;
 import io.rong.imkit.RongContext;
 import io.rong.imkit.RongIM;
 import io.rong.imkit.RongMessageItemLongClickActionManager;
+import io.rong.imkit.mention.RongMentionManager;
 import io.rong.imkit.model.UIMessage;
 import io.rong.imkit.tools.CharacterParser;
 import io.rong.imkit.utilities.OptionsPopupDialog;
@@ -77,7 +78,7 @@ public class MyConversationClickListener implements RongIM.ConversationClickList
      */
     @Override
     public boolean onUserPortraitLongClick(Context context, Conversation.ConversationType conversationType, UserInfo user, String targetId) {
-
+        RongMentionManager.getInstance().mentionMember(conversationType,targetId, user.getUserId());
         //Toast.makeText(context, "长按消息时执行。", Toast.LENGTH_LONG).show();
         return false;
     }

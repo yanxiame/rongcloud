@@ -66,6 +66,9 @@ public class AudioPlugin implements IPluginModule, IPluginRequestPermissionResul
     }
 
     private void startAudioActivity(Fragment currentFragment, final RongExtension extension) {
+        if (context == null){
+            return;
+        }
         RongCallSession profile = RongCallClient.getInstance().getCallSession();
         if (profile != null && profile.getStartTime() > 0) {
             Toast.makeText(context,
@@ -151,7 +154,7 @@ public class AudioPlugin implements IPluginModule, IPluginRequestPermissionResul
         if (PermissionCheckUtil.checkPermissions(fragment.getActivity(), permissions)) {
             startAudioActivity(fragment, extension);
         } else {
-            extension.showRequestPermissionFailedAlter(PermissionCheckUtil.getNotGrantedPermissionMsg(context, permissions, grantResults));
+            extension.showRequestPermissionFailedAlter(PermissionCheckUtil.getNotGrantedPermissionMsg(fragment.getContext(), permissions, grantResults));
         }
         return true;
     }

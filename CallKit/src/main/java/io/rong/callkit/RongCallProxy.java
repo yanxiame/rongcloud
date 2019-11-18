@@ -117,6 +117,13 @@ public class RongCallProxy implements IRongCallListener {
     }
 
     @Override
+    public void onRemoteMicrophoneDisabled(String userId, boolean disabled) {
+        if (mCallListener != null) {
+            mCallListener.onRemoteMicrophoneDisabled(userId, disabled);
+        }
+    }
+
+    @Override
     public void onNetworkSendLost(int lossRate, int delay) {
         if (mCallListener != null) {
             mCallListener.onNetworkSendLost(lossRate, delay);

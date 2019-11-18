@@ -15,7 +15,12 @@ import android.view.ViewGroup;
 
 import java.io.File;
 import java.util.List;
+import java.util.Locale;
 
+import cn.sa.im.R;
+import cn.sa.im.ui.apadper.MessageListAdapterEx;
+import io.rong.common.RLog;
+import io.rong.imkit.RongExtension;
 import io.rong.imkit.RongIM;
 import io.rong.imkit.fragment.ConversationFragment;
 import io.rong.imkit.fragment.IHistoryDataResultCallback;
@@ -34,15 +39,66 @@ import static android.content.Context.MODE_PRIVATE;
  */
 public class ConversationSaFragment extends ConversationFragment {
 
+    private RongExtension mRongExtension;
+    private String mTargetId;
+    private Conversation.ConversationType mConversationType;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return super.onCreateView(inflater, container, savedInstanceState);
+    }
+    @Override
+    public MessageListAdapter onResolveAdapter(Context context) {
+        //return super.onResolveAdapter(context);
+        return new MessageListAdapterEx(context);
+    }
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        mRongExtension = (RongExtension) view.findViewById(io.rong.imkit.R.id.rc_extension);
+        super.onViewCreated(view, savedInstanceState);
+        //View s=view.findViewById(R.id.rc_layout_msg_list);
+        //s.setBackground(getResources().getDrawable(R.drawable.bg_conversation));
+    }
     @Override
     protected void initFragment(Uri uri) {
+        String typeStr = uri.getLastPathSegment().toUpperCase(Locale.US);
+        mConversationType = Conversation.ConversationType.valueOf(typeStr);
+        mTargetId = uri.getQueryParameter("targetId");
         super.initFragment(uri);
 
+    }
+    @Override
+    public void onPluginToggleClick(View v, ViewGroup extensionBoard) {
+        super.onPluginToggleClick(v, extensionBoard);
     }
 
     @Override
     public void onSendToggleClick(View v, String text) {
         super.onSendToggleClick(v,text);
+    }
+
+    @Override
+    public void getRemoteHistoryMessages(Conversation.ConversationType conversationType, String targetId, long dateTime, int reqCount, IHistoryDataResultCallback<List<Message>> callback) {
+        super.getRemoteHistoryMessages(conversationType, targetId, dateTime, reqCount, callback);
+    }
+
+    @Override
+    public void getHistoryMessage(Conversation.ConversationType conversationType, String targetId, int lastMessageId, int reqCount, LoadMessageDirection direction, final IHistoryDataResultCallback<List<Message>> callback) {
+        super.getHistoryMessage(conversationType, targetId, lastMessageId, reqCount, direction, new IHistoryDataResultCallback<List<Message>>() {
+            @Override
+            public void onResult(List<Message> data) {
+                // 在这里remove
+                // data = filterMessageList(data)
+                callback.onResult(data);
+            }
+
+
+            @Override
+            public void onError() {
+
+
+            }
+        });
     }
 }
 

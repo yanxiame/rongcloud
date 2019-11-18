@@ -38,6 +38,7 @@ public class RceRecallMessageItemProvider extends RecallMessageItemProvider {
 
             viewHolder.contentTextView.setText(information);
         }
+        viewHolder.contentTextView.setVisibility(View.GONE);
     }
 
     @Override
@@ -47,22 +48,22 @@ public class RceRecallMessageItemProvider extends RecallMessageItemProvider {
 
     @Override
     public Spannable getContentSummary(Context context, RecallNotificationMessage data) {
-        if (data != null && !TextUtils.isEmpty(data.getOperatorId())) {
-            String information;
-            if(data.isAdmin()){
-                information = context.getString(io.rong.imkit.R.string.rc_admin_recalled_a_message);
-            }else if (data.getOperatorId().equals(RongIM.getInstance().getCurrentUserId())) {
-                information = context.getString(io.rong.imkit.R.string.rc_you_recalled_a_message);
-            } else {
-                UserInfo userInfo = RongUserInfoManager.getInstance().getUserInfo(data.getOperatorId());
-                if (userInfo != null && userInfo.getName() != null) {
-                    information = userInfo.getName() + context.getString(io.rong.imkit.R.string.rc_recalled_a_message);
-                } else {
-                    information = data.getOperatorId() + context.getString(io.rong.imkit.R.string.rc_recalled_a_message);
-                }
-            }
-            return new SpannableString(information);
-        }
+//        if (data != null && !TextUtils.isEmpty(data.getOperatorId())) {
+//            String information;
+//            if(data.isAdmin()){
+//                information = context.getString(io.rong.imkit.R.string.rc_admin_recalled_a_message);
+//            }else if (data.getOperatorId().equals(RongIM.getInstance().getCurrentUserId())) {
+//                information = context.getString(io.rong.imkit.R.string.rc_you_recalled_a_message);
+//            } else {
+//                UserInfo userInfo = RongUserInfoManager.getInstance().getUserInfo(data.getOperatorId());
+//                if (userInfo != null && userInfo.getName() != null) {
+//                    information = userInfo.getName() + context.getString(io.rong.imkit.R.string.rc_recalled_a_message);
+//                } else {
+//                    information = data.getOperatorId() + context.getString(io.rong.imkit.R.string.rc_recalled_a_message);
+//                }
+//            }
+//            return new SpannableString(information);
+//        }
         return null;
     }
 

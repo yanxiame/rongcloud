@@ -260,13 +260,13 @@
     <string name="rc_receive_new_message">You have received a new message</string>
     <string name="rc_notification_error_ssl_cert_invalid">The webpage certificate you visited is invalid. Continue to visit?</string>
     <string name="rc_loadmore_loading">Loading...</string>
-    <string name="rc_click_to_view">Click to view</string>
-    <string name="rc_click_to_play">Click to play</string>
+    <string name="rc_click_to_view">Click to View</string>
+    <string name="rc_click_to_play">Click to Play</string>
     <string name="rc_got_it">Got it</string>
     <string name="rc_burn_after_reading">Secret Chat</string>
     <string name="rc_burn_hint">Messages are automatically destroyed after viewing, and replication or forwarding of messages is forbidden. The server does not retain message records</string>
     <string name="rc_sight">Video Clip</string>
-    <string name="rc_select_from_album">Select from album</string>
+    <string name="rc_select_from_album">Select from Album</string>
     <string name="rc_no_plugin">No plug-ins available</string>
 
     <!-- 合并转发-->
