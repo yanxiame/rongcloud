@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/res/merged/release/drawable/notification_tile_bg.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/11c14cbe859561c773b86ff02fae738a/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/res/merged/release/drawable/notification_bg_low.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/11c14cbe859561c773b86ff02fae738a/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/res/merged/release/drawable/notification_icon_background.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/11c14cbe859561c773b86ff02fae738a/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/res/merged/release/drawable/notification_bg.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/11c14cbe859561c773b86ff02fae738a/res/drawable/notification_bg.xml"
+    }
+]

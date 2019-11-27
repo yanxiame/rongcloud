@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/res/merged/release/layout/notification_template_icon_group.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/11c14cbe859561c773b86ff02fae738a/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/res/merged/release/layout/notification_action.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/11c14cbe859561c773b86ff02fae738a/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/res/merged/release/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/11c14cbe859561c773b86ff02fae738a/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/res/merged/release/layout/notification_action_tombstone.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/11c14cbe859561c773b86ff02fae738a/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/res/merged/release/layout/notification_template_part_time.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/11c14cbe859561c773b86ff02fae738a/res/layout/notification_template_part_time.xml"
+    }
+]

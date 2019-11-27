@@ -13,6 +13,7 @@ import java.util.Set;
 
 import cn.sa.im.ui.Listener.MyConversationClickListener;
 import cn.sa.im.ui.Listener.MyConversationListBehaviorListener;
+import cn.sa.im.ui.apadper.PrivateConversationProviderEx;
 import cn.sa.im.ui.widget.GifMessagesaItemProvider;
 import cn.sa.im.ui.widget.RceRecallMessageItemProvider;
 import cn.sa.im.ui.widget.plugin.ApkExtensionModule;
@@ -60,9 +61,10 @@ public class App extends Application {
         RongIM.registerMessageTemplate(new RceRecallMessageItemProvider());
         RongIM.registerMessageTemplate(new ContactNotificationMessageProvider());
         RongIM.registerMessageTemplate(new GifMessagesaItemProvider());
+        RongIM.getInstance().registerConversationTemplate(new PrivateConversationProviderEx());
         RongIM.registerMessageType(ApkMessage.class);
         RongIM.registerMessageType(InsertMessage.class);
-·
+
         //小视频
         RongExtensionManager.getInstance().registerExtensionModule(new SightExtensionModule());
         //RongExtensionManager.getInstance().registerExtensionModule(new RCSCallModule());

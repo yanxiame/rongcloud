@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/res/merged/release/values-en/values-en.xml",
+            "map": [
+                {
+                    "source": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/res/values-en/rc_lib_string.xml",
+                    "from": {
+                        "startLines": "4,5,11,9,10,7,3",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "132,205,577,374,465,294,56",
+                        "endColumns": "72,87,69,90,111,78,75",
+                        "endOffsets": "200,288,642,460,572,368,127"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,128,216,286,362,454,533",
+                        "endColumns": "72,87,69,75,91,78,75",
+                        "endOffsets": "123,211,281,357,449,528,604"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-en/values-en.xml",
+            "map": [
+                {
+                    "source": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/res/values-en/rc_lib_string.xml",
+                    "from": {
+                        "startLines": "4,5,11,9,10,7,3",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "132,205,577,374,465,294,56",
+                        "endColumns": "72,87,69,90,111,78,75",
+                        "endOffsets": "200,288,642,460,572,368,127"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,128,216,286,362,454,533",
+                        "endColumns": "72,87,69,75,91,78,75",
+                        "endOffsets": "123,211,281,357,449,528,604"
+                    }
+                }
+            ]
+        }
+    ]
+}

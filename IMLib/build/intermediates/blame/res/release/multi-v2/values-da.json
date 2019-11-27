@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/res/merged/release/values-da/values-da.xml",
+            "map": [
+                {
+                    "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/11c14cbe859561c773b86ff02fae738a/res/values-da/values-da.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/sa/AndroidStudioProjects/rongcloud/IMLib/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-da/values-da.xml",
+            "map": [
+                {
+                    "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/11c14cbe859561c773b86ff02fae738a/res/values-da/values-da.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="rc_reconnect_interval">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>32</item>
+        <item>64</item>
+        <item>128</item>
+        <item>256</item>
+        <item>512</item>
+    </integer-array>
+    <bool name="rc_extension_history">false</bool>
+    <bool name="rc_typing_status">false</bool>
+    <color name="notification_action_color_filter">#ffffffff</color>
+    <color name="notification_icon_bg_color">#ff9e9e9e</color>
+    <color name="ripple_material_light">#1f000000</color>
+    <color name="secondary_text_default_material_light">#8a000000</color>
+    <dimen name="compat_button_inset_horizontal_material">4dp</dimen>
+    <dimen name="compat_button_inset_vertical_material">6dp</dimen>
+    <dimen name="compat_button_padding_horizontal_material">8dp</dimen>
+    <dimen name="compat_button_padding_vertical_material">4dp</dimen>
+    <dimen name="compat_control_corner_material">2dp</dimen>
+    <dimen name="notification_action_icon_size">32dp</dimen>
+    <dimen name="notification_action_text_size">13sp</dimen>
+    <dimen name="notification_big_circle_margin">12dp</dimen>
+    <dimen name="notification_content_margin_start">8dp</dimen>
+    <dimen name="notification_large_icon_height">64dp</dimen>
+    <dimen name="notification_large_icon_width">64dp</dimen>
+    <dimen name="notification_main_column_padding_top">10dp</dimen>
+    <dimen name="notification_media_narrow_margin">@dimen/notification_content_margin_start</dimen>
+    <dimen name="notification_right_icon_size">16dp</dimen>
+    <dimen name="notification_right_side_padding_top">2dp</dimen>
+    <dimen name="notification_small_icon_background_padding">3dp</dimen>
+    <dimen name="notification_small_icon_size_as_large">24dp</dimen>
+    <dimen name="notification_subtext_size">13sp</dimen>
+    <dimen name="notification_top_pad">10dp</dimen>
+    <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
+    <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
+    <item name="line1" type="id"/>
+    <item name="line3" type="id"/>
+    <item name="text" type="id"/>
+    <item name="text2" type="id"/>
+    <item name="title" type="id"/>
+    <integer name="rc_image_quality">85</integer>
+    <integer name="rc_image_size">1080</integer>
+    <integer name="rc_max_original_image_size">200</integer>
+    <integer name="rc_resume_file_transfer_size_each_slice">1048576</integer>
+    <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="push_heartbeat_timer">240000</string>
+    <string name="rc_heartbeat_timer">150000</string>
+    <string name="rc_init_failed">连接客服失败</string>
+    <string name="rc_location_sharing_ended">位置共享已结束</string>
+    <string name="rc_media_message_default_save_path">/RongCloud/Media/</string>
+    <string name="rc_notification_channel_name">新消息</string>
+    <string name="rc_notification_new_msg">%1$s发来了%2$d条消息</string>
+    <string name="rc_notification_new_plural_msg">%1$d个联系人发来了%2$d条消息</string>
+    <string name="rc_notification_ticker_text">您有了一条新消息</string>
+    <string name="rc_quit_custom_service">客服已结束</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <style name="TextAppearance.Compat.Notification" parent="@android:style/TextAppearance.StatusBar.EventContent"/>
+    <style name="TextAppearance.Compat.Notification.Info">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Line2" parent="TextAppearance.Compat.Notification.Info"/>
+    <style name="TextAppearance.Compat.Notification.Time">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title"/>
+    <style name="Widget.Compat.NotificationActionContainer" parent=""/>
+    <style name="Widget.Compat.NotificationActionText" parent=""/>
+    <declare-styleable name="FontFamily"><attr format="string" name="fontProviderAuthority"/><attr format="string" name="fontProviderPackage"/><attr format="string" name="fontProviderQuery"/><attr format="reference" name="fontProviderCerts"/><attr name="fontProviderFetchStrategy">
+            
+            <enum name="blocking" value="0"/>
+            
+            <enum name="async" value="1"/>
+        </attr><attr format="integer" name="fontProviderFetchTimeout">
+          
+            <enum name="forever" value="-1"/>
+        </attr></declare-styleable>
+    <declare-styleable name="FontFamilyFont"><attr name="fontStyle">
+            <enum name="normal" value="0"/>
+            <enum name="italic" value="1"/>
+        </attr><attr format="reference" name="font"/><attr format="integer" name="fontWeight"/></declare-styleable>
+</resources>

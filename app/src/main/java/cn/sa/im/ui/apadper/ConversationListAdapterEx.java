@@ -35,6 +35,8 @@ public class ConversationListAdapterEx extends ConversationListAdapter {
             if (data.getConversationType().equals(Conversation.ConversationType.DISCUSSION))
                 data.setUnreadType(UIConversation.UnreadRemindType.REMIND_ONLY);
         }
+        final ViewHolder holder = (ViewHolder) v.getTag();
         super.bindView(v, position, data);
+        holder.leftImageView.setVisibility(View.GONE);
     }
 }

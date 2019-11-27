@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/Sight/build/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/377a0620211433f079ba723d06e1df65/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/Sight/build/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/377a0620211433f079ba723d06e1df65/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/Sight/build/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/377a0620211433f079ba723d06e1df65/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/sa/AndroidStudioProjects/rongcloud/Sight/build/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/Users/sa/.gradle/caches/transforms-2/files-2.1/377a0620211433f079ba723d06e1df65/res/layout-v21/notification_action.xml"
+    }
+]
