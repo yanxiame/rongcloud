@@ -61,7 +61,8 @@ public class App extends Application {
         RongIM.registerMessageTemplate(new RceRecallMessageItemProvider());
         RongIM.registerMessageTemplate(new ContactNotificationMessageProvider());
         RongIM.registerMessageTemplate(new GifMessagesaItemProvider());
-        RongIM.getInstance().registerConversationTemplate(new PrivateConversationProviderEx());
+        //用来隐藏部分控件自定义 base cell
+        //RongIM.getInstance().registerConversationTemplate(new PrivateConversationProviderEx());
         RongIM.registerMessageType(ApkMessage.class);
         RongIM.registerMessageType(InsertMessage.class);
 
