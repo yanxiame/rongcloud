@@ -36,12 +36,12 @@ public class ApkPlugin implements IPluginModule {
 
     @Override
     public void onClick(final Fragment fragment, RongExtension rongExtension) {
-        Toast.makeText(rongExtension.getContext(),"发送一条自定义消息",Toast.LENGTH_LONG).show();
-        final cn.sa.im.ui.widget.plugin.ApkMessage apkMessage =new cn.sa.im.ui.widget.plugin.ApkMessage();
+        Toast.makeText(rongExtension.getContext(), "发送一条自定义消息", Toast.LENGTH_LONG).show();
+        final cn.sa.im.ui.widget.plugin.ApkMessage apkMessage = new cn.sa.im.ui.widget.plugin.ApkMessage();
         apkMessage.setUserName("$111");
         apkMessage.setPhoneNum("转账给您");
-        apkMessage.setExtra("1");
-        Message message = Message.obtain(rongExtension.getTargetId(), rongExtension.getConversationType(),apkMessage);
+        apkMessage.setExtra("noopen");
+        Message message = Message.obtain(rongExtension.getTargetId(), rongExtension.getConversationType(), apkMessage);
         RongIM.getInstance().sendMessage(message, null, null, new IRongCallback.ISendMessageCallback() {
 
             @Override
@@ -51,20 +51,18 @@ public class ApkPlugin implements IPluginModule {
 
             @Override
             public void onSuccess(Message message) {
-                Log.i("TAG",message.getMessageId()+"!!!");
+
             }
 
             @Override
             public void onError(Message message, RongIMClient.ErrorCode errorCode) {
-                Log.i("TAG!!!",message.getContent()+"!"+errorCode.getMessage());
+
             }
         });
     }
 
     @Override
     public void onActivityResult(int i, int i1, Intent intent) {
-
-        Log.i("TAG","1asdf");
 
     }
 }

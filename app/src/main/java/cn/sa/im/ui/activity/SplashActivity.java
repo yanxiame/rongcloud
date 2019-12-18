@@ -42,9 +42,10 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
         context = this;
         SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
+        // 100//03
         connect("rbdI/5jrPxR4aQ2078HhWnHte7+VrAhsnSjOcYQ3SKOCXhodQlcZYZ5acv4syCtN0dsYRNvxZh44fo4VR5s+6A==");
-        //rtcu007
-        //connect("LWJRaOwl9//xX9RmkGGklbI6ZiT8q7s0UEaMPWY0lMzMWM3CRr9xPA2i+mjhFj7YQuWtiVix91mNyJRQHFdC7+RNKy+58WBU");
+        // 10001
+        //connect("+VAPKwjohQJE5j+JmWoCpqjdNQ7jV7Tda5q1yXzTGPqisWGGbu4ob5ffRbks897yWL4Qampgam58QvKrJgYtmQ==");
     }
 
     private boolean isNetworkConnected(Context context) {

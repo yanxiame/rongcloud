@@ -86,7 +86,7 @@ public class App extends Application {
         RongIM.getInstance().addUnReadMessageCountChangedObserver(new IUnReadMessageObserver() {
             @Override
             public void onCountChanged(int i) {
-                Log.i("TAG","!!!!"+i);
+
             }
         }, Conversation.ConversationType.PRIVATE);
         RongIM.setOnReceiveMessageListener(new RongIMClient.OnReceiveMessageListener() {
@@ -101,7 +101,7 @@ public class App extends Application {
                     Log.i("TAG", "11");
                     return true;
                 }
-                Log.i("TAG", "111111");
+
                 if (message.getContent() instanceof InformationNotificationMessage) {
                     int[] nums2 = new int[message.getMessageId()];
                     RongIM.getInstance().deleteMessages(nums2, new RongIMClient.ResultCallback<Boolean>() {

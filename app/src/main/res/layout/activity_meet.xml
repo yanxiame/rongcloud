@@ -104,7 +104,7 @@
                 android:layout_marginRight="30dip"
                 android:layout_marginTop="34dip"
                 android:background="@color/rc_ext_root_menu_item_text_color"
-                android:text="1天内未确认，将退还。"
+                android:text="仅供参考"
                 android:gravity="center"
                 android:textColor="#FFFFFF" />
 

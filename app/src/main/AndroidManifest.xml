@@ -288,7 +288,15 @@
                         android:scheme="rong" />
                 </intent-filter>
             </activity>
-        <activity android:name=".ui.activity.MeetActivity"/>
+        <activity android:name=".ui.activity.MeetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="cn.sa.im.intent.action.openmeet" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ui.activity.UserDetailActivity"/>
         <!--会话列表-->
         <activity

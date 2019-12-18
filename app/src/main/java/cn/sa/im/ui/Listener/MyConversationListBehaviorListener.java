@@ -15,6 +15,7 @@ import io.rong.imkit.model.UIConversation;
 import io.rong.imkit.utilities.OptionsPopupDialog;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
+import io.rong.imlib.model.Message;
 import io.rong.message.TextMessage;
 
 public class MyConversationListBehaviorListener implements RongIM.ConversationListBehaviorListener {
@@ -33,7 +34,7 @@ public class MyConversationListBehaviorListener implements RongIM.ConversationLi
 
     @Override
     public boolean onConversationLongClick(final Context context, View view, final UIConversation uiConversation) {
-        String[] items = new String[]{view.getContext().getResources().getString(R.string.rc_dialog_item_message_delete)};
+        String[] items = new String[]{view.getContext().getResources().getString(R.string.rc_dialog_item_message_delete),"标记未读"};
         /**
          * newInstance() 初始化OptionsPopupDialog
          * @param items弹出菜单功能选项
@@ -69,6 +70,22 @@ public class MyConversationListBehaviorListener implements RongIM.ConversationLi
 
                         }
                     });
+                } else if(which == 1){
+                    final Message.ReceivedStatus receivedStatus=new Message.ReceivedStatus(0);
+                    RongIMClient.getInstance().getMessage(uiConversation.getLatestMessageId(), new RongIMClient.ResultCallback<Message>() {
+                        @Override
+                        public void onSuccess(Message message) {
+
+                            message.setReceivedStatus(receivedStatus);
+                        }
+
+                        @Override
+                        public void onError(RongIMClient.ErrorCode errorCode) {
+
+                        }
+                    });
+
+                    RongIMClient.getInstance().setMessageReceivedStatus(uiConversation.getLatestMessageId(), receivedStatus,null);
                 }
             }
         }).show();

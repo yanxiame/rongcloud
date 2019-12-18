@@ -1,9 +1,6 @@
 package cn.sa.im.ui.widget.plugin;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
-import android.net.Uri;
 import android.text.Spannable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,23 +10,22 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import cn.sa.im.R;
-import cn.sa.im.ui.activity.MeetActivity;
 import io.rong.imkit.RongContext;
 import io.rong.imkit.RongIM;
-import io.rong.imkit.RongKitIntent;
 import io.rong.imkit.model.ProviderTag;
 import io.rong.imkit.model.UIMessage;
 import io.rong.imkit.widget.provider.IContainerItemProvider;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Message;
 
+
 @ProviderTag(
-        messageContent = ApkMessage.class,
+        messageContent = RedPacketOpenedMessage.class,
         showReadState = true
 )
-public class ApkItemProvider extends IContainerItemProvider.MessageProvider<ApkMessage> {
+public class RedPacketOpendMessageItemProvider extends IContainerItemProvider.MessageProvider<ApkMessage> {
 
-    public ApkItemProvider() {
+    public RedPacketOpendMessageItemProvider() {
     }
 
     @Override
@@ -37,7 +33,7 @@ public class ApkItemProvider extends IContainerItemProvider.MessageProvider<ApkM
         //这就是展示在会话界面的自定义的消息的布局
         View view = LayoutInflater.from(context).inflate(R.layout.item_apk_message, null);
         ViewHolder holder = new ViewHolder();
-        holder.trans_bg = (RelativeLayout) view.findViewById(R.id.rl_trans_bg);
+        holder.trans_bg= (RelativeLayout) view.findViewById(R.id.rl_trans_bg);
         holder.tvTitle = (TextView) view.findViewById(R.id.tv_trans_tip);
         holder.tvStoreName = (TextView) view.findViewById(R.id.tv_trans_money);
         view.setTag(holder);
@@ -55,22 +51,22 @@ public class ApkItemProvider extends IContainerItemProvider.MessageProvider<ApkM
         } else {
             holder.trans_bg.setBackgroundResource(R.drawable.jrmf_trans_bg_from);
         }
-        Log.i("TAG", apkMessage.getExtra() + "}}}}}}");
-        Log.i("TAG", message.getExtra() + "@@@@@@@");
-        Log.i("TAG", message.getMessage().getExtra() + "#######");
+        Log.i("TAG",""+message.getMessageId()+"{{{{{");
+        Log.i("TAG",apkMessage.getExtra()+"}}}}}}");
+        Log.i("TAG",message.getExtra()+"@@@@@@@");
 
-//        if (message.getExtra() != null && !message.getExtra().equals("")) {
-//            if ("isopen".equals(message.getExtra()) || apkMessage.getIsReceived() == 1) {
-//                holder.tvTitle.setText("¥1.00");
-//                holder.tvStoreName.setText("已经领取");
-//            } else {
-//                holder.tvTitle.setText("¥1.00");
-//                holder.tvStoreName.setText("未领取");
-//            }
-//        } else {
-//            holder.tvTitle.setText("¥1.00");
-//            holder.tvStoreName.setText("转账给你");
-//        }
+        if(message.getExtra()!=null&&!message.getExtra().equals("")) {
+            if ("isopen".equals(message.getExtra())) {
+                holder.tvTitle.setText("¥1.00");
+                holder.tvStoreName.setText("转账给你");
+            } else {
+                holder.tvTitle.setText("¥1.00");
+                holder.tvStoreName.setText("转账给你");
+            }
+        }else{
+            holder.tvTitle.setText("¥1.00");
+            holder.tvStoreName.setText("转账给你");
+        }
 
     }
 
@@ -81,15 +77,11 @@ public class ApkItemProvider extends IContainerItemProvider.MessageProvider<ApkM
 
     @Override
     public void onItemClick(View view, int i, ApkMessage redPackageMessage, UIMessage uiMessage) {
-        Intent intent = new Intent("cn.sa.im.intent.action.openmeet");
-        intent.setPackage(view.getContext().getPackageName());
-        intent.putExtra("isopen", redPackageMessage.getExtra());
-        intent.putExtra("direction", uiMessage.getMessageDirection().getValue());
-        intent.putExtra("conversationtype", uiMessage.getConversationType());
-        intent.putExtra("targid", uiMessage.getTargetId());
-        intent.putExtra("sendid", uiMessage.getSenderUserId());
-        intent.putExtra("uimessage", uiMessage.getMessage());
-        view.getContext().startActivity(intent);
+        RongIM.getInstance().sendDirectionalMessage(uiMessage.getConversationType(),uiMessage.getTargetId(),redPackageMessage,new String[]{uiMessage.getSenderUserId()},"","",null);
+
+        uiMessage.setExtra("isopen");
+        RongIMClient.getInstance().setMessageExtra(uiMessage.getMessageId(), "isopen", null);
+        RongContext.getInstance().getEventBus().post(uiMessage);
     }
 
     @Override

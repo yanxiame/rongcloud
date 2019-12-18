@@ -17,6 +17,6 @@ public class MessageListAdapterEx extends MessageListAdapter {
         super.bindView(v, position, data);
         //holder.nameView.setVisibility(View.GONE);
         //holder.leftIconView.setVisibility(View.GONE);
-        holder.rightIconView.setVisibility(View.GONE);
+        //holder.rightIconView.setVisibility(View.GONE);
     }
 }
