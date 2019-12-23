@@ -22,10 +22,13 @@ import cn.sa.im.ui.apadper.MessageListAdapterEx;
 import io.rong.common.RLog;
 import io.rong.imkit.RongExtension;
 import io.rong.imkit.RongIM;
+import io.rong.imkit.RongMessageItemLongClickActionManager;
 import io.rong.imkit.fragment.ConversationFragment;
 import io.rong.imkit.fragment.IHistoryDataResultCallback;
+import io.rong.imkit.model.UIMessage;
 import io.rong.imkit.widget.AutoRefreshListView;
 import io.rong.imkit.widget.adapter.MessageListAdapter;
+import io.rong.imkit.widget.provider.MessageItemLongClickAction;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.Message;
@@ -42,6 +45,7 @@ public class ConversationSaFragment extends ConversationFragment {
     private RongExtension mRongExtension;
     private String mTargetId;
     private Conversation.ConversationType mConversationType;
+    private MessageItemLongClickAction messageItemLongClickAction;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -58,6 +62,19 @@ public class ConversationSaFragment extends ConversationFragment {
         super.onViewCreated(view, savedInstanceState);
         //View s=view.findViewById(R.id.rc_layout_msg_list);
         //s.setBackground(getResources().getDrawable(R.drawable.bg_conversation));
+
+        messageItemLongClickAction = new MessageItemLongClickAction.Builder()
+                .title("收藏")
+                .actionListener(new MessageItemLongClickAction.MessageItemLongClickListener() {
+                    @Override
+                    public boolean onMessageItemLongClick(Context context, UIMessage message) {
+                        Log.i("TAG","asdf");
+                        return true;
+                    }
+                }).build();
+        RongMessageItemLongClickActionManager.getInstance().addMessageItemLongClickAction(messageItemLongClickAction);
+
+
     }
     @Override
     protected void initFragment(Uri uri) {
@@ -99,6 +116,13 @@ public class ConversationSaFragment extends ConversationFragment {
 
             }
         });
+    }
+    @Override
+    public void onDestroy() {
+        RongMessageItemLongClickActionManager
+                .getInstance().removeMessageItemLongClickAction(messageItemLongClickAction);
+
+        super.onDestroy();
     }
 }
 
