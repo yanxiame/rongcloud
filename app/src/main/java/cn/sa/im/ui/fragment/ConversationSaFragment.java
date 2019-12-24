@@ -117,6 +117,12 @@ public class ConversationSaFragment extends ConversationFragment {
             }
         });
     }
+
+    @Override
+    public boolean showMoreClickItem() {
+        return true;
+    }
+
     @Override
     public void onDestroy() {
         RongMessageItemLongClickActionManager

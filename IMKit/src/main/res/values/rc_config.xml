@@ -73,6 +73,6 @@
     <integer name="rc_max_message_selected_count">100</integer>
 
     <!--是否开启合并转发功能,默认关闭 -->
-    <bool name="rc_enable_send_combine_message">false</bool>
+    <bool name="rc_enable_send_combine_message">true</bool>
 
 </resources>
