@@ -528,10 +528,10 @@
     <bool name="rc_is_show_warning_notification">true</bool>
     <bool name="rc_location_2D">false</bool>
     <bool name="rc_media_selector_contain_video">false</bool>
-    <bool name="rc_open_destruct_plugin">false</bool>
+    <bool name="rc_open_destruct_plugin">true</bool>
     <bool name="rc_open_https_certificate">false</bool>
     <bool name="rc_play_audio_continuous">true</bool>
-    <bool name="rc_read_receipt">false</bool>
+    <bool name="rc_read_receipt">true</bool>
     <bool name="rc_set_java_script_enabled">false</bool>
     <bool name="rc_stop_custom_service_when_quit">true</bool>
     <bool name="rc_wipe_out_notification_message">true</bool>
@@ -562,6 +562,8 @@
     <color name="rc_map_list_text_color">#262626</color>
     <color name="rc_map_list_text_grey_color">#939393</color>
     <color name="rc_map_search_highlight_color">#0099ff</color>
+    <color name="rc_map_send_enabled">#FFFFFFFF</color>
+    <color name="rc_map_send_not_enabled">#80FFFFFF</color>
     <color name="rc_mentioned_color">#cc3333</color>
     <color name="rc_message_user_name">#828282</color>
     <color name="rc_new_message_divider_text_color">#B2B2B2</color>
@@ -1096,7 +1098,7 @@
     <string name="rc_pub_service_info_follow">关注</string>
     <string name="rc_pub_service_info_unfollow">取消关注</string>
     <string name="rc_read_all">阅读全文</string>
-    <string name="rc_read_receipt_status">%d人已读</string>
+    <string name="rc_read_receipt_status">%d 人已读</string>
     <string name="rc_real_time_exit_notification">离开会话，位置共享也会结束，确定离开？</string>
     <string name="rc_real_time_join_notification">加入位置共享，聊天中其他人也能看到你的位置，确定加入？</string>
     <string name="rc_real_time_location_sharing">发起了位置共享</string>
@@ -1280,6 +1282,10 @@
     </declare-styleable>
     <declare-styleable name="AutoLinkTextView">
         <attr format="dimension" name="RCMaxWidth"/>
+    </declare-styleable>
+    <declare-styleable name="EllipsizeTextView">
+        <attr format="string|reference" name="RCEllipsizeText"/>
+        <attr format="integer|reference" name="RCEllipsizeIndex"/>
     </declare-styleable>
     <declare-styleable name="RongExtension">
         <attr name="RCStyle">

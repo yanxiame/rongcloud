@@ -37,7 +37,7 @@
     <bool name="rc_enable_mentioned_message">false</bool>
 
     <!-- 设置已读回执，目前仅支持单聊、群聊、讨论组 -->
-    <bool name="rc_read_receipt">false</bool>
+    <bool name="rc_read_receipt">true</bool>
 
     <!-- 设置已读回执有效时间（单位：秒）-->
     <integer name="rc_read_receipt_request_interval">120</integer>
@@ -67,7 +67,7 @@
     <integer name="rc_gifmsg_auto_download_size">1024</integer>
 
     <!--是否启用阅后即焚插件-->
-    <bool name="rc_open_destruct_plugin">false</bool>
+    <bool name="rc_open_destruct_plugin">true</bool>
 
     <!--多选时,最大多选消息数 -->
     <integer name="rc_max_message_selected_count">100</integer>

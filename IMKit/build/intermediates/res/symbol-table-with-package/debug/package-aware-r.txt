@@ -18,6 +18,8 @@ array rc_video_file_suffix
 array rc_word_file_suffix
 attr RCCornerRadius
 attr RCDefDrawable
+attr RCEllipsizeIndex
+attr RCEllipsizeText
 attr RCMask
 attr RCMaxWidth
 attr RCMinShortSideSize
@@ -54,6 +56,7 @@ bool rc_media_selector_contain_video
 bool rc_open_destruct_plugin
 bool rc_open_https_certificate
 bool rc_play_audio_continuous
+bool rc_q_storage_mode_enable
 bool rc_read_receipt
 bool rc_set_java_script_enabled
 bool rc_stop_custom_service_when_quit
@@ -91,6 +94,8 @@ color rc_map_list_divider_color
 color rc_map_list_text_color
 color rc_map_list_text_grey_color
 color rc_map_search_highlight_color
+color rc_map_send_enabled
+color rc_map_send_not_enabled
 color rc_mentioned_color
 color rc_message_user_name
 color rc_new_message_divider_text_color
@@ -1722,6 +1727,7 @@ styleable AsyncImageView RCCornerRadius RCDefDrawable RCMask RCMinShortSideSize 
 styleable AutoLinkTextView RCMaxWidth
 styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
+styleable EllipsizeTextView RCEllipsizeIndex RCEllipsizeText
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontStyle android_fontWeight font fontStyle fontWeight
 styleable RongExtension RCStyle

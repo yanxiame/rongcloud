@@ -21,12 +21,11 @@
 
         <service
             android:name="io.rong.imlib.ipc.RongService"
-            android:exported="true"
             android:process=":ipc" />
 
         <receiver
             android:name="io.rong.imlib.ConnectChangeReceiver"
-            android:exported="true" />
+            />
 
         <receiver
             android:name="io.rong.imlib.HeartbeatReceiver"

@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         navigation.setSelectedItemId(R.id.navigation_home);
         ManFragment = new ConversationListManFragment();
         WomanFragment =new ConversationListWoManFragment();
+
         RongIM.getInstance().joinChatRoom("1", 0, new RongIMClient.OperationCallback() {
             @Override
             public void onSuccess() {
@@ -177,7 +178,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     class ViewPagerAdapter extends FragmentPagerAdapter {
 
 
-        private Fragment[] mFragments = new Fragment[]{ManFragment, new ContactsFragment(), WomanFragment};
+        private Fragment[] mFragments = new Fragment[]{ManFragment, new ConversationListFragment(), WomanFragment};
 
         public ViewPagerAdapter(FragmentManager fm) {
             super(fm);

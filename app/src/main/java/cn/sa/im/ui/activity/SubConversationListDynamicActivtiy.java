@@ -14,8 +14,6 @@ public class SubConversationListDynamicActivtiy extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rong_activity);
-
-
         SubConversationListFragment fragment = new SubConversationListFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(R.id.rong_content, fragment);

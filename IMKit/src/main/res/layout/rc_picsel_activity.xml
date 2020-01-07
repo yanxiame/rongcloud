@@ -43,6 +43,7 @@
             android:paddingRight="10dp"
             android:text="@string/rc_picsel_toolbar_send"
             android:textColor="@color/rc_picsel_toolbar_send_text_disable"
+            android:textAllCaps="false"
             android:textSize="14sp"/>
     </RelativeLayout>
 

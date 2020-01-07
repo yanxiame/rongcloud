@@ -43,7 +43,8 @@ public class SplashActivity extends Activity {
         context = this;
         SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
         // 100//03
-        connect("rbdI/5jrPxR4aQ2078HhWnHte7+VrAhsnSjOcYQ3SKOCXhodQlcZYZ5acv4syCtN0dsYRNvxZh44fo4VR5s+6A==");
+
+        connect("oZVuqdxgIyW2eUK7hxQ0tsrMNEyN+h+wlok4YiygdnNPOT8i5qL6sLEU8u1f2uzEIZXkMGOtuvPFgjmQ66AIFA==");
         // 10001
         //connect("+VAPKwjohQJE5j+JmWoCpqjdNQ7jV7Tda5q1yXzTGPqisWGGbu4ob5ffRbks897yWL4Qampgam58QvKrJgYtmQ==");
     }
@@ -108,6 +109,7 @@ public class SplashActivity extends Activity {
                                 return null;
                             }
                         },true);
+
                         RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
                             @Override
                             public UserInfo getUserInfo(String s) {

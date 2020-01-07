@@ -55,6 +55,7 @@
             android:layout_gravity="right|center_vertical"
             android:background="@android:color/transparent"
             android:paddingRight="10dp"
+            android:textAllCaps="false"
             android:text="@string/rc_action_bar_ok"
             android:textColor="#ffffff"
             android:textSize="18sp"

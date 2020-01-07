@@ -11,6 +11,7 @@ attr fontStyle
 attr fontWeight
 bool abc_action_bar_embed_tabs
 bool rc_extension_history
+bool rc_q_storage_mode_enable
 bool rc_typing_status
 color notification_action_color_filter
 color notification_icon_bg_color

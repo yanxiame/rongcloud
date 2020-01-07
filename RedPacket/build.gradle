@@ -37,3 +37,4 @@ dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     api 'com.google.code.gson:gson:2.8.1'
 }
+//apply from: './bintray.gradle'

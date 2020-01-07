@@ -333,8 +333,6 @@
                     android:scheme="rong" />
             </intent-filter>
         </activity>
-
-
         <!--会话页面-->
         <activity
             android:name=".ui.activity.ConversationDynamicActivity"

@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 19
-        versionCode 2019102520
-        versionName "2.10.0 release"
+        versionCode 2019121814
+        versionName "2.10.2 release"
     }
     buildTypes {
         release {
@@ -55,3 +55,4 @@ task clearJar(type: Delete) {
 }
 
 makeJar.dependsOn(clearJar, build)
+//apply from: './bintray.gradle'

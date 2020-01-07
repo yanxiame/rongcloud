@@ -17,4 +17,9 @@
     <declare-styleable name="AutoLinkTextView">
         <attr name="RCMaxWidth" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="EllipsizeTextView">
+        <attr name="RCEllipsizeText" format="string|reference" />
+        <attr name="RCEllipsizeIndex" format="integer|reference" />
+    </declare-styleable>
 </resources>

@@ -1,8 +1,11 @@
 package cn.sa.im.ui.fragment;
 
 import android.content.Context;
+import android.net.Uri;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -13,12 +16,21 @@ import cn.sa.im.R;
 import cn.sa.im.ui.apadper.ConversationListAdapterEx;
 import io.rong.imkit.fragment.ConversationListFragment;
 import io.rong.imkit.fragment.IHistoryDataResultCallback;
+import io.rong.imkit.model.UIConversation;
 import io.rong.imkit.widget.adapter.ConversationListAdapter;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 
 public class ConversationListManFragment extends ConversationListFragment {
 
+    @Override
+    protected void initFragment(Uri uri) {
+        super.initFragment(uri);
+        Log.i("TAG",uri.toString());
+        if(uri.toString().contains("subconversationlist")){
+            Log.i("TAG","111113243");
+        }
+    }
 
     @Override
     protected List<View> onAddHeaderView() {
@@ -36,4 +48,25 @@ public class ConversationListManFragment extends ConversationListFragment {
         return new ConversationListAdapterEx(context);
     }
 
+    @Override
+    public boolean onPortraitItemLongClick(View v, UIConversation data) {
+        Log.i("TAG","onPortraitItemLongClick");
+        return super.onPortraitItemLongClick(v, data);
+    }
+
+    @Override
+    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+        Log.i("TAG","onItemLongClick");
+        return super.onItemLongClick(parent, view, position, id);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        UIConversation conversation= (UIConversation) parent.getAdapter().getItem(position);
+        Log.i("TAG","onItemClick");
+        if(conversation.getConversationGatherState()){
+            //做您的需求。
+        }
+        super.onItemClick(parent, view, position, id);
+    }
 }

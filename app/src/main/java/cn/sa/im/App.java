@@ -16,6 +16,7 @@ import cn.sa.im.ui.Listener.MyConversationListBehaviorListener;
 import cn.sa.im.ui.apadper.PrivateConversationProviderEx;
 import cn.sa.im.ui.widget.GifMessagesaItemProvider;
 import cn.sa.im.ui.widget.RceRecallMessageItemProvider;
+import cn.sa.im.ui.widget.TextMessagesaItemProvider;
 import cn.sa.im.ui.widget.plugin.ApkExtensionModule;
 import cn.sa.im.ui.widget.plugin.ApkItemProvider;
 import cn.sa.im.ui.widget.plugin.ApkMessage;
@@ -52,8 +53,8 @@ public class App extends Application {
 
         RongPushClient.setPushConfig(config);
         //RongIM.setServerInfo("navsg01.cn.ronghub.com","");
-        //RongIM.init(this,"z3v5yqkbv8v30");
-        RongIM.init(this,"pvxdm17jpof6r");
+        RongIM.init(this,"bmdehs6pbg8as");
+        //RongIM.init(this,"pvxdm17jpof6r");
 
         //自定义消息
         RongIM.registerMessageTemplate(new ApkItemProvider());
@@ -61,6 +62,7 @@ public class App extends Application {
         RongIM.registerMessageTemplate(new RceRecallMessageItemProvider());
         RongIM.registerMessageTemplate(new ContactNotificationMessageProvider());
         RongIM.registerMessageTemplate(new GifMessagesaItemProvider());
+        RongIM.registerMessageTemplate(new TextMessagesaItemProvider());
         //用来隐藏部分控件自定义 base cell
         //RongIM.getInstance().registerConversationTemplate(new PrivateConversationProviderEx());
         RongIM.registerMessageType(ApkMessage.class);
@@ -93,8 +95,7 @@ public class App extends Application {
             @Override
             public boolean onReceived(Message message, int i) {
                 if(message.getContent() instanceof ImageMessage){
-                    ImageMessage imageMessage= (ImageMessage) message.getContent();
-
+                    Log.i("TAG",message.toString());
                 }
 
                 if (message.getSenderUserId().equals("10003")) {

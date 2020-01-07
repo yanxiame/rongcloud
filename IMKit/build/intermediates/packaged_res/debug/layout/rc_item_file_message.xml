@@ -42,17 +42,18 @@
 
             <RelativeLayout
                 android:layout_width="147dp"
-                android:layout_height="52dp">
+                android:layout_height="52dp"
+                android:layout_gravity="center_vertical">
 
-                <TextView
+                <io.rong.imkit.widget.EllipsizeTextView
                     android:id="@+id/rc_msg_tv_file_name"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_gravity="top"
-                    android:ellipsize="middle"
+                    android:maxLines="2"
+                    app:RCEllipsizeIndex="8"
                     android:gravity="top"
-                    android:singleLine="true"
+                    android:layout_marginTop="-3dp"
                     android:textColor="#343434"
                     android:textSize="16sp" />
 
@@ -63,6 +64,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_gravity="bottom"
                     android:gravity="bottom"
+                    android:layout_marginBottom="-2dp"
                     android:text="149kb"
                     android:textColor="#a8a8a8"
                     android:textSize="12sp" />
@@ -74,6 +76,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="10dp"
+                    android:layout_marginBottom="-2dp"
                     android:text="已取消"
                     android:textColor="#a8a8a8"
                     android:textSize="12sp"
