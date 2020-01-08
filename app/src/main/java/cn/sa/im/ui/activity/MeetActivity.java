@@ -36,8 +36,7 @@ public class MeetActivity extends Activity {
                 public void onClick(View v) {
                     final cn.sa.im.ui.widget.plugin.ApkMessage apkMessage = new cn.sa.im.ui.widget.plugin.ApkMessage();
                     apkMessage.setUserName("$111");
-                    apkMessage.setPhoneNum("转账给--");
-                    apkMessage.setIsReceived(1);
+                    apkMessage.setPhoneNum("已经领取");
                     apkMessage.setExtra("isopen");
                     RongIM.getInstance().sendDirectionalMessage(Conversation.ConversationType.setValue(intent.getIntExtra("conversation", 1)), intent.getStringExtra("targid"), apkMessage, new String[]{intent.getStringExtra("sendid")}, "", "", null);
                     uiMessage.setExtra("isopen");

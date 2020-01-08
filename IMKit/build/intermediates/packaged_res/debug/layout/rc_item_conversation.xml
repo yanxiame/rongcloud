@@ -74,7 +74,8 @@
         <FrameLayout
             android:id="@+id/rc_unread_view_right"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
 
             <ImageView
                 android:id="@+id/rc_unread_message_icon_right"
@@ -91,7 +92,23 @@
         </FrameLayout>
 
     </FrameLayout>
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_conversation_check"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:visibility="visible">-->
 
+        <!--<CheckBox-->
+            <!--android:id="@+id/message_check"-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:background="@drawable/rc_message_checkbox"-->
+            <!--android:button="@null" />-->
+    <!--</LinearLayout>-->
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"

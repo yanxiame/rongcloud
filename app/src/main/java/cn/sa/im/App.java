@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.net.Uri;
 import android.os.health.SystemHealthManager;
+import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ import io.rong.push.notification.PushNotificationMessage;
 import io.rong.push.pushconfig.PushConfig;
 import io.rong.sight.SightExtensionModule;
 
-public class App extends Application {
+public class App extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
@@ -53,8 +54,8 @@ public class App extends Application {
 
         RongPushClient.setPushConfig(config);
         //RongIM.setServerInfo("navsg01.cn.ronghub.com","");
-        RongIM.init(this,"bmdehs6pbg8as");
-        //RongIM.init(this,"pvxdm17jpof6r");
+        //RongIM.init(this,"bmdehs6pbg8as");
+        RongIM.init(this,"pvxdm17jpof6r");
 
         //自定义消息
         RongIM.registerMessageTemplate(new ApkItemProvider());
@@ -64,7 +65,7 @@ public class App extends Application {
         RongIM.registerMessageTemplate(new GifMessagesaItemProvider());
         RongIM.registerMessageTemplate(new TextMessagesaItemProvider());
         //用来隐藏部分控件自定义 base cell
-        //RongIM.getInstance().registerConversationTemplate(new PrivateConversationProviderEx());
+        RongIM.getInstance().registerConversationTemplate(new PrivateConversationProviderEx());
         RongIM.registerMessageType(ApkMessage.class);
         RongIM.registerMessageType(InsertMessage.class);
 
@@ -122,7 +123,6 @@ public class App extends Application {
                     //Log.i("TAG", message.getContent().getSearchableWord().get(0));
                     //RongNotificationManager.getInstance().onReceiveMessageFromApp(message, 0);
                     Log.i("TAG", message.getUId());
-                    Log.i("TAG", "1");
                 }
                 return false;
             }

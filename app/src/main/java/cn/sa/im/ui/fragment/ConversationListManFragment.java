@@ -64,9 +64,7 @@ public class ConversationListManFragment extends ConversationListFragment {
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         UIConversation conversation= (UIConversation) parent.getAdapter().getItem(position);
         Log.i("TAG","onItemClick");
-        if(conversation.getConversationGatherState()){
-            //做您的需求。
-        }
+
         super.onItemClick(parent, view, position, id);
     }
 }

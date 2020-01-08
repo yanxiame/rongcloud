@@ -10,11 +10,13 @@ import io.rong.push.notification.PushNotificationMessage;
 public class SaNotificationReceiver extends PushMessageReceiver {
     @Override
     public boolean onNotificationMessageArrived(Context context, PushType pushType, PushNotificationMessage message) {
+        Log.i("TAG",message.getPushData()+"!!!");
         return false;
     }
 
     @Override
     public boolean onNotificationMessageClicked(Context context, PushType pushType, PushNotificationMessage message) {
+        Log.i("TAG",message.getPushData()+"!!!");
         return false;
     }
 

@@ -108,7 +108,6 @@ public class MyConversationListBehaviorListener implements RongIM.ConversationLi
 
     @Override
     public boolean onConversationClick(Context context, View view, UIConversation uiConversation) {
-        Log.i("TAG","11111111");
         return false;
     }
 }

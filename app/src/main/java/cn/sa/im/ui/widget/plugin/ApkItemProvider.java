@@ -59,18 +59,20 @@ public class ApkItemProvider extends IContainerItemProvider.MessageProvider<ApkM
         Log.i("TAG", message.getExtra() + "@@@@@@@");
         Log.i("TAG", message.getMessage().getExtra() + "#######");
 
-//        if (message.getExtra() != null && !message.getExtra().equals("")) {
-//            if ("isopen".equals(message.getExtra()) || apkMessage.getIsReceived() == 1) {
-//                holder.tvTitle.setText("¥1.00");
-//                holder.tvStoreName.setText("已经领取");
-//            } else {
-//                holder.tvTitle.setText("¥1.00");
-//                holder.tvStoreName.setText("未领取");
-//            }
-//        } else {
-//            holder.tvTitle.setText("¥1.00");
-//            holder.tvStoreName.setText("转账给你");
-//        }
+        if (message.getExtra() != null && !message.getExtra().equals("")) {
+            if ("isopen".equals(message.getExtra())) {
+                holder.tvTitle.setText("¥1.00");
+                holder.tvStoreName.setText("已经领取");
+            } else {
+                holder.tvTitle.setText("¥1.00");
+                holder.tvStoreName.setText("未领取");
+            }
+        } else {
+            holder.tvTitle.setText("¥1.00");
+            Log.i("TAG","!!!!!2"+apkMessage.getPhoneNum());
+            Log.i("TAG","!!!!!3"+apkMessage.getIsReceived());
+            holder.tvStoreName.setText(apkMessage.getPhoneNum());
+        }
 
     }
 

@@ -60,7 +60,7 @@ public class ApkMessage extends MessageContent {
             }
             setUserName(object.getString("userName"));
             setPhoneNum(object.getString("phoneNum"));
-            setPhoneNum(object.getString("isReceived"));
+            setIsReceived(object.getInteger("isReceived"));
         } catch (Exception e) {
             e.printStackTrace();
         }
