@@ -1,5 +1,4 @@
 package cn.sa.im.ui.fragment;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,6 +15,8 @@ import cn.sa.im.ui.User;
 import cn.sa.im.ui.apadper.UserAdapter;
 import cn.sa.im.ui.widget.HintSideBar;
 import cn.sa.im.ui.widget.SideBar;
+import io.rong.imkit.RongIM;
+import io.rong.imlib.model.Conversation;
 
 public class ContactsFragment extends Fragment implements SideBar.OnChooseLetterChangedListener{
 
@@ -40,6 +41,16 @@ public class ContactsFragment extends Fragment implements SideBar.OnChooseLetter
         userList = new ArrayList<>();
         adapter = new UserAdapter(getActivity());
         initData();
+        adapter.setOnItemClickListener(new UserAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                RongIM.getInstance().startConversation(ContactsFragment.this.getActivity(), Conversation.ConversationType.PRIVATE,userList.get(position).getPhone(),userList.get(position).getUserName());
+            }
+            @Override
+            public void onItemLongClick(View view, int position) {
+
+            }
+        });
         adapter.setData(userList);
         rv_userList.setAdapter(adapter);
         return view;
@@ -59,11 +70,10 @@ public class ContactsFragment extends Fragment implements SideBar.OnChooseLetter
 
     }
     public void initData() {
-        User user1 = new User("陈", "12345678");
-        User user2 = new User("赵", "12345678");
+        User user1 = new User(getString(R.string.sa_one), "10001");
+        User user2 = new User(getString(R.string.sa_two), "10002");
         userList.add(user1);
         userList.add(user2);
-
         adapter.notifyDataSetChanged();
     }
 }

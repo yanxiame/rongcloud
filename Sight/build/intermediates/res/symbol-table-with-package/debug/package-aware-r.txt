@@ -800,6 +800,7 @@ id left
 id letter
 id line1
 id line3
+id ll_conversation_check
 id ll_message_check
 id ll_nav_title
 id mask

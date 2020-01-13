@@ -101,7 +101,7 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name="io.rong.imkit.activity.PicturePagerActivity"
+            android:name="io.rong.imkit.PictureActivity"
             android:exported="false"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>

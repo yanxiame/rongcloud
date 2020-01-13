@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.text.Spannable;
+import android.text.SpannableString;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,16 +70,18 @@ public class ApkItemProvider extends IContainerItemProvider.MessageProvider<ApkM
             }
         } else {
             holder.tvTitle.setText("¥1.00");
-            Log.i("TAG","!!!!!2"+apkMessage.getPhoneNum());
-            Log.i("TAG","!!!!!3"+apkMessage.getIsReceived());
             holder.tvStoreName.setText(apkMessage.getPhoneNum());
         }
 
     }
-
     @Override
     public Spannable getContentSummary(ApkMessage redPackageMessage) {
         return null;
+    }
+
+    @Override
+    public Spannable getContentSummary(Context context, ApkMessage data) {
+        return new SpannableString(context.getString(io.rong.imkit.R.string.rc_message_content_rp));
     }
 
     @Override

@@ -173,14 +173,14 @@ ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManif
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:84:13-63
 	android:name
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:83:13-80
-activity#io.rong.imkit.activity.PicturePagerActivity
+activity#io.rong.imkit.PictureActivity
 ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:87:9-95:20
 	android:exported
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:89:13-37
 	android:theme
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:90:13-71
 	android:name
-		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:88:13-71
+		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:88:13-57
 intent-filter#action:name:io.rong.imkit.intent.action.picturepagerview+category:name:android.intent.category.DEFAULT
 ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:91:13-94:29
 action#io.rong.imkit.intent.action.picturepagerview

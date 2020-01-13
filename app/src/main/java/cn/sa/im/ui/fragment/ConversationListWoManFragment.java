@@ -35,8 +35,13 @@ public class ConversationListWoManFragment extends ConversationListFragment {
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
         Log.i("TAG","onItemLongClick");
-        conversationListAdapterEx.setMoreClick(true);
+        conversationListAdapterEx.setShowCheckbox(true);
+
+        conversationListAdapterEx.notifyDataSetChanged();
+
         return true;
         //return super.onItemLongClick(parent, view, position, id);
     }
+
+
 }

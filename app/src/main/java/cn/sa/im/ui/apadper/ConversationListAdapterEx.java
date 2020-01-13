@@ -1,6 +1,7 @@
 package cn.sa.im.ui.apadper;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -16,6 +17,7 @@ public class ConversationListAdapterEx extends ConversationListAdapter {
     }
 
     LinearLayout leftImageLayout;
+    boolean isShowCheckbox;
 
     @Override
     public int getCount() {
@@ -31,7 +33,7 @@ public class ConversationListAdapterEx extends ConversationListAdapter {
     @Override
     protected View newView(Context context, int position, ViewGroup group) {
         View view =super.newView(context, position, group);
-
+        leftImageLayout = findViewById(view, io.rong.imkit.R.id.ll_conversation_check);
         return view;
     }
 
@@ -41,13 +43,18 @@ public class ConversationListAdapterEx extends ConversationListAdapter {
             if (data.getConversationType().equals(Conversation.ConversationType.DISCUSSION))
                 data.setUnreadType(UIConversation.UnreadRemindType.REMIND_ONLY);
         }
-
+        Log.i("TAG","2222"+isShowCheckbox);
+        if(isShowCheckbox()) {leftImageLayout.setVisibility(View.VISIBLE);}
         super.bindView(v, position, data);
 
     }
 
 
-    public void setMoreClick(boolean b) {
+    public boolean isShowCheckbox() {
+        return isShowCheckbox;
+    }
 
+    public void setShowCheckbox(boolean showCheckbox) {
+        isShowCheckbox = showCheckbox;
     }
 }
