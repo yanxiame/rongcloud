@@ -16,6 +16,7 @@ import cn.sa.im.ui.apadper.UserAdapter;
 import cn.sa.im.ui.widget.HintSideBar;
 import cn.sa.im.ui.widget.SideBar;
 import io.rong.imkit.RongIM;
+import io.rong.imlib.model.CSCustomServiceInfo;
 import io.rong.imlib.model.Conversation;
 
 public class ContactsFragment extends Fragment implements SideBar.OnChooseLetterChangedListener{
@@ -44,7 +45,15 @@ public class ContactsFragment extends Fragment implements SideBar.OnChooseLetter
         adapter.setOnItemClickListener(new UserAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                RongIM.getInstance().startConversation(ContactsFragment.this.getActivity(), Conversation.ConversationType.PRIVATE,userList.get(position).getPhone(),userList.get(position).getUserName());
+                if(userList.get(position).getTagid()!=null){
+                    //首先需要构造使用客服者的用户信息
+                    CSCustomServiceInfo.Builder csBuilder = new CSCustomServiceInfo.Builder();
+                    CSCustomServiceInfo csInfo = csBuilder.nickName("融云").referrer("20001").build();
+                    RongIM.getInstance().startCustomerServiceChat(getActivity(), "service", "在线客服",csInfo);
+
+                }else {
+                    RongIM.getInstance().startConversation(ContactsFragment.this.getActivity(), Conversation.ConversationType.PRIVATE, userList.get(position).getPhone(), userList.get(position).getUserName());
+                }
             }
             @Override
             public void onItemLongClick(View view, int position) {
@@ -70,10 +79,13 @@ public class ContactsFragment extends Fragment implements SideBar.OnChooseLetter
 
     }
     public void initData() {
-        User user1 = new User(getString(R.string.sa_one), "10001");
+        User user1 = new User(getString(R.string.sa_one), "10003");
         User user2 = new User(getString(R.string.sa_two), "10002");
+        User kean = new User("客服","10001");
+        kean.setTagid("10001");
         userList.add(user1);
         userList.add(user2);
+        userList.add(kean);
         adapter.notifyDataSetChanged();
     }
 }

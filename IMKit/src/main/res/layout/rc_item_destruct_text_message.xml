@@ -21,7 +21,6 @@
         style="@style/RCTheme.Message.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:autoLink="web|email|phone"
         android:gravity="center_vertical|left"
         android:paddingLeft="9dp"
         android:textColorLink="#2972ab"

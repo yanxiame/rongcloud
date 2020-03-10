@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,6 +31,7 @@ import io.rong.imkit.widget.provider.IContainerItemProvider;
 import io.rong.imkit.widget.provider.TextMessageItemProvider;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Message;
+import io.rong.imlib.model.MessageContent;
 import io.rong.message.TextMessage;
 @ProviderTag(
         messageContent = TextMessage.class,
@@ -98,6 +100,18 @@ public class TextMessagesaItemProvider extends TextMessageItemProvider {
 
         @Override
         public void bindView(final View v, int position, TextMessage content, final UIMessage data) {
+                    if (content.getContent() != null) {
+                        if(content.getContent().equals("[(D)]")) {
+                            int code = AndroidEmoji.getEmojiCode(0);
+                            char[] chars = Character.toChars(code);
+                            String key = Character.toString(chars[0]);
+                            for (int i = 1; i < chars.length; ++i) {
+                                key = key + Character.toString(chars[i]);
+                            }
+                            data.setTextMessageContent(new SpannableStringBuilder(AndroidEmoji.ensure(key)));
+                        }
+                    }
+
             TextMessagesaItemProvider.ViewHolder holder = (TextMessagesaItemProvider.ViewHolder) v.getTag();
             if (data.getMessageDirection() == Message.MessageDirection.SEND) {
                 holder.message.setBackgroundResource(io.rong.imkit.R.drawable.rc_ic_bubble_right);

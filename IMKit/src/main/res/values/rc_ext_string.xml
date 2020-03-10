@@ -193,6 +193,7 @@
     <string name="rc_emoji_rocket">火箭</string><!--128-->
     <string name="rc_emoji_globe">地球</string><!--129-->
     <string name="rc_emoji_love_heart">爱心</string><!--130-->
+    <string name="rc_emoji_nice">点赞</string><!--131-->
     <!--emoji 对应的文字描述 共 130 个 end-->
     <!--RongExtension-->
     <string name="rc_extension_common_phrases">常用语</string>

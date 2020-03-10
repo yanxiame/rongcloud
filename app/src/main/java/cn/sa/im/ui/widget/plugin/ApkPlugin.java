@@ -16,6 +16,7 @@ import io.rong.imlib.IRongCallback;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.Message;
+import io.rong.message.CommandMessage;
 
 public class ApkPlugin implements IPluginModule {
 
@@ -36,11 +37,12 @@ public class ApkPlugin implements IPluginModule {
 
     @Override
     public void onClick(final Fragment fragment, RongExtension rongExtension) {
-        Toast.makeText(rongExtension.getContext(), "发送一条自定义消息", Toast.LENGTH_LONG).show();
-        final cn.sa.im.ui.widget.plugin.ApkMessage apkMessage = new cn.sa.im.ui.widget.plugin.ApkMessage();
-        apkMessage.setUserName("$111");
-        apkMessage.setPhoneNum("转账给您");
-        apkMessage.setExtra("noopen");
+//        Toast.makeText(rongExtension.getContext(), "发送一条自定义消息", Toast.LENGTH_LONG).show();
+//        final cn.sa.im.ui.widget.plugin.ApkMessage apkMessage = new cn.sa.im.ui.widget.plugin.ApkMessage();
+//        apkMessage.setUserName("$111");
+//        apkMessage.setPhoneNum("转账给您");
+//        apkMessage.setExtra("noopen");
+        CommandMessage apkMessage = CommandMessage.obtain("1","2");
         Message message = Message.obtain(rongExtension.getTargetId(), rongExtension.getConversationType(), apkMessage);
         RongIM.getInstance().sendMessage(message, null, null, new IRongCallback.ISendMessageCallback() {
 
@@ -51,7 +53,7 @@ public class ApkPlugin implements IPluginModule {
 
             @Override
             public void onSuccess(Message message) {
-
+                Log.i("TAG",message.getMessageId()+"");
             }
 
             @Override
@@ -59,6 +61,9 @@ public class ApkPlugin implements IPluginModule {
 
             }
         });
+
+
+
     }
 
     @Override

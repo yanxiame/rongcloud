@@ -203,6 +203,7 @@ dimen sight_text_view_padding_horizontal
 dimen sight_text_view_padding_vertical
 drawable def_gif_bg
 drawable fire
+drawable nice
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1499,6 +1500,7 @@ string rc_emoji_microphone
 string rc_emoji_money_bag
 string rc_emoji_mouthless
 string rc_emoji_musical_note
+string rc_emoji_nice
 string rc_emoji_no_speaking
 string rc_emoji_ok_hand
 string rc_emoji_oncoming_fist

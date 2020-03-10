@@ -12,6 +12,7 @@ import java.util.List;
 import io.rong.imkit.DefaultExtensionModule;
 import io.rong.imkit.IExtensionModule;
 import io.rong.imkit.RongExtensionManager;
+import io.rong.imkit.emoticon.IEmoticonTab;
 import io.rong.imkit.plugin.IPluginModule;
 import io.rong.imkit.plugin.ImagePlugin;
 import io.rong.imkit.widget.provider.FilePlugin;
@@ -45,6 +46,12 @@ public class ApkExtensionModule extends DefaultExtensionModule {
         }
 
         return pluginModuleList;
+    }
+
+    @Override
+    public List<IEmoticonTab> getEmoticonTabs() {
+
+        return super.getEmoticonTabs();
     }
 
     private void removeFilePlugin() {

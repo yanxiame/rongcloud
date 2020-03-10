@@ -42,9 +42,10 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
         context = this;
         SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
-        // 100//03
 
-        connect("rbdI/5jrPxR4aQ2078HhWnHte7+VrAhsnSjOcYQ3SKOCXhodQlcZYZ5acv4syCtN0dsYRNvxZh44fo4VR5s+6A==");
+        connect("1h6lQuewv2mJuHpty0P/5CdctTgTnE391ZFavKpzdP8z5FArQgapFMJ9Gaf23Fkq0jHvilddNis/maNFNBY4cg==");
+        // 100//03
+        //connect("MnvwCDWPDGPZbHiivJ7lPPhVl5pNKz7Uy0yfoZDE01EOFsRlPUW5bHSFXmg+iB8CiDVxs/v4/+XOIALlTcrhMV3xkUrsM6T0xkkUaMl/JL0=");
         // 10001
         //connect("+VAPKwjohQJE5j+JmWoCpqjdNQ7jV7Tda5q1yXzTGPqisWGGbu4ob5ffRbks897yWL4Qampgam58QvKrJgYtmQ==");
     }
@@ -84,23 +85,14 @@ public class SplashActivity extends Activity {
                     public void run() {
                         TextMessage textMessage= TextMessage.obtain("11");
                         Message message=Message.obtain("rtcu013", Conversation.ConversationType.PRIVATE,textMessage);
-                        RongIM.getInstance().sendMessage(message, "", "", new RongIMClient.SendMessageCallback() {
-                            @Override
-                            public void onError(Integer integer, RongIMClient.ErrorCode errorCode) {
 
-                            }
-
-                            @Override
-                            public void onSuccess(Integer integer) {
-
-                            }
-                        });
                         RongIM.setGroupInfoProvider(new RongIM.GroupInfoProvider() {
                             @Override
                             public Group getGroupInfo(String s) {
                                 return new Group(s,"群聊",Uri.parse("https://www.baidu.com/img/bd_logo1.png"));
                             }
                         },true);
+                        //RongIM.getInstance().refreshUserInfoCache();
                         //RongIM.getInstance().refreshGroupInfoCache();
                         RongIM.setGroupUserInfoProvider(new RongIM.GroupUserInfoProvider() {
                             @Override
@@ -109,6 +101,7 @@ public class SplashActivity extends Activity {
                                 return null;
                             }
                         },true);
+                        //RongIM.getInstance().refreshGroupUserInfoCache();
 
                         RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
                             @Override

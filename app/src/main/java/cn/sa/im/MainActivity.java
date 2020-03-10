@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private ConversationListManFragment ManFragment;
     private ConversationListWoManFragment WomanFragment;
 
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -174,10 +175,23 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public void onPageScrollStateChanged(int i) {
 
     }
+    /*重新加载布局*/
+    public void reLoadFragView(){
+        /*现将该fragment从fragmentList移除*/
+
+
+        /*从FragmentManager中移除*/
+        getSupportFragmentManager().beginTransaction().remove(WomanFragment).commit();
+
+        /*重新创建*/
+        //WomanFragment=new ConversationListWoManFragment();
+
+
+        /*显示*/
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
+    }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
-
-
         private Fragment[] mFragments = new Fragment[]{ManFragment, new ContactsFragment(), WomanFragment};
 
         public ViewPagerAdapter(FragmentManager fm) {
@@ -191,9 +205,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         @Override
         public int getCount() {
-            return 3;
+            return mFragments.length;
         }
     }
+
 
 
 }

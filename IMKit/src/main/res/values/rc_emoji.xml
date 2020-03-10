@@ -131,6 +131,7 @@
         <item>@drawable/u1f48a</item>
         <item>@drawable/u1f680</item>
         <item>@drawable/u1f30f</item>
+        <item>@drawable/nice</item>
     </array>
 
     <integer-array name="rc_emoji_code">
@@ -264,6 +265,7 @@
         <item>0x1f48a</item>
         <item>0x1f680</item>
         <item>0x1f30f</item>
+        <item>0x1f30c</item>
     </integer-array>
 
     <array name="rc_emoji_description">
@@ -397,5 +399,6 @@
         <item>@string/rc_emoji_capsule</item><!--127-->
         <item>@string/rc_emoji_rocket</item><!--128-->
         <item>@string/rc_emoji_globe</item><!--129-->
+        <item>@string/rc_emoji_nice</item><!--129-->
     </array>
 </resources>
