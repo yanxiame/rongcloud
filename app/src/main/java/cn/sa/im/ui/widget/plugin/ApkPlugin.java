@@ -17,6 +17,7 @@ import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.Message;
 import io.rong.message.CommandMessage;
+import io.rong.message.InformationNotificationMessage;
 
 public class ApkPlugin implements IPluginModule {
 
@@ -42,7 +43,8 @@ public class ApkPlugin implements IPluginModule {
 //        apkMessage.setUserName("$111");
 //        apkMessage.setPhoneNum("转账给您");
 //        apkMessage.setExtra("noopen");
-        CommandMessage apkMessage = CommandMessage.obtain("1","2");
+        CustomizeMessage apkMessage=CustomizeMessage.obtain(1,"1","1");
+        //InformationNotificationMessage informationNotificationMessage = InformationNotificationMessage.obtain("无人工在线");
         Message message = Message.obtain(rongExtension.getTargetId(), rongExtension.getConversationType(), apkMessage);
         RongIM.getInstance().sendMessage(message, null, null, new IRongCallback.ISendMessageCallback() {
 

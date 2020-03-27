@@ -4,15 +4,13 @@
 
     <!-- 访问相册，访问文件系统等 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- 发送位置消息，实时位置共享 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 发送位置消息，实时位置共享，如果您需要定位相关的功能，可以打开以下注释 -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
     <!-- 拍照 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <!-- 拍照等 -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <!-- 音视频 -->
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
     <!-- 网络 -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -85,7 +83,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="io.rong.imkit.PictureActivity"
+            android:name="io.rong.imkit.activity.PicturePagerActivity"
             android:exported="false"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>

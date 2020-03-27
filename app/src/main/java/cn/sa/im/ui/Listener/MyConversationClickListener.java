@@ -159,12 +159,12 @@ public class MyConversationClickListener implements RongIM.ConversationClickList
                    RongIMClient.getInstance().recallMessage(message, "", new RongIMClient.ResultCallback<RecallNotificationMessage>() {
                        @Override
                        public void onSuccess(RecallNotificationMessage recallNotificationMessage) {
-                            Log.i("TAG","22222222");
+
                        }
 
                        @Override
                        public void onError(RongIMClient.ErrorCode errorCode) {
-                            Log.i("TAG","333333333");
+
                        }
                    });
                 }

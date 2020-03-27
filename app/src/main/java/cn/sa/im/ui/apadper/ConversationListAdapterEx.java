@@ -33,7 +33,7 @@ public class ConversationListAdapterEx extends ConversationListAdapter {
     @Override
     protected View newView(Context context, int position, ViewGroup group) {
         View view =super.newView(context, position, group);
-        leftImageLayout = findViewById(view, io.rong.imkit.R.id.ll_conversation_check);
+        leftImageLayout = findViewById(view, io.rong.imkit.R.id.ll_message_check);
         return view;
     }
 

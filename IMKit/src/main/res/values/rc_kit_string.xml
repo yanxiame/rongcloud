@@ -59,6 +59,7 @@
     <string name="rc_recall_success">消息已撤回</string>
     <string name="rc_recall_failed">撤回失败</string>
     <string name="rc_you_recalled_a_message">你撤回了一条消息</string>
+    <string name="rc_you_recalled_edit">重新编辑</string>
     <string name="rc_admin_recalled_a_message">管理员撤回了一条消息</string>
     <string name="rc_recalled_a_message">&#160;撤回了一条消息</string>
     <string name="rc_admin_recalled_message">管理员&#160;撤回了一条消息</string>
@@ -163,7 +164,9 @@
 
     <!-- LargePictureActivity -->
     <string name="rc_save_picture">保存图片</string>
+    <string name="rc_save_video">保存视频</string>
     <string name="rc_save_picture_at">图片保存成功</string>
+    <string name="rc_save_video_success">视频保存成功</string>
     <string name="rc_src_file_not_found">源文件不存在</string>
 
     <string name="rc_blacklist_prompt">您已被加入黑名单</string>
@@ -217,8 +220,8 @@
     <string name="rc_ac_file_url_error">文件地址异常，无法下载!</string>
     <string name="rc_read_receipt_status">%d 人已读</string>
 
-    <string name="rc_item_quit_groups">退出了群组</string>
-    <string name="rc_item_dismiss_groups">解散了群组</string>
+    <string name="rc_item_quit_groups">&#160;退出了群组</string>
+    <string name="rc_item_dismiss_groups">&#160;解散了群组</string>
     <string name="rc_item_join_group">加入了群组</string>
     <string name="rc_item_to_join_group">加入了群组</string>
 
@@ -251,6 +254,7 @@
     <string name="rc_android.permission.PROCESS_OUTGOING_CALLS">电话</string>
 
     <string name="rc_real_time_location_summary">我发起了位置共享</string>
+    <string name="rc_real_time_location_start">开启位置共享</string>
     <string name="rc_real_time_location_sharing">发起了位置共享</string>
     <string name="rc_dialog_button_clear">清空</string>
 

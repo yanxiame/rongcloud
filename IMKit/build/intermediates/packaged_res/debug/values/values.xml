@@ -149,140 +149,138 @@
         <item>0x1f48a</item>
         <item>0x1f680</item>
         <item>0x1f30f</item>
-        <item>0x1f30c</item>
     </integer-array>
     <array name="rc_emoji_description">
-        <item>@string/rc_emoji_smiley_face</item><!--1-->
-        <item>@string/rc_emoji_grinning_face</item><!--2-->
-        <item>@string/rc_emoji_smiley</item><!--3-->
-        <item>@string/rc_emoji_cute</item><!--4-->
-        <item>@string/rc_emoji_winking_face</item><!--5-->
-        <item>@string/rc_emoji_heart_eyes</item><!--6-->
-        <item>@string/rc_emoji_blowing_kiss</item><!--7-->
-        <item>@string/rc_emoji_kiss_face</item><!--8-->
-        <item>@string/rc_emoji_crazy_face</item><!--9-->
-        <item>@string/rc_emoji_tongue_out</item><!--10-->
-        <item>@string/rc_emoji_flushed_face</item><!--11-->
-        <item>@string/rc_emoji_grinning_with_smiling</item><!--12-->
-        <item>@string/rc_emoji_pensive</item><!--13-->
-        <item>@string/rc_emoji_pleased</item><!--14-->
-        <item>@string/rc_emoji_dissatisfied</item><!--15-->
-        <item>@string/rc_emoji_worried_face</item><!--16-->
-        <item>@string/rc_emoji_disappointed_face</item><!--17-->
-        <item>@string/rc_emoji_helpless_face</item><!--18-->
-        <item>@string/rc_emoji_crying</item><!--19-->
-        <item>@string/rc_emoji_laughing_tears</item><!--20-->
-        <item>@string/rc_emoji_sobbing</item><!--21-->
-        <item>@string/rc_emoji_sleepy_face</item><!--22-->
-        <item>@string/rc_emoji_cold_sweat</item><!--23-->
-        <item>@string/rc_emoji_happy_sweat</item><!--24-->
-        <item>@string/rc_emoji_sweat</item><!--25-->
-        <item>@string/rc_emoji_tired_face</item><!--26-->
-        <item>@string/rc_emoji_weary_face</item><!--27-->
-        <item>@string/rc_emoji_fearful_face</item><!--28-->
-        <item>@string/rc_emoji_scream</item><!--29-->
-        <item>@string/rc_emoji_angry_face</item><!--30-->
-        <item>@string/rc_emoji_mad_face</item><!--31-->
-        <item>@string/rc_emoji_confounded_face</item><!--32-->
-        <item>@string/rc_emoji_big_grin</item><!--33-->
-        <item>@string/rc_emoji_hungry</item><!--34-->
-        <item>@string/rc_emoji_mask_face</item><!--35-->
-        <item>@string/rc_emoji_sunglasses</item><!--36-->
-        <item>@string/rc_emoji_sleeping</item><!--37-->
-        <item>@string/rc_emoji_shocked_face</item><!--38-->
-        <item>@string/rc_emoji_dizzy_face</item><!--39-->
-        <item>@string/rc_emoji_purple_devil</item><!--40-->
-        <item>@string/rc_emoji_devil</item><!--41-->
-        <item>@string/rc_emoji_surprised_face</item><!--42-->
-        <item>@string/rc_emoji_grimacing_face</item><!--43-->
-        <item>@string/rc_emoji_confused</item><!--44-->
-        <item>@string/rc_emoji_mouthless</item><!--45-->
-        <item>@string/rc_emoji_halo</item><!--46-->
-        <item>@string/rc_emoji_smirking_face</item><!--47-->
-        <item>@string/rc_emoji_expressionless_face</item><!--48-->
-        <item>@string/rc_emoji_see_no_monkey</item><!--49-->
-        <item>@string/rc_emoji_hear_no_monkey</item><!--50-->
-        <item>@string/rc_emoji_no_speaking</item><!--51-->
-        <item>@string/rc_emoji_alien</item><!--52-->
-        <item>@string/rc_emoji_pile_of_poo</item><!--53-->
-        <item>@string/rc_emoji_love_heart</item><!-- <<<<<<<<<<<<<<<<<< 130 >>>>>>>>>>>>>>>>  -->
-        <item>@string/rc_emoji_broken_heart</item><!--54-->
-        <item>@string/rc_emoji_fire</item><!--55-->
-        <item>@string/rc_emoji_anger</item><!--56-->
-        <item>@string/rc_emoji_zzz</item><!--57-->
-        <item>@string/rc_emoji_prohibited</item><!--58-->
-        <item>@string/rc_emoji_star</item><!--59-->
-        <item>@string/rc_emoji_lightning_bolt</item><!--60-->
-        <item>@string/rc_emoji_crescent_moon</item><!--61-->
-        <item>@string/rc_emoji_sunny</item><!--62-->
-        <item>@string/rc_emoji_cloudy</item><!--63-->
-        <item>@string/rc_emoji_cloud</item><!--64-->
-        <item>@string/rc_emoji_snowflake</item><!--65-->
-        <item>@string/rc_emoji_umbrella</item><!--66-->
-        <item>@string/rc_emoji_snowman</item><!--67-->
-        <item>@string/rc_emoji_thumbs_up</item><!--68-->
-        <item>@string/rc_emoji_thumbs_down</item><!--69-->
-        <item>@string/rc_emoji_shake_hand</item><!--70-->
-        <item>@string/rc_emoji_ok_hand</item><!--71-->
-        <item>@string/rc_emoji_oncoming_fist</item><!--72-->
-        <item>@string/rc_emoji_raised_fist</item><!--73-->
-        <item>@string/rc_emoji_victory_hand</item><!--74-->
-        <item>@string/rc_emoji_raised_fist</item><!--75-->
-        <item>@string/rc_emoji_folded_hands</item><!--76-->
-        <item>@string/rc_emoji_pointing_up</item><!--77-->
-        <item>@string/rc_emoji_clapping_hands</item><!--78-->
-        <item>@string/rc_emoji_flexed_biceps</item><!--79-->
-        <item>@string/rc_emoji_family</item><!--80-->
-        <item>@string/rc_emoji_couple</item><!--81-->
-        <item>@string/rc_emoji_baby_angel</item><!--82-->
-        <item>@string/rc_emoji_horse</item><!--83-->
-        <item>@string/rc_emoji_dog</item><!--84-->
-        <item>@string/rc_emoji_pig</item><!--85-->
-        <item>@string/rc_emoji_ghost</item><!--86-->
-        <item>@string/rc_emoji_rose</item><!--87-->
-        <item>@string/rc_emoji_sunflower</item><!--88-->
-        <item>@string/rc_emoji_pine_tree</item><!--89-->
-        <item>@string/rc_emoji_christmas_tree</item><!--90-->
-        <item>@string/rc_emoji_wrapped_gift</item><!--91-->
-        <item>@string/rc_emoji_party_popper</item><!--92-->
-        <item>@string/rc_emoji_money_bag</item><!--93-->
-        <item>@string/rc_emoji_birthday_cake</item><!--94-->
-        <item>@string/rc_emoji_barbecue</item><!--95-->
-        <item>@string/rc_emoji_cooked_rice</item><!--96-->
-        <item>@string/rc_emoji_ice_cream</item><!--97-->
-        <item>@string/rc_emoji_chocolate_bar</item><!--98-->
-        <item>@string/rc_emoji_watermelon</item><!--99-->
-        <item>@string/rc_emoji_wine_glass</item><!--100-->
-        <item>@string/rc_emoji_cheers</item><!--101-->
-        <item>@string/rc_emoji_coffee</item><!--102-->
-        <item>@string/rc_emoji_basketball</item><!--103-->
-        <item>@string/rc_emoji_soccer_ball</item><!--104-->
-        <item>@string/rc_emoji_snowboarder</item><!--105-->
-        <item>@string/rc_emoji_microphone</item><!--106-->
-        <item>@string/rc_emoji_musical_note</item><!--107-->
-        <item>@string/rc_emoji_game_die</item><!--108-->
-        <item>@string/rc_emoji_mahjone_red_dragon</item><!--109-->
-        <item>@string/rc_emoji_crown</item><!--110-->
-        <item>@string/rc_emoji_lipstick</item><!--111-->
-        <item>@string/rc_emoji_kiss</item><!--112-->
-        <item>@string/rc_emoji_ring</item><!--113-->
-        <item>@string/rc_emoji_books</item><!--114-->
-        <item>@string/rc_emoji_graduation_cap</item><!--115-->
-        <item>@string/rc_emoji_pencil</item><!--116-->
-        <item>@string/rc_emoji_house_with_garden</item><!--117-->
-        <item>@string/rc_emoji_shower</item><!--118-->
-        <item>@string/rc_emoji_light_bulb</item><!--119-->
-        <item>@string/rc_emoji_telephone_receiver</item><!--120-->
-        <item>@string/rc_emoji_loudspeaker</item><!--121-->
-        <item>@string/rc_emoji_clock</item><!--122-->
-        <item>@string/rc_emoji_alarm_clock</item><!--123-->
-        <item>@string/rc_emoji_hourglass</item><!--124-->
-        <item>@string/rc_emoji_bomb</item><!--125-->
-        <item>@string/rc_emoji_pistol</item><!--126-->
-        <item>@string/rc_emoji_capsule</item><!--127-->
-        <item>@string/rc_emoji_rocket</item><!--128-->
-        <item>@string/rc_emoji_globe</item><!--129-->
-        <item>@string/rc_emoji_nice</item><!--129-->
+        <item>@string/rc_emoji_smiley_face</item>
+        <item>@string/rc_emoji_grinning_face</item>
+        <item>@string/rc_emoji_smiley</item>
+        <item>@string/rc_emoji_cute</item>
+        <item>@string/rc_emoji_winking_face</item>
+        <item>@string/rc_emoji_heart_eyes</item>
+        <item>@string/rc_emoji_blowing_kiss</item>
+        <item>@string/rc_emoji_kiss_face</item>
+        <item>@string/rc_emoji_crazy_face</item>
+        <item>@string/rc_emoji_tongue_out</item>
+        <item>@string/rc_emoji_flushed_face</item>
+        <item>@string/rc_emoji_grinning_with_smiling</item>
+        <item>@string/rc_emoji_pensive</item>
+        <item>@string/rc_emoji_pleased</item>
+        <item>@string/rc_emoji_dissatisfied</item>
+        <item>@string/rc_emoji_worried_face</item>
+        <item>@string/rc_emoji_disappointed_face</item>
+        <item>@string/rc_emoji_helpless_face</item>
+        <item>@string/rc_emoji_crying</item>
+        <item>@string/rc_emoji_laughing_tears</item>
+        <item>@string/rc_emoji_sobbing</item>
+        <item>@string/rc_emoji_sleepy_face</item>
+        <item>@string/rc_emoji_cold_sweat</item>
+        <item>@string/rc_emoji_happy_sweat</item>
+        <item>@string/rc_emoji_sweat</item>
+        <item>@string/rc_emoji_tired_face</item>
+        <item>@string/rc_emoji_weary_face</item>
+        <item>@string/rc_emoji_fearful_face</item>
+        <item>@string/rc_emoji_scream</item>
+        <item>@string/rc_emoji_angry_face</item>
+        <item>@string/rc_emoji_mad_face</item>
+        <item>@string/rc_emoji_confounded_face</item>
+        <item>@string/rc_emoji_big_grin</item>
+        <item>@string/rc_emoji_hungry</item>
+        <item>@string/rc_emoji_mask_face</item>
+        <item>@string/rc_emoji_sunglasses</item>
+        <item>@string/rc_emoji_sleeping</item>
+        <item>@string/rc_emoji_shocked_face</item>
+        <item>@string/rc_emoji_dizzy_face</item>
+        <item>@string/rc_emoji_purple_devil</item>
+        <item>@string/rc_emoji_devil</item>
+        <item>@string/rc_emoji_surprised_face</item>
+        <item>@string/rc_emoji_grimacing_face</item>
+        <item>@string/rc_emoji_confused</item>
+        <item>@string/rc_emoji_mouthless</item>
+        <item>@string/rc_emoji_halo</item>
+        <item>@string/rc_emoji_smirking_face</item>
+        <item>@string/rc_emoji_expressionless_face</item>
+        <item>@string/rc_emoji_see_no_monkey</item>
+        <item>@string/rc_emoji_hear_no_monkey</item>
+        <item>@string/rc_emoji_no_speaking</item>
+        <item>@string/rc_emoji_alien</item>
+        <item>@string/rc_emoji_pile_of_poo</item>
+        <item>@string/rc_emoji_love_heart</item>
+        <item>@string/rc_emoji_broken_heart</item>
+        <item>@string/rc_emoji_fire</item>
+        <item>@string/rc_emoji_anger</item>
+        <item>@string/rc_emoji_zzz</item>
+        <item>@string/rc_emoji_prohibited</item>
+        <item>@string/rc_emoji_star</item>
+        <item>@string/rc_emoji_lightning_bolt</item>
+        <item>@string/rc_emoji_crescent_moon</item>
+        <item>@string/rc_emoji_sunny</item>
+        <item>@string/rc_emoji_cloudy</item>
+        <item>@string/rc_emoji_cloud</item>
+        <item>@string/rc_emoji_snowflake</item>
+        <item>@string/rc_emoji_umbrella</item>
+        <item>@string/rc_emoji_snowman</item>
+        <item>@string/rc_emoji_thumbs_up</item>
+        <item>@string/rc_emoji_thumbs_down</item>
+        <item>@string/rc_emoji_shake_hand</item>
+        <item>@string/rc_emoji_ok_hand</item>
+        <item>@string/rc_emoji_oncoming_fist</item>
+        <item>@string/rc_emoji_raised_fist</item>
+        <item>@string/rc_emoji_victory_hand</item>
+        <item>@string/rc_emoji_raised_fist</item>
+        <item>@string/rc_emoji_folded_hands</item>
+        <item>@string/rc_emoji_pointing_up</item>
+        <item>@string/rc_emoji_clapping_hands</item>
+        <item>@string/rc_emoji_flexed_biceps</item>
+        <item>@string/rc_emoji_family</item>
+        <item>@string/rc_emoji_couple</item>
+        <item>@string/rc_emoji_baby_angel</item>
+        <item>@string/rc_emoji_horse</item>
+        <item>@string/rc_emoji_dog</item>
+        <item>@string/rc_emoji_pig</item>
+        <item>@string/rc_emoji_ghost</item>
+        <item>@string/rc_emoji_rose</item>
+        <item>@string/rc_emoji_sunflower</item>
+        <item>@string/rc_emoji_pine_tree</item>
+        <item>@string/rc_emoji_christmas_tree</item>
+        <item>@string/rc_emoji_wrapped_gift</item>
+        <item>@string/rc_emoji_party_popper</item>
+        <item>@string/rc_emoji_money_bag</item>
+        <item>@string/rc_emoji_birthday_cake</item>
+        <item>@string/rc_emoji_barbecue</item>
+        <item>@string/rc_emoji_cooked_rice</item>
+        <item>@string/rc_emoji_ice_cream</item>
+        <item>@string/rc_emoji_chocolate_bar</item>
+        <item>@string/rc_emoji_watermelon</item>
+        <item>@string/rc_emoji_wine_glass</item>
+        <item>@string/rc_emoji_cheers</item>
+        <item>@string/rc_emoji_coffee</item>
+        <item>@string/rc_emoji_basketball</item>
+        <item>@string/rc_emoji_soccer_ball</item>
+        <item>@string/rc_emoji_snowboarder</item>
+        <item>@string/rc_emoji_microphone</item>
+        <item>@string/rc_emoji_musical_note</item>
+        <item>@string/rc_emoji_game_die</item>
+        <item>@string/rc_emoji_mahjone_red_dragon</item>
+        <item>@string/rc_emoji_crown</item>
+        <item>@string/rc_emoji_lipstick</item>
+        <item>@string/rc_emoji_kiss</item>
+        <item>@string/rc_emoji_ring</item>
+        <item>@string/rc_emoji_books</item>
+        <item>@string/rc_emoji_graduation_cap</item>
+        <item>@string/rc_emoji_pencil</item>
+        <item>@string/rc_emoji_house_with_garden</item>
+        <item>@string/rc_emoji_shower</item>
+        <item>@string/rc_emoji_light_bulb</item>
+        <item>@string/rc_emoji_telephone_receiver</item>
+        <item>@string/rc_emoji_loudspeaker</item>
+        <item>@string/rc_emoji_clock</item>
+        <item>@string/rc_emoji_alarm_clock</item>
+        <item>@string/rc_emoji_hourglass</item>
+        <item>@string/rc_emoji_bomb</item>
+        <item>@string/rc_emoji_pistol</item>
+        <item>@string/rc_emoji_capsule</item>
+        <item>@string/rc_emoji_rocket</item>
+        <item>@string/rc_emoji_globe</item>
     </array>
     <array name="rc_emoji_res">
         <item>@drawable/u1f603</item>
@@ -415,7 +413,6 @@
         <item>@drawable/u1f48a</item>
         <item>@drawable/u1f680</item>
         <item>@drawable/u1f30f</item>
-        <item>@drawable/nice</item>
     </array>
     <array name="rc_excel_file_suffix">
         <item>.xla</item>
@@ -525,21 +522,22 @@
     </array>
     <bool name="rc_enable_automatic_download_voice_msg">true</bool>
     <bool name="rc_enable_mentioned_message">false</bool>
-    <bool name="rc_enable_message_recall">true</bool>
-    <bool name="rc_enable_send_combine_message">true</bool>
+    <bool name="rc_enable_message_recall">false</bool>
+    <bool name="rc_enable_send_combine_message">false</bool>
     <bool name="rc_enable_sync_read_status">false</bool>
     <bool name="rc_is_show_warning_notification">true</bool>
     <bool name="rc_location_2D">false</bool>
     <bool name="rc_media_selector_contain_video">false</bool>
-    <bool name="rc_open_destruct_plugin">true</bool>
+    <bool name="rc_open_destruct_plugin">false</bool>
     <bool name="rc_open_https_certificate">false</bool>
     <bool name="rc_play_audio_continuous">true</bool>
-    <bool name="rc_read_receipt">true</bool>
+    <bool name="rc_read_receipt">false</bool>
     <bool name="rc_set_java_script_enabled">false</bool>
+    <bool name="rc_sound_in_foreground">true</bool>
     <bool name="rc_stop_custom_service_when_quit">true</bool>
     <bool name="rc_wipe_out_notification_message">true</bool>
     <color name="color_list_item_hover">#DFDFDD</color>
-    <color name="rc_EmoticonTab_bg_select_color">#d7d7d7</color>
+    <color name="rc_EmoticonTab_bg_select_color">#2dffff</color>
     <color name="rc_ad_file_list_no_select_file_text_state">#9fcdfd</color>
     <color name="rc_ad_file_list_select_file_text_state">#ffffff</color>
     <color name="rc_common_phrases_bg_color">#f2f2f2</color>
@@ -697,7 +695,8 @@
     <integer name="rc_extension_plugin_count_per_page">8</integer>
     <integer name="rc_gifmsg_auto_download_size">1024</integer>
     <integer name="rc_max_message_selected_count">100</integer>
-    <integer name="rc_message_recall_interval">180</integer>
+    <integer name="rc_message_recall_edit_interval">300</integer>
+    <integer name="rc_message_recall_interval">120</integer>
     <integer name="rc_read_receipt_request_interval">120</integer>
     <string name="rc_ac_file_download_btn">开始下载</string>
     <string name="rc_ac_file_download_open_file_btn">打开文件</string>
@@ -906,7 +905,6 @@
     <string name="rc_emoji_money_bag">钱袋</string>
     <string name="rc_emoji_mouthless">无口</string>
     <string name="rc_emoji_musical_note">音乐</string>
-    <string name="rc_emoji_nice">点赞</string>
     <string name="rc_emoji_no_speaking">闭嘴</string>
     <string name="rc_emoji_ok_hand">没问题</string>
     <string name="rc_emoji_oncoming_fist">击拳</string>
@@ -973,6 +971,7 @@
     <string name="rc_ext_send">发送</string>
     <string name="rc_ext_warning">提示</string>
     <string name="rc_extension_common_phrases">常用语</string>
+    <string name="rc_file_default_saved_path">/RongCloud/File/</string>
     <string name="rc_file_not_exist">文件不存在</string>
     <string name="rc_forbidden_in_chatroom">你已被禁言，不能发送消息</string>
     <string name="rc_fr_file_category_title_audio">音频</string>
@@ -999,13 +998,13 @@
     <string name="rc_item_change_group_name">%1$s 修改群名称为 %2$s</string>
     <string name="rc_item_create_group">创建群组</string>
     <string name="rc_item_created_group">%1$s 创建了群组</string>
-    <string name="rc_item_dismiss_groups">解散了群组</string>
+    <string name="rc_item_dismiss_groups"> 解散了群组</string>
     <string name="rc_item_divided_string">、</string>
     <string name="rc_item_etc">等</string>
     <string name="rc_item_group_notification_summary">[群组通知]</string>
     <string name="rc_item_invitation">%1$s 邀请 %2$s 加入群组</string>
     <string name="rc_item_join_group">加入了群组</string>
-    <string name="rc_item_quit_groups">退出了群组</string>
+    <string name="rc_item_quit_groups"> 退出了群组</string>
     <string name="rc_item_remove_group_after_str">移出了群组</string>
     <string name="rc_item_remove_group_before_str">将</string>
     <string name="rc_item_remove_group_member">%1$s 将 %2$s 移出群组</string>
@@ -1106,6 +1105,7 @@
     <string name="rc_real_time_exit_notification">离开会话，位置共享也会结束，确定离开？</string>
     <string name="rc_real_time_join_notification">加入位置共享，聊天中其他人也能看到你的位置，确定加入？</string>
     <string name="rc_real_time_location_sharing">发起了位置共享</string>
+    <string name="rc_real_time_location_start">开启位置共享</string>
     <string name="rc_real_time_location_summary">我发起了位置共享</string>
     <string name="rc_recall_failed">撤回失败</string>
     <string name="rc_recall_failed_for_network_unavailable">撤回不成功，请检查网络连接</string>
@@ -1116,6 +1116,8 @@
     <string name="rc_saturday_format">周六</string>
     <string name="rc_save_picture">保存图片</string>
     <string name="rc_save_picture_at">图片保存成功</string>
+    <string name="rc_save_video">保存视频</string>
+    <string name="rc_save_video_success">视频保存成功</string>
     <string name="rc_search">搜索</string>
     <string name="rc_select_from_album">从相册选取</string>
     <string name="rc_send_format">发送(%1$s)</string>
@@ -1137,6 +1139,7 @@
     <string name="rc_toast_message_destruct">该消息已自动销毁，无法继续查看</string>
     <string name="rc_tuesday_format">周二</string>
     <string name="rc_user_recalled_message">%s撤回了一条消息</string>
+    <string name="rc_video_default_saved_path">/RongCloud/Video/</string>
     <string name="rc_voice_cancel">松开手指，取消发送</string>
     <string name="rc_voice_failure">录音失败！</string>
     <string name="rc_voice_rec">手指上滑，取消发送</string>
@@ -1153,6 +1156,7 @@
     <string name="rc_yesterday_format">昨天</string>
     <string name="rc_you_are_sharing_location">你正在共享位置</string>
     <string name="rc_you_recalled_a_message">你撤回了一条消息</string>
+    <string name="rc_you_recalled_edit">重新编辑</string>
     <style name="RCTheme" parent="@android:style/Theme.Light">
         <item name="android:listDivider">@android:color/transparent</item>
         <item name="android:listSelector">@android:color/transparent</item>
@@ -1190,6 +1194,13 @@
         <item name="android:paddingTop">4dp</item>
         <item name="android:paddingBottom">4dp</item>
         <item name="android:textColor">@color/rc_text_color_primary_inverse</item>
+    </style>
+    <style name="RCTheme.Notification.RelativeLayout">
+        <item name="android:background">@drawable/rc_corner_style</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingTop">-2dp</item>
+        <item name="android:paddingBottom">-2dp</item>
     </style>
     <style name="RCTheme.TextView" parent="android:Widget.TextView">
 

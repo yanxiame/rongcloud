@@ -21,9 +21,11 @@
         style="@style/RCTheme.Message.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autoLink="none"
         android:gravity="center_vertical|left"
         android:paddingLeft="9dp"
-        android:textColorLink="#2972ab"
+        android:textColorLink="#297211"
+        android:textColor="#297211"
         app:RCMaxWidth="223dp" />
     <FrameLayout
         android:id="@+id/fl_send_fire"

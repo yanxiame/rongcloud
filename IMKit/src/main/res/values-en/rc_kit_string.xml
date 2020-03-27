@@ -50,7 +50,7 @@
     <string name="rc_message_content_location">[Location]</string>
     <string name="rc_message_content_draft">[Draft]</string>
     <string name="rc_message_content_file">[File]</string>
-    <string name="rc_message_content_sight">[Sight]</string>
+    <string name="rc_message_content_sight">[Video]</string>
     <string name="rc_message_content_combine">[Chat History]</string>
     <string name="rc_message_content_mentioned">[You were mentioned]</string>
     <string name="rc_message_content_burn">[Secret Chat]</string>
@@ -66,6 +66,7 @@
     <string name="rc_recall_success">Message recalled</string>
     <string name="rc_recall_failed">Failed to recall the message</string>
     <string name="rc_you_recalled_a_message">You have recalled a message</string>
+    <string name="rc_you_recalled_edit">Edit</string>
     <string name="rc_admin_recalled_a_message">Admin has recalled a message</string>
     <string name="rc_recalled_a_message">&#160; has recalled a message</string>
     <string name="rc_admin_recalled_message">Admin&#160; has recalled a message</string>
@@ -161,7 +162,9 @@
 
     <!-- LargePictureActivity -->
     <string name="rc_save_picture">Save Photo</string>
+    <string name="rc_save_video">Save Video</string>
     <string name="rc_save_picture_at">Saved to album</string>
+    <string name="rc_save_video_success">Saved to album</string>
     <string name="rc_src_file_not_found">Source file does not exist.</string>
 
     <string name="rc_blacklist_prompt">You have been added to blacklist</string>
@@ -249,6 +252,7 @@
     <string name="rc_item_remove_self">%1$s has removed by %2$s from the group</string>
 
     <string name="rc_real_time_location_summary">I start a location sharing</string>
+    <string name="rc_real_time_location_start">Start real time location</string>
     <string name="rc_real_time_location_sharing">Start a location sharing</string>
 
     <string name="rc_dialog_button_clear">Clear</string>

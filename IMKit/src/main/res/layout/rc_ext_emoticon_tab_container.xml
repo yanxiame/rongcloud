@@ -44,6 +44,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@color/rc_ad_file_list_no_select_file_text_state"
                     android:scrollbars="none"
                     android:layout_gravity="center_vertical">
 

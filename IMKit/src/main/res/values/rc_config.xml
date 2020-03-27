@@ -9,7 +9,7 @@
     <!--设置 AAC 语音消息的码率 (单位 bps)-->
     <integer name="rc_audio_aac_encoding_bit_rate">16000</integer>
 
-    <!-- 设置聊天室一次拉取消息数目 -->
+    <!-- 设置聊天室一次拉取消息数目 设置0默认拉取10条，设置-1默认不拉取，其他值为拉取自定义条数 -->
     <integer name="rc_chatroom_first_pull_message_count">10</integer>
 
     <!-- 设置在会话列表或会话页面是否显示“连接状态”的提示 -->
@@ -28,16 +28,24 @@
     <!-- 默认图片保存路径，在会话界面查看大图，长按时选择保存，会使用这个配置-->
     <string name="rc_image_default_saved_path">/RongCloud/Image/</string>
 
+    <!-- 默认视频保存路径，在会话界面查看，长按时选择保存，会使用这个配置-->
+    <string name="rc_video_default_saved_path">/RongCloud/Video/</string>
+
+    <!-- 默认文件保存路径，在会话界面查看，长按时选择保存，会使用这个配置-->
+    <string name="rc_file_default_saved_path">/RongCloud/File/</string>
+
     <!-- 设置是否支持消息撤回-->
-    <bool name="rc_enable_message_recall">true</bool>
+    <bool name="rc_enable_message_recall">false</bool>
     <!-- 消息撤回有效时间（单位：秒）-->
-    <integer name="rc_message_recall_interval">180</integer>
+    <integer name="rc_message_recall_interval">120</integer>
+    <!-- 消息撤回重新编辑有效时间（单位：秒）-->
+    <integer name="rc_message_recall_edit_interval">300</integer>
 
     <!-- 是否打开 @ 功能-->
     <bool name="rc_enable_mentioned_message">false</bool>
 
     <!-- 设置已读回执，目前仅支持单聊、群聊、讨论组 -->
-    <bool name="rc_read_receipt">true</bool>
+    <bool name="rc_read_receipt">false</bool>
 
     <!-- 设置已读回执有效时间（单位：秒）-->
     <integer name="rc_read_receipt_request_interval">120</integer>
@@ -67,12 +75,15 @@
     <integer name="rc_gifmsg_auto_download_size">1024</integer>
 
     <!--是否启用阅后即焚插件-->
-    <bool name="rc_open_destruct_plugin">true</bool>
+    <bool name="rc_open_destruct_plugin">false</bool>
 
     <!--多选时,最大多选消息数 -->
     <integer name="rc_max_message_selected_count">100</integer>
 
     <!--是否开启合并转发功能,默认关闭 -->
-    <bool name="rc_enable_send_combine_message">true</bool>
+    <bool name="rc_enable_send_combine_message">false</bool>
+
+    <!--在前台非会话页面时，接收到新消息是否响铃 -->
+    <bool name="rc_sound_in_foreground">true</bool>
 
 </resources>

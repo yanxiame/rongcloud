@@ -59,6 +59,7 @@ bool rc_play_audio_continuous
 bool rc_q_storage_mode_enable
 bool rc_read_receipt
 bool rc_set_java_script_enabled
+bool rc_sound_in_foreground
 bool rc_stop_custom_service_when_quit
 bool rc_typing_status
 bool rc_wipe_out_notification_message
@@ -185,7 +186,6 @@ dimen rc_extension_board_height
 dimen rc_popup_dialog_distance_to_edge
 drawable def_gif_bg
 drawable fire
-drawable nice
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -758,7 +758,6 @@ id left
 id letter
 id line1
 id line3
-id ll_conversation_check
 id ll_message_check
 id mask
 id media_actions
@@ -859,6 +858,7 @@ id rc_dialog_popup_item_name
 id rc_divider
 id rc_download_failed
 id rc_download_progress
+id rc_edit
 id rc_edit_text
 id rc_emoticon_tab_add
 id rc_emoticon_tab_iv
@@ -1080,6 +1080,7 @@ integer rc_image_quality
 integer rc_image_size
 integer rc_max_message_selected_count
 integer rc_max_original_image_size
+integer rc_message_recall_edit_interval
 integer rc_message_recall_interval
 integer rc_read_receipt_request_interval
 integer rc_resume_file_transfer_size_each_slice
@@ -1434,7 +1435,6 @@ string rc_emoji_microphone
 string rc_emoji_money_bag
 string rc_emoji_mouthless
 string rc_emoji_musical_note
-string rc_emoji_nice
 string rc_emoji_no_speaking
 string rc_emoji_ok_hand
 string rc_emoji_oncoming_fist
@@ -1501,6 +1501,7 @@ string rc_ext_search_no_result
 string rc_ext_send
 string rc_ext_warning
 string rc_extension_common_phrases
+string rc_file_default_saved_path
 string rc_file_not_exist
 string rc_forbidden_in_chatroom
 string rc_fr_file_category_title_audio
@@ -1643,6 +1644,7 @@ string rc_read_receipt_status
 string rc_real_time_exit_notification
 string rc_real_time_join_notification
 string rc_real_time_location_sharing
+string rc_real_time_location_start
 string rc_real_time_location_summary
 string rc_recall_failed
 string rc_recall_failed_for_network_unavailable
@@ -1653,6 +1655,8 @@ string rc_rejected_by_blacklist_prompt
 string rc_saturday_format
 string rc_save_picture
 string rc_save_picture_at
+string rc_save_video
+string rc_save_video_success
 string rc_search
 string rc_select_from_album
 string rc_send_format
@@ -1674,6 +1678,7 @@ string rc_time_count_down
 string rc_toast_message_destruct
 string rc_tuesday_format
 string rc_user_recalled_message
+string rc_video_default_saved_path
 string rc_voice_cancel
 string rc_voice_failure
 string rc_voice_rec
@@ -1690,6 +1695,7 @@ string rc_yes
 string rc_yesterday_format
 string rc_you_are_sharing_location
 string rc_you_recalled_a_message
+string rc_you_recalled_edit
 string status_bar_notification_info_overflow
 style RCTheme
 style RCTheme_MessageTime
@@ -1697,6 +1703,7 @@ style RCTheme_Message_RichContent_TextView
 style RCTheme_Message_TextView
 style RCTheme_Message_Username_TextView
 style RCTheme_Notification
+style RCTheme_Notification_RelativeLayout
 style RCTheme_TextView
 style RCTheme_TextView_Large
 style RCTheme_TextView_Large_Inverse

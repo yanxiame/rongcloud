@@ -41,10 +41,6 @@ uses-permission#android.permission.WAKE_LOCK
 ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMLib/AndroidManifest.xml:11:5-68
 	android:name
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMLib/AndroidManifest.xml:11:22-65
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMLib/AndroidManifest.xml:13:5-79
-	android:name
-		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMLib/AndroidManifest.xml:13:22-76
 application
 ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMLib/AndroidManifest.xml:15:5-63:19
 meta-data#RONG_CLOUD_APP_KEY

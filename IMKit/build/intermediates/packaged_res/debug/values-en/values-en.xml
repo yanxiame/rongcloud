@@ -192,7 +192,6 @@
     <string name="rc_emoji_money_bag">Money Bag</string>
     <string name="rc_emoji_mouthless">Mouthless</string>
     <string name="rc_emoji_musical_note">Musical Note</string>
-    <string name="rc_emoji_nice">Nice</string>
     <string name="rc_emoji_no_speaking">No Speaking</string>
     <string name="rc_emoji_ok_hand">Ok Hand</string>
     <string name="rc_emoji_oncoming_fist">Oncoming Fist</string>
@@ -319,7 +318,7 @@
     <string name="rc_message_content_mentioned">[You were mentioned]</string>
     <string name="rc_message_content_rich_text">[Message]</string>
     <string name="rc_message_content_rp">[Red Packet]</string>
-    <string name="rc_message_content_sight">[Sight]</string>
+    <string name="rc_message_content_sight">[Video]</string>
     <string name="rc_message_content_sticker">[Sticker]</string>
     <string name="rc_message_content_voice">[Voice]</string>
     <string name="rc_message_content_vst">[Audio video call]]</string>
@@ -391,6 +390,7 @@
     <string name="rc_real_time_exit_notification">Real-time Location will stop if you leave this session. Leave now?</string>
     <string name="rc_real_time_join_notification">Others can see your location if you join Real-time Location. Join now</string>
     <string name="rc_real_time_location_sharing">Start a location sharing</string>
+    <string name="rc_real_time_location_start">Start real time location</string>
     <string name="rc_real_time_location_summary">I start a location sharing</string>
     <string name="rc_recall_failed">Failed to recall the message</string>
     <string name="rc_recall_failed_for_network_unavailable">Recall failed. Please check your network</string>
@@ -401,6 +401,8 @@
     <string name="rc_saturday_format">Sat</string>
     <string name="rc_save_picture">Save Photo</string>
     <string name="rc_save_picture_at">Saved to album</string>
+    <string name="rc_save_video">Save Video</string>
+    <string name="rc_save_video_success">Saved to album</string>
     <string name="rc_search">Search</string>
     <string name="rc_select_from_album">Select from Album</string>
     <string name="rc_send_format">Send(%1$s)</string>
@@ -437,4 +439,5 @@
     <string name="rc_yesterday_format">Yesterday</string>
     <string name="rc_you_are_sharing_location">You are sharing location</string>
     <string name="rc_you_recalled_a_message">You have recalled a message</string>
+    <string name="rc_you_recalled_edit">Edit</string>
 </resources>

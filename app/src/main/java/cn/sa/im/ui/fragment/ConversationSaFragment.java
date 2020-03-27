@@ -108,8 +108,6 @@ public class ConversationSaFragment extends ConversationFragment {
                 // data = filterMessageList(data)
                 callback.onResult(data);
             }
-
-
             @Override
             public void onError() {
 

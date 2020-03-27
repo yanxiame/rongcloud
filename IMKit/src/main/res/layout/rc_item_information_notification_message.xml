@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@id/rc_msg"
-    style="@style/RCTheme.Notification"
-    android:layout_width="wrap_content"
-    android:layout_height="27dp"
-    android:layout_gravity="center_horizontal"
-    />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
+    <RelativeLayout
+        style="@style/RCTheme.Notification.RelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@id/rc_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textColor="@color/rc_text_color_primary_inverse" />
+
+        <TextView
+            android:id="@+id/rc_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:gravity="center"
+            android:layout_toRightOf="@id/rc_msg"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:paddingLeft="4dp"
+            android:text="@string/rc_you_recalled_edit"
+            android:textColor="@color/rc_voip_check_enable" />
+    </RelativeLayout>
+
+</RelativeLayout>

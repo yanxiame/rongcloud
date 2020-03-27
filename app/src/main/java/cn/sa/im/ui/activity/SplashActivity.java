@@ -28,6 +28,7 @@ import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.Group;
 import io.rong.imlib.model.Message;
 import io.rong.imlib.model.UserInfo;
+import io.rong.message.ImageMessage;
 import io.rong.message.TextMessage;
 
 public class SplashActivity extends Activity {
@@ -43,11 +44,10 @@ public class SplashActivity extends Activity {
         context = this;
         SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
 
-        connect("1h6lQuewv2mJuHpty0P/5CdctTgTnE391ZFavKpzdP8z5FArQgapFMJ9Gaf23Fkq0jHvilddNis/maNFNBY4cg==");
         // 100//03
         //connect("MnvwCDWPDGPZbHiivJ7lPPhVl5pNKz7Uy0yfoZDE01EOFsRlPUW5bHSFXmg+iB8CiDVxs/v4/+XOIALlTcrhMV3xkUrsM6T0xkkUaMl/JL0=");
         // 10001
-        //connect("+VAPKwjohQJE5j+JmWoCpqjdNQ7jV7Tda5q1yXzTGPqisWGGbu4ob5ffRbks897yWL4Qampgam58QvKrJgYtmQ==");
+        connect("+VAPKwjohQJE5j+JmWoCpqjdNQ7jV7Tda5q1yXzTGPqisWGGbu4ob5ffRbks897yWL4Qampgam58QvKrJgYtmQ==");
     }
 
     private boolean isNetworkConnected(Context context) {
@@ -83,8 +83,8 @@ public class SplashActivity extends Activity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        TextMessage textMessage= TextMessage.obtain("11");
-                        Message message=Message.obtain("rtcu013", Conversation.ConversationType.PRIVATE,textMessage);
+                        //sendMessage();
+                        RongIMClient.getInstance().cleanHistoryMessages(Conversation.ConversationType.PRIVATE,"10003",System.currentTimeMillis(),true,null);
 
                         RongIM.setGroupInfoProvider(new RongIM.GroupInfoProvider() {
                             @Override
@@ -130,6 +130,35 @@ public class SplashActivity extends Activity {
         //}
     }
 
+    private void sendMessage() {
+        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.rc_loading);
+        Uri uri= Uri.parse(RongGenerate.generate(bitmap,name,"1"));
+        ImageMessage imageMessage = ImageMessage.obtain(uri,uri);
+        Message message=Message.obtain("rtcu013", Conversation.ConversationType.PRIVATE,imageMessage);
+
+        RongIM.getInstance().sendImageMessage(message, "", "", new RongIMClient.SendImageMessageCallback() {
+            @Override
+            public void onAttached(Message message) {
+
+            }
+
+            @Override
+            public void onError(Message message, RongIMClient.ErrorCode errorCode) {
+
+            }
+
+            @Override
+            public void onSuccess(Message message) {
+
+            }
+
+            @Override
+            public void onProgress(Message message, int i) {
+
+            }
+        });
+    }
+
     //网络图片 没缓存 如果需要请求的图片要缓存。要刷新。
     private UserInfo findUserById(String s) {
 
@@ -158,6 +187,6 @@ public class SplashActivity extends Activity {
         //Uri portrait = Uri.parse(RongGenerate.generateDefaultAvatar(name, s));
         Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.rc_loading);
         Uri uri= Uri.parse(RongGenerate.generate(bitmap,name,s));
-        return new UserInfo(s, name, uri);
+        return new UserInfo(s, name, null);
     }
 }
