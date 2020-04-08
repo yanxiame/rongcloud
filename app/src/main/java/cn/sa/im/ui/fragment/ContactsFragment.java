@@ -52,7 +52,9 @@ public class ContactsFragment extends Fragment implements SideBar.OnChooseLetter
                     RongIM.getInstance().startCustomerServiceChat(getActivity(), "service", "在线客服",csInfo);
 
                 }else {
-                    RongIM.getInstance().startConversation(ContactsFragment.this.getActivity(), Conversation.ConversationType.PRIVATE, userList.get(position).getPhone(), userList.get(position).getUserName());
+                    Bundle bundle = new Bundle();
+                    bundle.putString("1","1");
+                    RongIM.getInstance().startConversation(ContactsFragment.this.getActivity(), Conversation.ConversationType.PRIVATE, userList.get(position).getPhone(), userList.get(position).getUserName(),bundle);
                 }
             }
             @Override

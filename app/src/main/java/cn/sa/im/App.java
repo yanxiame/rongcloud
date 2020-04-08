@@ -56,8 +56,8 @@ public class App extends MultiDexApplication {
 
         RongPushClient.setPushConfig(config);
         //RongIM.setServerInfo("navsg01.cn.ronghub.com","");
-        //RongIM.init(this,"8brlm7ufrh6k3");
-        RongIM.init(this,"pvxdm17jpof6r");
+        RongIM.init(this,"pwe86ga5p4gn6");
+        //RongIM.init(this,"pvxdm17jpof6r");
 
         //自定义消息
         RongIM.registerMessageTemplate(new ApkItemProvider());

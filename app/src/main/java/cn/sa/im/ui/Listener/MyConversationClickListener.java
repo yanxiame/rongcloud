@@ -26,6 +26,7 @@ import io.rong.imkit.RongMessageItemLongClickActionManager;
 import io.rong.imkit.mention.RongMentionManager;
 import io.rong.imkit.model.UIMessage;
 import io.rong.imkit.tools.CharacterParser;
+import io.rong.imkit.userInfoCache.RongUserInfoManager;
 import io.rong.imkit.utilities.OptionsPopupDialog;
 import io.rong.imkit.widget.provider.MessageItemLongClickAction;
 import io.rong.imlib.IHandler;
@@ -123,7 +124,7 @@ public class MyConversationClickListener implements RongIM.ConversationClickList
      * @return 如果用户自己处理了长按后的逻辑处理，则返回 true，否则返回 false，false 走融云默认处理方式。
      */
     @Override
-    public boolean onMessageLongClick(Context context, View view, final Message message) {
+    public boolean onMessageLongClick(final Context context, View view, final Message message) {
 
         //setMessageItemLongClickAction(context);
 
@@ -156,7 +157,7 @@ public class MyConversationClickListener implements RongIM.ConversationClickList
             @Override
             public void onOptionsItemClicked(int which) {
                 if (which == 0) {
-                   RongIMClient.getInstance().recallMessage(message, "", new RongIMClient.ResultCallback<RecallNotificationMessage>() {
+                   RongIMClient.getInstance().recallMessage(message, getPushContent(context, message), new RongIMClient.ResultCallback<RecallNotificationMessage>() {
                        @Override
                        public void onSuccess(RecallNotificationMessage recallNotificationMessage) {
 
@@ -192,5 +193,13 @@ public class MyConversationClickListener implements RongIM.ConversationClickList
                     }
                 }).build();
         RongMessageItemLongClickActionManager.getInstance().addMessageItemLongClickAction(action, 1);
+    }
+    private String getPushContent(Context context, Message message) {
+        String userName = "";
+        UserInfo userInfo = RongUserInfoManager.getInstance().getUserInfo(message.getSenderUserId());
+        if (userInfo != null) {
+            userName = userInfo.getName();
+        }
+        return context.getString(io.rong.imkit.R.string.rc_user_recalled_message, userName);
     }
 }

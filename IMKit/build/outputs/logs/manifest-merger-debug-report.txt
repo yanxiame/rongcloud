@@ -49,10 +49,10 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:18:5-76
 	android:name
 		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:18:22-73
-uses-permission#android.permission.RECORD_AUDIO
-ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:20:5-71
+uses-permission#android.prmission.RECORD_AUDIO
+ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:20:5-70
 	android:name
-		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:20:22-68
+		ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:20:22-67
 uses-permission#android.permission.GET_TASKS
 ADDED from /Users/sa/AndroidStudioProjects/rongcloud/IMKit/src/main/AndroidManifest.xml:22:5-68
 	android:name

@@ -23,7 +23,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <!-- 录音 -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.prmission.RECORD_AUDIO" />
     <!-- 使用ActivityManager需要 -->
     <uses-permission android:name="android.permission.GET_TASKS" />
     <!-- 适配 Android 8.0 -->
