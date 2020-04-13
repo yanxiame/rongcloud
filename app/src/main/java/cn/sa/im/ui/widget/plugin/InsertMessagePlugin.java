@@ -24,6 +24,7 @@ import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.Message;
 import io.rong.message.ImageMessage;
+import io.rong.message.InformationNotificationMessage;
 import io.rong.message.TextMessage;
 
 public class InsertMessagePlugin implements IPluginModule {
@@ -47,7 +48,8 @@ public class InsertMessagePlugin implements IPluginModule {
     public void onClick(final Fragment fragment, RongExtension rongExtension) {
         Log.i("TAG","222222");
 
-
+        InformationNotificationMessage informationNotificationMessage = InformationNotificationMessage.obtain("无人工在线");
+        RongIM.getInstance().insertMessage(rongExtension.getConversationType(), rongExtension.getTargetId(), RongIM.getInstance().getCurrentUserId(), informationNotificationMessage, null);
 
 
 //        Toast.makeText(rongExtension.getContext(), "发送一条自定义消息", Toast.LENGTH_LONG).show();
