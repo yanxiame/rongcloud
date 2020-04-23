@@ -55,6 +55,7 @@ public class SplashActivity extends Activity {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo ni = cm.getActiveNetworkInfo();
         return ni != null && ni.isConnectedOrConnecting();
+
     }
 
     private void connect(String token) {

@@ -28,8 +28,7 @@ public class ConversationDynamicActivity extends FragmentActivity {
         Intent intent = getIntent();
         mTargetId = intent.getData().getQueryParameter("targetId");
         mTargetIds = intent.getData().getQueryParameter("targetIds");
-        Bundle bundle=intent.getExtras();
-        Log.i("TAG@@",bundle.getString("1"));
+
         mConversationType = Conversation.ConversationType.valueOf(intent.getData().getLastPathSegment().toUpperCase());
 
         /* 新建 ConversationFragment 实例，通过 setUri() 设置相关属性*/

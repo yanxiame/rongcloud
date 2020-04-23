@@ -3,6 +3,8 @@ package cn.sa.im.ui.fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -19,6 +21,9 @@ import java.util.Locale;
 
 import cn.sa.im.R;
 import cn.sa.im.ui.apadper.MessageListAdapterEx;
+import cn.sa.im.ui.widget.plugin.OnItemClickListener;
+import cn.sa.im.ui.widget.plugin.RongEmoticonTab;
+import cn.sa.im.util.RongGenerate;
 import io.rong.common.RLog;
 import io.rong.imkit.RongExtension;
 import io.rong.imkit.RongIM;
@@ -40,7 +45,7 @@ import static android.content.Context.MODE_PRIVATE;
  * 聊天记录
  *
  */
-public class ConversationSaFragment extends ConversationFragment {
+public class ConversationSaFragment extends ConversationFragment{
 
     private RongExtension mRongExtension;
     private String mTargetId;
@@ -49,7 +54,10 @@ public class ConversationSaFragment extends ConversationFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+
         return super.onCreateView(inflater, container, savedInstanceState);
+
     }
     @Override
     public MessageListAdapter onResolveAdapter(Context context) {
@@ -128,5 +136,7 @@ public class ConversationSaFragment extends ConversationFragment {
 
         super.onDestroy();
     }
+
+
 }
 
