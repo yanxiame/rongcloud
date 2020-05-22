@@ -43,7 +43,6 @@ public class ConversationListAdapterEx extends ConversationListAdapter {
             if (data.getConversationType().equals(Conversation.ConversationType.DISCUSSION))
                 data.setUnreadType(UIConversation.UnreadRemindType.REMIND_ONLY);
         }
-        Log.i("TAG","2222"+isShowCheckbox);
         if(isShowCheckbox()) {leftImageLayout.setVisibility(View.VISIBLE);}
         super.bindView(v, position, data);
 
