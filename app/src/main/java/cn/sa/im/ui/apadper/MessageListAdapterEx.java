@@ -20,7 +20,7 @@ public class MessageListAdapterEx extends MessageListAdapter {
         super.bindView(v, position, data);
         if(data.getMessageDirection() == Message.MessageDirection.SEND){
 //            holder.nameView.setText(RongUserInfoManager.getInstance().getUserInfo(data.getTargetId()).getName());
-            holder.nameView.setText("456");
+
         }else {
             holder.nameView.setText("123");
         }
