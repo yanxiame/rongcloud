@@ -131,7 +131,19 @@ public class App extends MultiDexApplication {
                 return false;
             }
         });
+        RongIM.getInstance().setSendMessageListener(new RongIM.OnSendMessageListener() {
+            @Override
+            public Message onSend(Message message) {
 
+                return null;
+            }
+
+            @Override
+            public boolean onSent(Message message, RongIM.SentMessageErrorCode sentMessageErrorCode) {
+                Log.i("TAG",message.getObjectName()+"@@@@");
+                return true;
+            }
+        });
 
 
     }

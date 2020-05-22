@@ -55,6 +55,9 @@ public class ConversationListWoManFragment extends ConversationListFragment {
 
     @Override
     public boolean shouldFilterConversation(Conversation.ConversationType type, String targetId) {
+        if(targetId!="10003"){
+            return true;
+        }
         return super.shouldFilterConversation(type, targetId);
     }
 }
