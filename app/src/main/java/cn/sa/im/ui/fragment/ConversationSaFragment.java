@@ -30,6 +30,7 @@ import io.rong.imkit.RongIM;
 import io.rong.imkit.RongMessageItemLongClickActionManager;
 import io.rong.imkit.fragment.ConversationFragment;
 import io.rong.imkit.fragment.IHistoryDataResultCallback;
+import io.rong.imkit.model.Event;
 import io.rong.imkit.model.UIMessage;
 import io.rong.imkit.widget.AutoRefreshListView;
 import io.rong.imkit.widget.adapter.MessageListAdapter;
@@ -137,6 +138,12 @@ public class ConversationSaFragment extends ConversationFragment{
         super.onDestroy();
     }
 
-
+    @Override
+    public void onEventMainThread(Event.MessageDeleteEvent deleteEvent) {
+        super.onEventMainThread(deleteEvent);
+        for (int messageId : deleteEvent.getMessageIds()) {
+            //RongIM.getInstance().deleteRemoteMessages();
+        }
+    }
 }
 

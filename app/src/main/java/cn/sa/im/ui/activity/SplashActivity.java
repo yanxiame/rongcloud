@@ -47,9 +47,8 @@ public class SplashActivity extends Activity {
         // 100//03
         //connect("MnvwCDWPDGPZbHiivJ7lPPhVl5pNKz7Uy0yfoZDE01EOFsRlPUW5bHSFXmg+iB8CiDVxs/v4/+XOIALlTcrhMV3xkUrsM6T0xkkUaMl/JL0=");
         // 10001
-        //connect("+VAPKwjohQJE5j+JmWoCpqjdNQ7jV7Tda5q1yXzTGPqisWGGbu4ob5ffRbks897yWL4Qampgam58QvKrJgYtmQ==");
-        connect("2jMI28WdWY1cQ/XXwVGBkMTqnHvv1od0zMJGOA0FB6OYFN4UVRGGbaykuVJvJJLrJ8pdjj5Fb7MTP5Ijo/pU4F5hsWLdGmDg9Bh6zV1iDz7mc8Ka6ZVsfw==");
-    }
+        connect("+VAPKwjohQJE5j+JmWoCpqjdNQ7jV7Tda5q1yXzTGPqisWGGbu4ob5ffRbks897yWL4Qampgam58QvKrJgYtmQ==");
+        }
 
     private boolean isNetworkConnected(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

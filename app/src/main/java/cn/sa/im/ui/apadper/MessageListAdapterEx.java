@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.view.View;
 
 import io.rong.imkit.model.UIMessage;
+import io.rong.imkit.userInfoCache.RongUserInfoManager;
 import io.rong.imkit.widget.adapter.MessageListAdapter;
 
 public class MessageListAdapterEx extends MessageListAdapter {
@@ -16,8 +17,9 @@ public class MessageListAdapterEx extends MessageListAdapter {
     protected void bindView(View v, int position, UIMessage data) {
         final ViewHolder holder = (ViewHolder) v.getTag();
         super.bindView(v, position, data);
+        holder.nameView.setText(RongUserInfoManager.getInstance().getUserInfo(data.getTargetId()).getName());
+        holder.nameView.setVisibility(View.VISIBLE);
         holder.nameView.setTextColor(Color.RED);
-        //holder.nameView.setVisibility(View.GONE);
         //holder.leftIconView.setVisibility(View.GONE);
         //holder.rightIconView.setVisibility(View.GONE);
     }

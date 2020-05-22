@@ -56,8 +56,8 @@ public class App extends MultiDexApplication {
 
         RongPushClient.setPushConfig(config);
         //RongIM.setServerInfo("navsg01.cn.ronghub.com","");
-        RongIM.init(this,"pwe86ga5p4gn6");
-        //RongIM.init(this,"pvxdm17jpof6r");
+        //RongIM.init(this,"pwe86ga5p4gn6");
+        RongIM.init(this,"pvxdm17jpof6r");
 
         //自定义消息
         RongIM.registerMessageTemplate(new ApkItemProvider());
@@ -85,7 +85,6 @@ public class App extends MultiDexApplication {
         RongIM.getInstance().setConversationClickListener(new MyConversationClickListener());
         RongIM.getInstance().enableNewComingMessageIcon(true);//显示新消息提醒
         RongIM.getInstance().enableUnreadMessageIcon(true);//显示未读消息数目
-
 
 
         //使用消息携带用户信息

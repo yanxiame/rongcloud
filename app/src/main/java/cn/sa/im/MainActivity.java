@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             recordHWNotificationEvent(intent);
         }
     }
+    
 
     public void recordHWNotificationEvent(Intent intent) {
         if (intent != null) {

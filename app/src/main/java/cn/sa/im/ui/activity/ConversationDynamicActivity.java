@@ -23,7 +23,6 @@ public class ConversationDynamicActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rong_activity);
-
         /* 从 intent 携带的数据里获取 targetId 和会话类型*/
         Intent intent = getIntent();
         mTargetId = intent.getData().getQueryParameter("targetId");

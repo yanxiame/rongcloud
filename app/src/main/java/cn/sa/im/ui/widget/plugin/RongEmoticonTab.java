@@ -49,7 +49,9 @@ public class RongEmoticonTab implements IEmoticonTab {
     public RongEmoticonTab() {
 
     }
+
     NewsAdapter adapter;
+
     @Override
     public Drawable obtainTabDrawable(final Context context) {
         //final String saveImagePath = KitStorageUtils.getImageSavePath(context);
@@ -59,6 +61,18 @@ public class RongEmoticonTab implements IEmoticonTab {
 
     @Override
     public View obtainTabPager(Context context) {
+        return initView(context);
+    }
+
+    public NewsAdapter getAdapter() {
+        return adapter;
+    }
+
+    @Override
+    public void onTableSelected(int i) {
+    }
+
+    public View initView(Context context) {
         View view = LayoutInflater.from(context).inflate(R.layout.view_emoji, null);
         RecyclerView rv = view.findViewById(R.id.recycler_view);
         //LinearLayoutManager是用来做列表布局，也就是单列的列表
@@ -76,17 +90,9 @@ public class RongEmoticonTab implements IEmoticonTab {
         while (++i < array.length()) {
             newsList.add(array.getResourceId(i, -1));
         }
-        adapter =new NewsAdapter(newsList);
+        adapter = new NewsAdapter(newsList);
         rv.setAdapter(adapter);
         return view;
-    }
-    public NewsAdapter getAdapter(){
-        return adapter;
-    }
-
-    @Override
-    public void onTableSelected(int i) {
-
     }
 }
 

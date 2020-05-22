@@ -92,16 +92,10 @@ public class ApkExtensionModule extends DefaultExtensionModule {
                 }
 
             }
-
             RongExtensionManager.getInstance().unregisterExtensionModule(module);//注销之前的
-
             RongExtensionManager.getInstance().registerExtensionModule(new ApkExtensionModule());//注册新的
-
             List<IExtensionModule> moduleList2 = RongExtensionManager.getInstance().getExtensionModules();
-
             Log.i("TAG", "moduleList.size() = " + moduleList2);
-
         }
-
     }
 }
