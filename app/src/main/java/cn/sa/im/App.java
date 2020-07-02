@@ -135,7 +135,7 @@ public class App extends MultiDexApplication {
             @Override
             public Message onSend(Message message) {
 
-                return null;
+                return message;
             }
 
             @Override
