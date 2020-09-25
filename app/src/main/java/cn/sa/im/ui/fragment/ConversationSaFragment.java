@@ -49,6 +49,7 @@ import static android.content.Context.MODE_PRIVATE;
 public class ConversationSaFragment extends ConversationFragment{
 
     private RongExtension mRongExtension;
+    private AutoRefreshListView mList;
     private String mTargetId;
     private Conversation.ConversationType mConversationType;
     private MessageItemLongClickAction messageItemLongClickAction;
@@ -68,16 +69,18 @@ public class ConversationSaFragment extends ConversationFragment{
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         mRongExtension = (RongExtension) view.findViewById(io.rong.imkit.R.id.rc_extension);
+        mList = (AutoRefreshListView) view.findViewById( io.rong.imkit.R.id.rc_list);
+        mRongExtension.setTag("11");
+        mList.setSelection(mList.getCount());
         super.onViewCreated(view, savedInstanceState);
         //View s=view.findViewById(R.id.rc_layout_msg_list);
         //s.setBackground(getResources().getDrawable(R.drawable.bg_conversation));
-
         messageItemLongClickAction = new MessageItemLongClickAction.Builder()
                 .title("收藏")
                 .actionListener(new MessageItemLongClickAction.MessageItemLongClickListener() {
                     @Override
                     public boolean onMessageItemLongClick(Context context, UIMessage message) {
-                        Log.i("TAG","asdf");
+
                         return true;
                     }
                 }).build();
@@ -99,7 +102,8 @@ public class ConversationSaFragment extends ConversationFragment{
     }
 
     @Override
-    public void onSendToggleClick(View v, String text) {
+    public void onSendToggleClick(View v, String text)
+    {
         super.onSendToggleClick(v,text);
     }
 
@@ -145,5 +149,6 @@ public class ConversationSaFragment extends ConversationFragment{
             //RongIM.getInstance().deleteRemoteMessages();
         }
     }
+
 }
 

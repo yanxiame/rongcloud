@@ -1,6 +1,7 @@
 package cn.sa.im.ui.apadper;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,7 @@ public class ConversationListAdapterEx extends ConversationListAdapter {
     protected View newView(Context context, int position, ViewGroup group) {
         View view =super.newView(context, position, group);
         leftImageLayout = findViewById(view, io.rong.imkit.R.id.ll_message_check);
+        view.setBackgroundColor(Color.RED);
         return view;
     }
 
@@ -44,6 +46,7 @@ public class ConversationListAdapterEx extends ConversationListAdapter {
                 data.setUnreadType(UIConversation.UnreadRemindType.REMIND_ONLY);
         }
         if(isShowCheckbox()) {leftImageLayout.setVisibility(View.VISIBLE);}
+
         super.bindView(v, position, data);
 
     }

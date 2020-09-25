@@ -45,10 +45,11 @@ public class SplashActivity extends Activity {
         SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
 
         // 100//03
-        //connect("MnvwCDWPDGPZbHiivJ7lPPhVl5pNKz7Uy0yfoZDE01EOFsRlPUW5bHSFXmg+iB8CiDVxs/v4/+XOIALlTcrhMV3xkUrsM6T0xkkUaMl/JL0=");
+        connect("qkG1qvBx5GN2rRWp3lUGLl2lXYyV+kg2@9qrf.sg.rongnav.com;9qrf.sg.rongcfg.com");
         // 10001
-        connect("+VAPKwjohQJE5j+JmWoCpqjdNQ7jV7Tda5q1yXzTGPqisWGGbu4ob5ffRbks897yWL4Qampgam58QvKrJgYtmQ==");
-        }
+        //connect("pGJotIrFCum8Ft/A0OOYJvMFxrVBB+C6hCY4WZALhv4=@vvrh.cn.rongnav.com;vvrh.cn.rongcfg.com");
+
+    }
 
     private boolean isNetworkConnected(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -110,12 +111,23 @@ public class SplashActivity extends Activity {
                                 Log.i("TAG",s);
                                 return findUserById(s);
                             }
-                        }, true);
+                        }, false);
+
+
+                        Conversation.ConversationType conversationType = Conversation.ConversationType.PRIVATE;
+                        String targetId = "10001";
+                        // 消息免打扰
+                        Conversation.ConversationNotificationStatus notificationStatus = Conversation.ConversationNotificationStatus.DO_NOT_DISTURB;
+
+
+
                         startActivity(new Intent(SplashActivity.this, MainActivity.class));
                         finish();
                     }
-                });
 
+                });
+                //sendMessage();
+                insertMessage();
                 //startActivity(new Intent(SplashActivity.this, ConversationListActivity.class));
                 //finish();
             }
@@ -130,11 +142,27 @@ public class SplashActivity extends Activity {
         });
         //}
     }
+    public void insertMessage(){
+        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.rc_loading);
+        Uri uri= Uri.parse(RongGenerate.generate(bitmap,name,"1"));
+        Log.i("TAG",RongGenerate.generate(bitmap,name,"1"));
+//        Uri uri1=Uri.parse("file:///storage/emulated/0/Pictures/WeiXin/mmexport1597074491083.jpg");
+        Uri uri1=Uri.parse("file:///storage/emulated/0/DCIM/Alipay/1597620368962.jpg");
+        ImageMessage imageMessage = ImageMessage.obtain(uri1,uri1);
+        Message message=Message.obtain("rtcu013", Conversation.ConversationType.PRIVATE,imageMessage);
+
+        RongIM.getInstance().insertIncomingMessage(Conversation.ConversationType.PRIVATE,"rtcu013",RongIM.getInstance().getCurrentUserId(), new Message.ReceivedStatus(0),imageMessage,null);
+
+    }
 
     private void sendMessage() {
         Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.rc_loading);
         Uri uri= Uri.parse(RongGenerate.generate(bitmap,name,"1"));
-        ImageMessage imageMessage = ImageMessage.obtain(uri,uri);
+        Log.i("TAG",RongGenerate.generate(bitmap,name,"1"));
+//        Uri uri1=Uri.parse("file:///storage/emulated/0/Pictures/WeiXin/mmexport1597074491083.jpg");
+
+        Uri uri1=Uri.parse("file:///storage/emulated/0/DCIM/Alipay/1597620368962.jpg");
+        ImageMessage imageMessage = ImageMessage.obtain(uri1,uri1);
         Message message=Message.obtain("rtcu013", Conversation.ConversationType.PRIVATE,imageMessage);
 
         RongIM.getInstance().sendImageMessage(message, "", "", new RongIMClient.SendImageMessageCallback() {
@@ -163,31 +191,32 @@ public class SplashActivity extends Activity {
     //网络图片 没缓存 如果需要请求的图片要缓存。要刷新。
     private UserInfo findUserById(String s) {
 
-//        switch (s){
-//            case "10001":
-//                return new UserInfo("userId", "大鱼", Uri.parse("https://www.baidu.com/img/bd_logo1.png"));
-//            case "10002":
-//                return new UserInfo("userId", "双鱼", Uri.parse("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3709603467,2914885303&fm=58&bpow=512&bpoh=512"));
-//            case "10003":
-//                return new UserInfo("userId", "三鱼", Uri.parse("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2967361950,4205462985&fm=58&bpow=802&bpoh=652"));
-//        }
-        switch (s) {
+        switch (s){
             case "10001":
-                name = "大鱼";
-                break;
+                return new UserInfo(s, "大鱼", Uri.parse("https://www.baidu.com/img/bd_logo1.png"));
             case "10002":
-                name = "双鱼";
-                break;
+                return new UserInfo(s, "双鱼", Uri.parse("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3709603467,2914885303&fm=58&bpow=512&bpoh=512"));
             case "10003":
-                name = "三鱼";
-                break;
-            default:
-                name = "鱼群";
-                break;
+                return new UserInfo(s, "三鱼", Uri.parse("https://ss0.baidu.com/6ONW  sjip0QIZ8tyhnq/it/u=2967361950,4205462985&fm=58&bpow=802&bpoh=652"));
         }
-        //Uri portrait = Uri.parse(RongGenerate.generateDefaultAvatar(name, s));
-        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.rc_loading);
-        Uri uri= Uri.parse(RongGenerate.generate(bitmap,name,s));
-        return new UserInfo(s, name, null);
+        return new UserInfo(s,"呵呵",Uri.parse("https://m.weiweiapp.com/cgi/home/OssAction?function=header&uid=4"));
+//        switch (s) {
+//            case "10001":
+//                name = "大鱼";
+//                break;
+//            case "10002":
+//                name = "双鱼";
+//                break;
+//            case "10003":
+//                name = "三鱼";
+//                break;
+//            default:
+//                name = "鱼群";
+//                break;
+//        }
+//        Uri portrait = Uri.parse(RongGenerate.generateDefaultAvatar(name, s));
+////        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.rc_loading);
+////        Uri uri= Uri.parse(RongGenerate.generate(bitmap,name,s));
+//        return new UserInfo(s, name, portrait);
     }
 }

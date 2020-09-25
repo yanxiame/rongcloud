@@ -55,10 +55,9 @@ public class App extends MultiDexApplication {
 
 
         RongPushClient.setPushConfig(config);
-        //RongIM.setServerInfo("navsg01.cn.ronghub.com","");
-        //RongIM.init(this,"pwe86ga5p4gn6");
-        RongIM.init(this,"pvxdm17jpof6r");
-
+        RongIM.setServerInfo("navsg01.cn.ronghub.com","");
+        //RongIM.init(this,"pvxdm17jpof6r");
+        RongIM.init(this,"8luwapkv84zrl");
         //自定义消息
         RongIM.registerMessageTemplate(new ApkItemProvider());
         RongIM.registerMessageTemplate(new InsertItemProvider());
@@ -92,6 +91,7 @@ public class App extends MultiDexApplication {
         RongIM.getInstance().addUnReadMessageCountChangedObserver(new IUnReadMessageObserver() {
             @Override
             public void onCountChanged(int i) {
+                Log.i("TAG",i+"!!!!!!");
 
             }
         }, Conversation.ConversationType.PRIVATE);

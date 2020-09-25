@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="rc_popup_dialog_distance_to_edge">40dp</dimen>
-    <dimen name="rc_extension_board_height">282dp</dimen>
+    <dimen name="rc_extension_board_height">212dp</dimen>
     <dimen name="rc_ext_root_menu_item_text_size">16sp</dimen>
     <dimen name="rc_ext_sub_menu_item_text_size">14sp</dimen>
     <dimen name="rc_ext_more_layout_height">46dp</dimen>

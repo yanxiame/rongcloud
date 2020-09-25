@@ -78,7 +78,6 @@ public class RedPacketOpendMessageItemProvider extends IContainerItemProvider.Me
     @Override
     public void onItemClick(View view, int i, ApkMessage redPackageMessage, UIMessage uiMessage) {
         RongIM.getInstance().sendDirectionalMessage(uiMessage.getConversationType(),uiMessage.getTargetId(),redPackageMessage,new String[]{uiMessage.getSenderUserId()},"","",null);
-
         uiMessage.setExtra("isopen");
         RongIMClient.getInstance().setMessageExtra(uiMessage.getMessageId(), "isopen", null);
         RongContext.getInstance().getEventBus().post(uiMessage);

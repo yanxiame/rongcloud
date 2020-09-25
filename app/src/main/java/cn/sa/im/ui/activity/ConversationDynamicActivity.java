@@ -35,9 +35,7 @@ public class ConversationDynamicActivity extends FragmentActivity {
         Uri uri = Uri.parse("rong://" + getApplicationInfo().packageName).buildUpon()
                 .appendPath("conversation").appendPath(mConversationType.getName().toLowerCase())
                 .appendQueryParameter("targetId", mTargetId).build();
-
         fragment.setUri(uri);
-
         /* 加载 ConversationFragment */
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(R.id.rong_content, fragment);

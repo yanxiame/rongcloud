@@ -26,6 +26,9 @@ public class MessageListAdapterEx extends MessageListAdapter {
         }
         holder.nameView.setVisibility(View.VISIBLE);
         holder.nameView.setTextColor(Color.RED);
+        holder.time.setBackgroundColor(Color.RED);
+
+
         //holder.leftIconView.setVisibility(View.GONE);
         //holder.rightIconView.setVisibility(View.GONE);
     }

@@ -24,8 +24,10 @@ import cn.sa.im.MainActivity;
 import cn.sa.im.R;
 import cn.sa.im.server.network.http.HttpException;
 import io.rong.imkit.RongIM;
+import io.rong.imlib.MessageTag;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.UserInfo;
+import io.rong.message.TextMessage;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
  private final static String TAG = "LoginActivity";
@@ -55,6 +57,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
  private void initView() {
   mPhoneEdit = (EditText) findViewById(R.id.de_login_phone);
   mPasswordEdit = (EditText) findViewById(R.id.de_login_password);
+  mPasswordEdit.setOnClickListener(new View.OnClickListener() {
+   @Override
+   public void onClick(View v) {
+      //111111
+   }
+  });
+
+
+
   Button mConfirm = (Button) findViewById(R.id.de_login_sign);
   TextView mRegister = (TextView) findViewById(R.id.de_login_register);
   TextView forgetPassword = (TextView) findViewById(R.id.de_login_forgot);
@@ -66,8 +77,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
  }
 
+
  @Override
- public void onClick(View view) {
+ public void onClick(View v) {
 
  }
 }
