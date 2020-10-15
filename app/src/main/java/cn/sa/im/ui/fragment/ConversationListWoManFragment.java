@@ -22,15 +22,6 @@ public class ConversationListWoManFragment extends ConversationListFragment {
     ConversationListAdapterEx conversationListAdapterEx;
 
     @Override
-    protected List<View> onAddHeaderView() {
-        List<View> headerViews = super.onAddHeaderView();
-        TextView textView = new TextView(this.getActivity());
-        textView.setGravity(Gravity.CENTER);
-        textView.setText(getString(R.string.conversatinolist_top_title));
-        headerViews.add(textView);
-        return headerViews;
-    }
-    @Override
     public ConversationListAdapter onResolveAdapter(Context context) {
         conversationListAdapterEx = new ConversationListAdapterEx(context);
         return conversationListAdapterEx;

@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import cn.sa.im.ui.fragment.CalendarFragment;
 import cn.sa.im.ui.fragment.ContactsFragment;
 import cn.sa.im.ui.fragment.ConversationListManFragment;
 import cn.sa.im.ui.fragment.ConversationListWoManFragment;
@@ -193,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
-        private Fragment[] mFragments = new Fragment[]{ManFragment, new ContactsFragment(), WomanFragment};
+        private Fragment[] mFragments = new Fragment[]{ManFragment, new CalendarFragment(), WomanFragment};
 
         public ViewPagerAdapter(FragmentManager fm) {
             super(fm);

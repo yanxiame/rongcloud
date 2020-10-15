@@ -199,7 +199,7 @@ public class SplashActivity extends Activity {
             case "10003":
                 return new UserInfo(s, "三鱼", Uri.parse("https://ss0.baidu.com/6ONW  sjip0QIZ8tyhnq/it/u=2967361950,4205462985&fm=58&bpow=802&bpoh=652"));
         }
-        return new UserInfo(s,"呵呵",Uri.parse("https://m.weiweiapp.com/cgi/home/OssAction?function=header&uid=4"));
+        return new UserInfo(s,this.getResources().getString(R.string.app_name),Uri.parse("https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2464709569,1785793044&fm=26&gp=0.jpg"));
 //        switch (s) {
 //            case "10001":
 //                name = "大鱼";

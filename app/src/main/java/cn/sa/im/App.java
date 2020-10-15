@@ -37,6 +37,7 @@ import io.rong.imlib.model.Message;
 import io.rong.imlib.model.UserInfo;
 import io.rong.message.ImageMessage;
 import io.rong.message.InformationNotificationMessage;
+import io.rong.message.RecallNotificationMessage;
 import io.rong.push.PushType;
 import io.rong.push.RongPushClient;
 import io.rong.push.notification.PushNotificationMessage;
@@ -144,8 +145,13 @@ public class App extends MultiDexApplication {
                 return true;
             }
         });
-
-
+        RongIMClient.setOnRecallMessageListener(new RongIMClient.OnRecallMessageListener() {
+            @Override
+            public boolean onMessageRecalled(Message message, RecallNotificationMessage recallNotificationMessage) {
+                Log.i("TAG","onMessageRecalled");
+                return false;
+            }
+        });
     }
 
     public static String getCurProcessName(Context context) {

@@ -59,6 +59,7 @@ dependencies {
     api 'com.android.support:multidex:1.0.1'
     api 'com.huawei.android.hms:push:2.6.1.301'
     implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.haibin:calendarview:3.6.9'
     //implementation 'com.heytap.mcssdk:mcssdk:2.0.2'
     //api 'com.meizu.flyme.internet:push-internal:3.6.+@aar'
     //api 'com.google.android.gms:play-services:12.0.1'

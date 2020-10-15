@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">satale</string>
+    <string name="app_name" translatable="false">Her name</string>
     <string name="sa_dialog_item_message_delete" translatable="false">转发</string>
 
     <string name="sa_one" translatable="false">大鱼</string>
@@ -8,8 +8,8 @@
     <string name="sa_more" translatable="false">多鱼</string>
 
     <string name="title_home" translatable="false">会话</string>
-    <string name="title_dashboard" translatable="false">联系人</string>
-    <string name="title_notifications" translatable="false">我的</string>
+    <string name="title_dashboard" translatable="false">纪念日</string>
+    <string name="title_notifications" translatable="false">记事本</string>
     <string name="rc_conversation_list_dialog_set_top1">sa</string>
 
     <string name="conversatinolist_top_title">需要修改 token 和 appkey ，使用融云后台 api 调用发送消息</string>
