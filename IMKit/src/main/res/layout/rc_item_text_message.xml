@@ -6,9 +6,8 @@
     style="@style/RCTheme.Message.TextView"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:autoLink="none"
+    android:autoLink="web|email|phone"
     android:gravity="center_vertical|left"
-    android:textColorLink="#297211"
-    android:textColor="#297211"
+    android:textColorLink="#2972ab"
     app:RCMaxWidth="223dp"
     android:paddingLeft="9dp" />

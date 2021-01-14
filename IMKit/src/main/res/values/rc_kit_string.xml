@@ -104,7 +104,7 @@
     <string name="rc_notice_network_unavailable">当前网络不可用，请检查你的网络设置</string>
     <string name="rc_notice_disconnect">无法连接到服务器</string>
     <string name="rc_notice_tick">该帐号已经在其他设备登录</string>
-    <string name="rc_notice_connecting">正在连接服务器</string>
+    <string name="rc_notice_connecting">连接中...</string>
     <string name="rc_notice_create_discussion">正在创建讨论组</string>
     <string name="rc_notice_create_discussion_fail">创建讨论组失败</string>
     <string name="rc_notice_enter_chatroom">进入聊天室</string>
@@ -193,7 +193,7 @@
     <string name="rc_ac_file_download_btn">开始下载</string>
     <string name="rc_ac_file_download_progress_tv">下载中...(%1$s/%2$s)</string>
     <string name="rc_ac_file_download_open_file_btn">打开文件</string>
-    <string name="rc_ac_file_send_preview">发文件</string>
+    <string name="rc_ac_file_send_preview">发送文件</string>
     <string name="rc_ad_send_file_no_select_file">发送</string>
     <string name="rc_ad_send_file_select_file">发送(%1$s/20)</string>
     <string name="rc_fr_no_file_message">没有%1$s文件</string>
@@ -299,11 +299,18 @@
     <string name="rc_combine_group_chat">群聊的聊天记录</string>
     <string name="rc_combine_the_group_chat_of">%s 的聊天记录</string>
     <string name="rc_combine_and">和</string>
-    <string name="rc_combine_unsupported">未发送成功、红包、阅后即焚消息不支持转发</string>
+    <string name="rc_combine_unsupported">未发送成功、阅后即焚、引用消息不支持转发</string>
+    <string name="rc_combine_unsupported_step">未发送成功、阅后即焚、音视频消息不支持转发</string>
     <string name="rc_combine_webview_loading">聊天记录加载中...</string>
     <string name="rc_combine_webview_download_failed">聊天记录加载失败</string>
     <string name="rc_combine_history_deleted">聊天记录已被删除</string>
 
+    <!--引用部分-->
+    <string name="rc_reference">引用消息</string>
+    <string name="rc_reference_link">[图文]</string>
+    <string name="rc_reference_file">[文件]</string>
+    <string name="rc_search_file_prefix">[文件]&#160;</string>
 
+    <string name="rc_recall_overtime">该消息超过撤回时间，不能被撤回。</string>
 
 </resources>

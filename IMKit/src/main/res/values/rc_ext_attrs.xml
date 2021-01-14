@@ -10,4 +10,8 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="ReferenceView">
+        <attr name="RCMaxHeight" format="reference|dimension" />
+    </declare-styleable>
+
 </resources>

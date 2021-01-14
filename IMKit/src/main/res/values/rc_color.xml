@@ -45,4 +45,17 @@
     <color name="rc_voip_check_disable">#1f4a76</color>
     <color name="rc_voip_check_enable">#0099ff</color>
 
+
+    <!-- Reference Message-->
+    <color name="rc_reference_color_white">#FFFFFF</color>
+    <color name="rc_reference_color_gray_text">#939393</color>
+    <color name="rc_reference_bar_bg_color">#FAFAFA</color>
+    <color name="rc_reference_normal_text_color">#262626</color>
+    <color name="rc_reference_text_link_color">#2972ab</color>
+    <color name="rc_reference_sent_mark_bg">#C1DCEF</color>
+    <color name="rc_reference_received_mark_bg">#ECECED</color>
+    <color name="rc_reference_received_title">#999999</color>
+    <color name="rc_reference_sent_title">#999999</color>
+    <color name="rc_reference_content_color">#528EBD</color>
+
 </resources>

@@ -58,7 +58,7 @@ public class MyConversationListBehaviorListener implements RongIM.ConversationLi
 
                         }
                     });
-                    RongIM.getInstance().removeConversation(uiConversation.getConversationType(), uiConversation.getConversationTargetId());
+                    RongIM.getInstance().removeConversation(uiConversation.getConversationType(), uiConversation.getConversationTargetId(),null);
                     RongIM.getInstance().getConversationList(new RongIMClient.ResultCallback<List<Conversation>>() {
                         @Override
                         public void onSuccess(List<Conversation> conversations) {

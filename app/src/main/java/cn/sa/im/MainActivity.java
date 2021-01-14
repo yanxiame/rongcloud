@@ -25,6 +25,7 @@ import org.json.JSONObject;
 import cn.sa.im.ui.fragment.ContactsFragment;
 import cn.sa.im.ui.fragment.ConversationListManFragment;
 import cn.sa.im.ui.fragment.ConversationListWoManFragment;
+import cn.sa.im.ui.fragment.StudyFragment;
 import io.rong.imkit.RongIM;
 import io.rong.imkit.fragment.ConversationListFragment;
 import io.rong.imlib.RongIMClient;
@@ -48,10 +49,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    return true;
+
                 case R.id.navigation_dashboard:
-                    return true;
+
                 case R.id.navigation_notifications:
+
+                case R.id.navigation_study:
                     return true;
             }
             return false;
@@ -157,6 +160,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.navigation_notifications:
                 viewPager.setCurrentItem(2);
                 break;
+            case R.id.navigation_study:
+                viewPager.setCurrentItem(3);
+                break;
         }
         return false;
     }
@@ -193,7 +199,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
-        private Fragment[] mFragments = new Fragment[]{ManFragment, new ContactsFragment(), WomanFragment};
+        private Fragment[] mFragments = new Fragment[]{ManFragment, new ContactsFragment(), WomanFragment,new StudyFragment()};
 
         public ViewPagerAdapter(FragmentManager fm) {
             super(fm);

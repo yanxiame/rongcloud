@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/rc_reference_color_white"
+    android:paddingBottom="@dimen/rc_reference_dimen_size_10"
+    android:paddingEnd="@dimen/rc_reference_dimen_size_7"
+    android:paddingLeft="@dimen/rc_reference_dimen_size_7"
+    android:paddingRight="@dimen/rc_reference_dimen_size_15"
+    android:paddingStart="@dimen/rc_reference_dimen_size_15"
+    android:paddingTop="@dimen/rc_reference_dimen_size_10">
+
+    <ImageButton
+        android:id="@+id/rc_view_iv_reference_cancel"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/rc_reference_dimen_size_18"
+        android:layout_height="@dimen/rc_reference_dimen_size_18"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/rc_ic_reference_delete" />
+
+    <View
+        android:id="@+id/rc_view_reference_bar"
+        android:layout_width="@dimen/rc_reference_dimen_size_3"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rc_view_sv_reference_content"
+        android:background="@drawable/rc_shape_bg_vertical_bar" />
+
+    <TextView
+        android:id="@+id/rc_view_tv_reference_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/rc_reference_dimen_size_4"
+        android:layout_marginStart="@dimen/rc_reference_dimen_size_4"
+        android:layout_toEndOf="@id/rc_view_reference_bar"
+        android:layout_toLeftOf="@id/rc_view_iv_reference_cancel"
+        android:layout_toRightOf="@id/rc_view_reference_bar"
+        android:layout_toStartOf="@id/rc_view_iv_reference_cancel"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/rc_reference_color_gray_text"
+        android:textSize="@dimen/rc_reference_text_size_12"
+        tools:text="name" />
+
+    <ScrollView
+        android:id="@+id/rc_view_sv_reference_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/rc_view_tv_reference_name"
+        android:layout_alignLeft="@id/rc_view_tv_reference_name"
+        android:layout_alignRight="@id/rc_view_tv_reference_name"
+        android:layout_alignStart="@id/rc_view_tv_reference_name"
+        android:layout_below="@id/rc_view_tv_reference_name"
+        android:layout_marginTop="@dimen/rc_reference_dimen_size_4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rc_view_tv_reference_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/rc_reference_dimen_size_1"
+                android:textSize="@dimen/rc_reference_dimen_size_15"
+                tools:text="content text content text content text content text content text " />
+
+            <io.rong.imkit.widget.AsyncImageView
+                android:id="@+id/rc_view_iv_reference_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:RCMinShortSideSize="120dp"
+                android:maxHeight="@dimen/rc_reference_dimen_size_400" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

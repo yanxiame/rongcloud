@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rc_quit_custom_service">تم ترك خدمة العميل </string>
+    <string name="rc_init_failed">فشل الاتصال بخدمة العميل</string>
+    <string name="rc_location_sharing_ended"> تم مشاركة الموقع </string>
+</resources>

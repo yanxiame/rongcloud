@@ -17,7 +17,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <!-- 录音 -->
-    <uses-permission android:name="android.prmission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- 使用ActivityManager需要 -->
     <uses-permission android:name="android.permission.GET_TASKS" />
     <!-- 适配 Android 8.0 -->
@@ -92,6 +92,16 @@
             </intent-filter>
         </activity>
 
+
+        <activity
+            android:name="io.rong.imkit.activity.CombinePicturePagerActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name="io.rong.imkit.mention.MemberMentionedActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -133,6 +143,7 @@
         </activity>
 
         <activity android:name="io.rong.imkit.activity.SelectConversationActivity" />
+
         <!-- 此部分代码需要移植到您的 app 下的 manifest，并且 authorities 指定您的包名。例如：com.android.FileProvider -->
         <!-- 否则使用拍照功能时，会崩溃 -->
         <!--<provider-->

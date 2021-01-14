@@ -35,7 +35,7 @@
     <string name="rc_file_default_saved_path">/RongCloud/File/</string>
 
     <!-- 设置是否支持消息撤回-->
-    <bool name="rc_enable_message_recall">false</bool>
+    <bool name="rc_enable_message_recall">true</bool>
     <!-- 消息撤回有效时间（单位：秒）-->
     <integer name="rc_message_recall_interval">120</integer>
     <!-- 消息撤回重新编辑有效时间（单位：秒）-->
@@ -45,13 +45,13 @@
     <bool name="rc_enable_mentioned_message">true</bool>
 
     <!-- 设置已读回执，目前仅支持单聊、群聊、讨论组 -->
-    <bool name="rc_read_receipt">false</bool>
+    <bool name="rc_read_receipt">true</bool>
 
     <!-- 设置已读回执有效时间（单位：秒）-->
     <integer name="rc_read_receipt_request_interval">120</integer>
 
     <!-- 开启之后，用户在其他端上阅读过的消息，当前客户端会清掉该消息的未读数。目前仅支持单聊、群聊、讨论组。-->
-    <bool name="rc_enable_sync_read_status">false</bool>
+    <bool name="rc_enable_sync_read_status">true</bool>
 
     <!--WebView 是否忽略 SSL 证书错误检测-->
     <bool name="rc_open_https_certificate">false</bool>
@@ -75,7 +75,7 @@
     <integer name="rc_gifmsg_auto_download_size">1024</integer>
 
     <!--是否启用阅后即焚插件-->
-    <bool name="rc_open_destruct_plugin">true</bool>
+    <bool name="rc_open_destruct_plugin">false</bool>
 
     <!--多选时,最大多选消息数 -->
     <integer name="rc_max_message_selected_count">100</integer>
@@ -85,5 +85,8 @@
 
     <!--在前台非会话页面时，接收到新消息是否响铃 -->
     <bool name="rc_sound_in_foreground">true</bool>
+
+    <!--是否支持消息引用功能，默认打开，聊天页面长按消息支持引用（目前仅支持文本消息、文件消息、图文消息、图片消息、引用消息的引用）-->
+    <bool name="rc_enable_reference_message">true</bool>
 
 </resources>

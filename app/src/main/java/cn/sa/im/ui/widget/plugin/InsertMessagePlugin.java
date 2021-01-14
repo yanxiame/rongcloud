@@ -49,7 +49,7 @@ public class InsertMessagePlugin implements IPluginModule {
         Log.i("TAG","222222");
 
         InformationNotificationMessage informationNotificationMessage = InformationNotificationMessage.obtain("无人工在线");
-        RongIM.getInstance().insertMessage(rongExtension.getConversationType(), rongExtension.getTargetId(), RongIM.getInstance().getCurrentUserId(), informationNotificationMessage, null);
+//        RongIM.getInstance().insertIncomingMessage(rongExtension.getConversationType(), rongExtension.getTargetId(), RongIM.getInstance().getCurrentUserId(), informationNotificationMessage, null);
 
 
 //        Toast.makeText(rongExtension.getContext(), "发送一条自定义消息", Toast.LENGTH_LONG).show();

@@ -10,7 +10,14 @@
         layout="@layout/rc_fr_messagelist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/rc_extension" />
+        android:layout_above="@id/rc_reference" />
+
+    <io.rong.imkit.reference.ReferenceView
+        android:id="@+id/rc_reference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_above="@id/rc_extension" />
 
     <io.rong.imkit.RongExtension
         android:id="@+id/rc_extension"

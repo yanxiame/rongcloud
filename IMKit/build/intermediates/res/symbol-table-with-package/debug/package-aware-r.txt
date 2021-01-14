@@ -13,7 +13,6 @@ array rc_other_file_suffix
 array rc_pages_file_suffix
 array rc_pdf_file_suffix
 array rc_ppt_file_suffix
-array rc_reconnect_interval
 array rc_video_file_suffix
 array rc_word_file_suffix
 attr RCCornerRadius
@@ -21,6 +20,7 @@ attr RCDefDrawable
 attr RCEllipsizeIndex
 attr RCEllipsizeText
 attr RCMask
+attr RCMaxHeight
 attr RCMaxWidth
 attr RCMinShortSideSize
 attr RCShape
@@ -47,6 +47,7 @@ bool abc_action_bar_embed_tabs
 bool rc_enable_automatic_download_voice_msg
 bool rc_enable_mentioned_message
 bool rc_enable_message_recall
+bool rc_enable_reference_message
 bool rc_enable_send_combine_message
 bool rc_enable_sync_read_status
 bool rc_extension_history
@@ -58,6 +59,7 @@ bool rc_open_https_certificate
 bool rc_play_audio_continuous
 bool rc_q_storage_mode_enable
 bool rc_read_receipt
+bool rc_secure_shared_preferences
 bool rc_set_java_script_enabled
 bool rc_sound_in_foreground
 bool rc_stop_custom_service_when_quit
@@ -123,6 +125,16 @@ color rc_popup_dialog_prompt_clear_color
 color rc_popup_dialog_prompt_ok_color
 color rc_popup_dialog_text_color
 color rc_read_receipt_status
+color rc_reference_bar_bg_color
+color rc_reference_color_gray_text
+color rc_reference_color_white
+color rc_reference_content_color
+color rc_reference_normal_text_color
+color rc_reference_received_mark_bg
+color rc_reference_received_title
+color rc_reference_sent_mark_bg
+color rc_reference_sent_title
+color rc_reference_text_link_color
 color rc_rich_content
 color rc_rich_title
 color rc_text_color_primary
@@ -183,7 +195,35 @@ dimen rc_ext_root_menu_item_text_size
 dimen rc_ext_sub_menu_item_text_size
 dimen rc_extension_bar_min_height
 dimen rc_extension_board_height
+dimen rc_extension_phrase_item_height
 dimen rc_popup_dialog_distance_to_edge
+dimen rc_reference_dimen_size_0
+dimen rc_reference_dimen_size_1
+dimen rc_reference_dimen_size_10
+dimen rc_reference_dimen_size_103
+dimen rc_reference_dimen_size_109
+dimen rc_reference_dimen_size_119
+dimen rc_reference_dimen_size_12
+dimen rc_reference_dimen_size_14
+dimen rc_reference_dimen_size_15
+dimen rc_reference_dimen_size_18
+dimen rc_reference_dimen_size_19
+dimen rc_reference_dimen_size_2
+dimen rc_reference_dimen_size_208
+dimen rc_reference_dimen_size_235
+dimen rc_reference_dimen_size_3
+dimen rc_reference_dimen_size_300
+dimen rc_reference_dimen_size_4
+dimen rc_reference_dimen_size_400
+dimen rc_reference_dimen_size_48
+dimen rc_reference_dimen_size_5
+dimen rc_reference_dimen_size_6
+dimen rc_reference_dimen_size_7
+dimen rc_reference_dimen_size_70
+dimen rc_reference_dimen_size_9
+dimen rc_reference_text_size_12
+dimen rc_reference_text_size_14
+dimen rc_reference_text_size_16
 drawable def_gif_bg
 drawable fire
 drawable notification_action_background
@@ -421,6 +461,7 @@ drawable rc_ic_notice_wraning
 drawable rc_ic_phone_normal
 drawable rc_ic_phone_pressed
 drawable rc_ic_phone_selector
+drawable rc_ic_reference_delete
 drawable rc_ic_setting_friends_add
 drawable rc_ic_setting_friends_delete
 drawable rc_ic_star
@@ -542,6 +583,7 @@ drawable rc_send_toggle_selector
 drawable rc_send_voice_one
 drawable rc_send_voice_three
 drawable rc_send_voice_two
+drawable rc_shape_bg_vertical_bar
 drawable rc_sp_grid_mask
 drawable rc_switch_btn
 drawable rc_tab_emoji
@@ -929,9 +971,14 @@ id rc_message_send_failed
 id rc_msg
 id rc_msg_canceled
 id rc_msg_iv_file_type_image
+id rc_msg_iv_reference
 id rc_msg_pb_file_upload_progress
 id rc_msg_tv_file_name
 id rc_msg_tv_file_size
+id rc_msg_tv_reference_content
+id rc_msg_tv_reference_file_name
+id rc_msg_tv_reference_name
+id rc_msg_tv_reference_send_content
 id rc_nearby_address
 id rc_nearby_checked
 id rc_nearby_name
@@ -955,6 +1002,10 @@ id rc_rating_bar
 id rc_read_receipt
 id rc_read_receipt_request
 id rc_read_receipt_status
+id rc_reference
+id rc_reference_horizontal_mark
+id rc_reference_root_view
+id rc_reference_vertical_mark
 id rc_refresh
 id rc_resolve_progress
 id rc_right
@@ -1010,7 +1061,13 @@ id rc_user_icons
 id rc_user_name
 id rc_user_portrait
 id rc_user_text
+id rc_view_iv_reference_cancel
+id rc_view_iv_reference_content
 id rc_view_pager
+id rc_view_reference_bar
+id rc_view_sv_reference_content
+id rc_view_tv_reference_content
+id rc_view_tv_reference_name
 id rc_voice_download_error
 id rc_voice_toggle
 id rc_voice_unread
@@ -1084,6 +1141,9 @@ integer rc_message_recall_edit_interval
 integer rc_message_recall_interval
 integer rc_read_receipt_request_interval
 integer rc_resume_file_transfer_size_each_slice
+integer rc_thumb_compress_min_size
+integer rc_thumb_compress_size
+integer rc_thumb_quality
 integer status_bar_notification_info_maxnum
 layout notification_action
 layout notification_action_tombstone
@@ -1209,6 +1269,7 @@ layout rc_location_search_title_bar
 layout rc_map_nearby_info_item
 layout rc_mention_list_item
 layout rc_mention_members
+layout rc_message_reference
 layout rc_notification_realtime_location
 layout rc_pic_popup_window
 layout rc_picprev_activity
@@ -1221,6 +1282,7 @@ layout rc_plugin_location_activity
 layout rc_plugin_location_activity_2d
 layout rc_refresh_list_view
 layout rc_share_location_message
+layout rc_view_reference
 layout rc_wi_block
 layout rc_wi_block_popup
 layout rc_wi_file_list_adapter
@@ -1296,6 +1358,7 @@ string rc_combine_history_deleted
 string rc_combine_stepwise_forwarding
 string rc_combine_the_group_chat_of
 string rc_combine_unsupported
+string rc_combine_unsupported_step
 string rc_combine_webview_download_failed
 string rc_combine_webview_loading
 string rc_confirm
@@ -1518,6 +1581,7 @@ string rc_fr_storage_folder_list_no_files
 string rc_fr_storage_folder_list_search
 string rc_friday_format
 string rc_got_it
+string rc_heartbeat_acquire_time
 string rc_heartbeat_timer
 string rc_image_default_saved_path
 string rc_info_forbidden_to_talk
@@ -1604,6 +1668,7 @@ string rc_notification_new_plural_msg
 string rc_notification_ticker_text
 string rc_other_is_sharing_location
 string rc_others_are_sharing_location
+string rc_others_are_sharing_location2
 string rc_permission_camera
 string rc_permission_grant_needed
 string rc_permission_microphone
@@ -1648,9 +1713,13 @@ string rc_real_time_location_start
 string rc_real_time_location_summary
 string rc_recall_failed
 string rc_recall_failed_for_network_unavailable
+string rc_recall_overtime
 string rc_recall_success
 string rc_recalled_a_message
 string rc_receive_new_message
+string rc_reference
+string rc_reference_file
+string rc_reference_link
 string rc_rejected_by_blacklist_prompt
 string rc_saturday_format
 string rc_save_picture
@@ -1658,6 +1727,7 @@ string rc_save_picture_at
 string rc_save_video
 string rc_save_video_success
 string rc_search
+string rc_search_file_prefix
 string rc_select_from_album
 string rc_send_format
 string rc_setting_clear_msg_fail
@@ -1704,6 +1774,7 @@ style RCTheme_Message_TextView
 style RCTheme_Message_Username_TextView
 style RCTheme_Notification
 style RCTheme_Notification_RelativeLayout
+style RCTheme_ReferenceMessage_TextView
 style RCTheme_TextView
 style RCTheme_TextView_Large
 style RCTheme_TextView_Large_Inverse
@@ -1740,5 +1811,6 @@ styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_a
 styleable EllipsizeTextView RCEllipsizeIndex RCEllipsizeText
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontStyle android_fontWeight font fontStyle fontWeight
+styleable ReferenceView RCMaxHeight
 styleable RongExtension RCStyle
 xml rc_file_path

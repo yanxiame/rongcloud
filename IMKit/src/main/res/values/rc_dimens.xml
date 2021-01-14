@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="rc_conversation_item_name_size">16sp</dimen>
-    <dimen name="rc_conversation_item_data_size">14sp</dimen>
-    <dimen name="rc_conversation_item_time_size">13sp</dimen>
+    <dimen name="rc_conversation_item_name_size">16dp</dimen>
+    <dimen name="rc_conversation_item_data_size">14dp</dimen>
+    <dimen name="rc_conversation_item_time_size">13dp</dimen>
     <dimen name="rc_dimen_size_3">3dp</dimen>
     <dimen name="rc_dimen_size_5">5dp</dimen>
     <dimen name="rc_dimen_size_6">6dp</dimen>
@@ -15,4 +15,33 @@
     <dimen name="rc_dimen_size_40">40dp</dimen>
     <dimen name="rc_dimen_size_44">44dp</dimen>
     <dimen name="rc_dimen_size_50">50dp</dimen>
+
+    <!-- Reference Message-->
+    <dimen name="rc_reference_dimen_size_0">0dp</dimen>
+    <dimen name="rc_reference_dimen_size_1">1dp</dimen>
+    <dimen name="rc_reference_dimen_size_2">2dp</dimen>
+    <dimen name="rc_reference_dimen_size_3">3dp</dimen>
+    <dimen name="rc_reference_dimen_size_4">4dp</dimen>
+    <dimen name="rc_reference_dimen_size_5">5dp</dimen>
+    <dimen name="rc_reference_dimen_size_6">6dp</dimen>
+    <dimen name="rc_reference_dimen_size_7">7dp</dimen>
+    <dimen name="rc_reference_dimen_size_9">9dp</dimen>
+    <dimen name="rc_reference_dimen_size_10">10dp</dimen>
+    <dimen name="rc_reference_dimen_size_12">12dp</dimen>
+    <dimen name="rc_reference_dimen_size_14">14dp</dimen>
+    <dimen name="rc_reference_dimen_size_15">15dp</dimen>
+    <dimen name="rc_reference_dimen_size_18">18dp</dimen>
+    <dimen name="rc_reference_dimen_size_19">19dp</dimen>
+    <dimen name="rc_reference_dimen_size_48">48dp</dimen>
+    <dimen name="rc_reference_dimen_size_70">70dp</dimen>
+    <dimen name="rc_reference_dimen_size_103">103dp</dimen>
+    <dimen name="rc_reference_dimen_size_109">109dp</dimen>
+    <dimen name="rc_reference_dimen_size_119">119dp</dimen>
+    <dimen name="rc_reference_dimen_size_208">208dp</dimen>
+    <dimen name="rc_reference_dimen_size_235">235dp</dimen>
+    <dimen name="rc_reference_dimen_size_300">300dp</dimen>
+    <dimen name="rc_reference_dimen_size_400">400dp</dimen>
+    <dimen name="rc_reference_text_size_12">12sp</dimen>
+    <dimen name="rc_reference_text_size_14">14sp</dimen>
+    <dimen name="rc_reference_text_size_16">16sp</dimen>
 </resources>

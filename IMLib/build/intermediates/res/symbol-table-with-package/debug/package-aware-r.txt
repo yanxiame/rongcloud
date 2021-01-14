@@ -1,5 +1,4 @@
 io.rong.imlib
-array rc_reconnect_interval
 attr font
 attr fontProviderAuthority
 attr fontProviderCerts
@@ -12,6 +11,7 @@ attr fontWeight
 bool abc_action_bar_embed_tabs
 bool rc_extension_history
 bool rc_q_storage_mode_enable
+bool rc_secure_shared_preferences
 bool rc_typing_status
 color notification_action_color_filter
 color notification_icon_bg_color
@@ -78,6 +78,9 @@ integer rc_image_quality
 integer rc_image_size
 integer rc_max_original_image_size
 integer rc_resume_file_transfer_size_each_slice
+integer rc_thumb_compress_min_size
+integer rc_thumb_compress_size
+integer rc_thumb_quality
 integer status_bar_notification_info_maxnum
 layout notification_action
 layout notification_action_tombstone
@@ -86,6 +89,7 @@ layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
 string push_heartbeat_timer
+string rc_heartbeat_acquire_time
 string rc_heartbeat_timer
 string rc_init_failed
 string rc_location_sharing_ended

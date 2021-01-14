@@ -15,5 +15,6 @@
     <string name="conversatinolist_top_title">需要修改 token 和 appkey ，使用融云后台 api 调用发送消息</string>
     <string name="contact_notification_someone_agree_your_request">111111</string>
     <string name="contact_notification_agree_your_request">22222</string>
+    <string name="title_study">学习</string>
 
 </resources>

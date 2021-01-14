@@ -20,6 +20,7 @@
     <string name="rc_you_are_sharing_location">You are sharing location</string>
     <string name="rc_other_is_sharing_location">%s are sharing location</string>
     <string name="rc_others_are_sharing_location">%d persons are sharing location</string>
+    <string name="rc_others_are_sharing_location2">%d persons are sharing location</string>
     <string name="rc_ext_warning">Prompt</string>
     <string name="rc_ext_exit_location_sharing">End Real-time Location now?</string>
     <string name="rc_real_time_exit_notification">Real-time Location will stop if you leave this session. Leave now?</string>

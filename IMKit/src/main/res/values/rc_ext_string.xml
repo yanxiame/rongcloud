@@ -20,6 +20,7 @@
     <string name="rc_you_are_sharing_location">你正在共享位置</string>
     <string name="rc_other_is_sharing_location">%s正在共享位置</string>
     <string name="rc_others_are_sharing_location">%d人正在共享位置</string>
+    <string name="rc_others_are_sharing_location2">%d人在共享位置</string>
     <string name="rc_real_time_join_notification">加入位置共享，聊天中其他人也能看到你的位置，确定加入？</string>
     <string name="rc_ext_warning">提示</string>
     <string name="rc_ext_exit_location_sharing">是否结束位置共享？</string>

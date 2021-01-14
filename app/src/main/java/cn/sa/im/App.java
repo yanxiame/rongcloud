@@ -17,7 +17,6 @@ import cn.sa.im.ui.Listener.MyConversationListBehaviorListener;
 import cn.sa.im.ui.apadper.PrivateConversationProviderEx;
 import cn.sa.im.ui.widget.GifMessagesaItemProvider;
 import cn.sa.im.ui.widget.RceRecallMessageItemProvider;
-import cn.sa.im.ui.widget.TextMessagesaItemProvider;
 import cn.sa.im.ui.widget.plugin.ApkExtensionModule;
 import cn.sa.im.ui.widget.plugin.ApkItemProvider;
 import cn.sa.im.ui.widget.plugin.ApkMessage;
@@ -55,16 +54,16 @@ public class App extends MultiDexApplication {
 
 
         RongPushClient.setPushConfig(config);
-        RongIM.setServerInfo("navsg01.cn.ronghub.com","");
-        //RongIM.init(this,"pvxdm17jpof6r");
-        RongIM.init(this,"8luwapkv84zrl");
+        //RongIM.setServerInfo("navsg01.cn.ronghub.com","");
+        RongIM.init(this,"pvxdm17jpof6r");
+        //RongIM.init(this,"8luwapkv84zrl");
         //自定义消息
         RongIM.registerMessageTemplate(new ApkItemProvider());
         RongIM.registerMessageTemplate(new InsertItemProvider());
         RongIM.registerMessageTemplate(new RceRecallMessageItemProvider());
         RongIM.registerMessageTemplate(new ContactNotificationMessageProvider());
         RongIM.registerMessageTemplate(new GifMessagesaItemProvider());
-        RongIM.registerMessageTemplate(new TextMessagesaItemProvider());
+        //RongIM.registerMessageTemplate(new TextMessagesaItemProvider());
         RongIM.registerMessageTemplate(new CustomizeMessageItemProvider());
         //用来隐藏部分控件自定义 base cell
         RongIM.getInstance().registerConversationTemplate(new PrivateConversationProviderEx());
@@ -102,11 +101,6 @@ public class App extends MultiDexApplication {
                     Log.i("TAG",message.toString());
                 }
 
-                if (message.getSenderUserId().equals("10003")) {
-                    Log.i("TAG", "11");
-                    return true;
-                }
-
                 if (message.getContent() instanceof InformationNotificationMessage) {
                     int[] nums2 = new int[message.getMessageId()];
                     RongIM.getInstance().deleteMessages(nums2, new RongIMClient.ResultCallback<Boolean>() {
@@ -127,7 +121,6 @@ public class App extends MultiDexApplication {
                     //RongNotificationManager.getInstance().onReceiveMessageFromApp(message, 0);
                     Log.i("TAG", message.getUId());
                 }
-                Log.i("TAG",message.getContent().toString());
                 return false;
             }
         });

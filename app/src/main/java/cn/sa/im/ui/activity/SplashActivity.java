@@ -45,33 +45,18 @@ public class SplashActivity extends Activity {
         SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
 
         // 100//03
-        connect("qkG1qvBx5GN2rRWp3lUGLl2lXYyV+kg2@9qrf.sg.rongnav.com;9qrf.sg.rongcfg.com");
+        connect("zCcNXqhAVZK8Ft/A0OOYJjugYr+DyRjAN63pMB7TzmI=@vvrh.cn.rongnav.com;vvrh.cn.rongcfg.com");
         // 10001
         //connect("pGJotIrFCum8Ft/A0OOYJvMFxrVBB+C6hCY4WZALhv4=@vvrh.cn.rongnav.com;vvrh.cn.rongcfg.com");
 
     }
 
-    private boolean isNetworkConnected(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo ni = cm.getActiveNetworkInfo();
-        return ni != null && ni.isConnectedOrConnecting();
-
-    }
 
     private void connect(String token) {
 
         //if (getApplicationInfo().packageName.equals(App.getCurProcessName(getApplicationContext()))) {
 
         RongIM.connect(token, new RongIMClient.ConnectCallback() {
-
-            /**
-             * Token 错误。可以从下面两点检查 1.  Token 是否过期，如果过期您需要向 App Server 重新请求一个新的 Token
-             *                  2.  token 对应的 appKey 和工程里设置的 appKey 是否一致
-             */
-            @Override
-            public void onTokenIncorrect() {
-
-            }
 
             /**
              * 连接融云成功
@@ -131,14 +116,18 @@ public class SplashActivity extends Activity {
                 //startActivity(new Intent(SplashActivity.this, ConversationListActivity.class));
                 //finish();
             }
-            /**
-             * 连接融云失败
-             * @param errorCode 错误码，可到官网 查看错误码对应的注释
-             */
+
             @Override
-            public void onError(RongIMClient.ErrorCode errorCode) {
-                Log.d("TAG", "--onSuccess" + errorCode);
+            public void onError(RongIMClient.ConnectionErrorCode connectionErrorCode) {
+                Log.d("TAG", "--onSuccess" + connectionErrorCode);
             }
+
+            @Override
+            public void onDatabaseOpened(RongIMClient.DatabaseOpenStatus databaseOpenStatus) {
+
+            }
+
+
         });
         //}
     }

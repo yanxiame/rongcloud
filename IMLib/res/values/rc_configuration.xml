@@ -8,42 +8,53 @@
     <!--配置发送图片时，如果图片大小不超过 200k 则发送原图-->
     <integer name="rc_max_original_image_size">200</integer>
 
+    <!--缩略图压缩比例-->
+    <integer name="rc_thumb_quality">30</integer>
+    <!--缩略图压缩宽、高-->
+    <integer name="rc_thumb_compress_size">240</integer>
+    <!--缩略图压缩最小宽、高-->
+    <integer name="rc_thumb_compress_min_size">100</integer>
+
     <!-- 设置发送输入状态 -->
-    <bool name="rc_typing_status">false</bool>
+    <bool name="rc_typing_status">true</bool>
     <!-- 下载文件默认存储路径 -->
     <string name="rc_media_message_default_save_path">/RongCloud/Media/</string>
     <!-- 是否开启 Extension 记忆功能 -->
-    <bool name="rc_extension_history">false</bool>
+    <bool name="rc_extension_history">true</bool>
     <!-- 设置心跳包的timer, 默认2分半（150000） , 最小值为10秒（10000）建议不要超过3分钟-->
     <string name="rc_heartbeat_timer">150000</string>
+    <!-- 设置心跳包持有电源锁时间，默认 1 秒，建议不要超过 5 秒-->
+    <string name="rc_heartbeat_acquire_time">1000</string>
     <!--&lt;!&ndash;实时位置共享最大人数&ndash;&gt;-->
     <!--<integer name="rc_max_realtime_location_participants">5</integer>-->
     <!--&lt;!&ndash;实时位置共享会话类型&ndash;&gt;-->
     <!--<string-array name="rc_realtime_support_conversation_types" translatable="false">-->
-        <!--<item>private</item>-->
-        <!--<item>group</item>-->
+    <!--<item>private</item>-->
+    <!--<item>group</item>-->
     <!--</string-array>-->
 
-    <!--自定义配置重连间隔-->
-    <!--SDK 会自动启动重连机制进行10次重连(根据配置的数量)，分别是1, 2, 4, 8, 16, 32, 64, 128, 256, 512秒后-->
-    <!--轮询一遍后，再从 1 秒开始-->
-    <integer-array name="rc_reconnect_interval">
-        <item>1</item>
-        <item>2</item>
-        <item>4</item>
-        <item>8</item>
-        <item>16</item>
-        <item>32</item>
-        <item>64</item>
-        <item>128</item>
-        <item>256</item>
-        <item>512</item>
-    </integer-array>
+
+    <!--自定义配置重连间隔，可配置 n (0 < n <= 10) 个-->
+    <!--轮询一遍后，第 n + 1 次 默认以第 n 个时间间隔进行重连。-->
+    <!--<string-array name="rc_reconnect_interval">
+    <item>0</item>
+    <item>0.25</item>
+    <item>0.5</item>
+    <item>1</item>
+    <item>2</item>
+    <item>4</item>
+    <item>8</item>
+    <item>16</item>
+    <item>32</item>
+    <item>64</item>
+    </string-array>-->
 
     <!-- 断点续传每片的长度（单位：Byte）默认 1M : 1024 * 1024 = 1048576 -->
     <integer name="rc_resume_file_transfer_size_each_slice">1048576</integer>
     <!--是否开启 Q 存储空间模式-->
-    <bool name="rc_q_storage_mode_enable">false</bool>
+    <bool name="rc_q_storage_mode_enable">true</bool>
+    <!--是否 sp 加密模式-->
+    <bool name="rc_secure_shared_preferences">false</bool>
     <!--push 心跳,默认 4 min-->
     <string name="push_heartbeat_timer">240000</string>
 </resources>

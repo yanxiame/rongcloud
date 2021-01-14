@@ -50,11 +50,11 @@ public class ContactNotificationMessageProvider extends IContainerItemProvider.M
                     if (bean != null && !TextUtils.isEmpty(bean.getSourceUserNickname())) {
                         if (content.getOperation().equals("AcceptResponse")) {
                            // viewHolder.contentTextView.setText(RongContext.getInstance().getResources().getString(R.string.contact_notification_someone_agree_your_request, bean.getSourceUserNickname()));
-                            viewHolder.contentTextView.setText(RongContext.getInstance().getResources().getString(R.string.contact_notification_agree_your_request));
+                            viewHolder.contentTextView.setText(v.getContext().getResources().getString(R.string.contact_notification_agree_your_request));
                         }
                     } else {
                         if (content.getOperation().equals("AcceptResponse")) {
-                            viewHolder.contentTextView.setText(RongContext.getInstance().getResources().getString(R.string.contact_notification_agree_your_request));
+                            viewHolder.contentTextView.setText(v.getContext().getString(R.string.contact_notification_agree_your_request));
                         }
                     }
                     if (content.getOperation().equals("Request")) {

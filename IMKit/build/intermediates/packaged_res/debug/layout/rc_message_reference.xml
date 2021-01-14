@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rc_reference_root_view"
+    android:layout_width="@dimen/rc_reference_dimen_size_208"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rc_ic_bubble_right"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/rc_reference_dimen_size_208"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/rc_reference_vertical_mark"
+            android:layout_width="@dimen/rc_reference_dimen_size_3"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/rc_reference_dimen_size_6"
+            android:background="@color/rc_reference_sent_mark_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rc_msg_tv_reference_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/rc_reference_dimen_size_2"
+                android:layout_marginEnd="@dimen/rc_reference_dimen_size_12"
+                android:layout_marginRight="@dimen/rc_reference_dimen_size_12"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:textSize="@dimen/rc_reference_text_size_12" />
+
+
+            <io.rong.imkit.widget.RCMessageFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/rc_msg_tv_reference_file_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="top"
+                    android:ellipsize="middle"
+                    android:gravity="top"
+                    android:singleLine="true"
+                    android:textColor="@color/rc_reference_content_color"
+                    android:textSize="@dimen/rc_reference_text_size_14"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/rc_msg_tv_reference_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/rc_rich_title"
+                    android:textColorLink="@color/rc_reference_text_link_color"
+                    android:textSize="@dimen/rc_reference_text_size_14" />
+            </io.rong.imkit.widget.RCMessageFrameLayout>
+
+            <io.rong.imkit.widget.AsyncImageView
+                android:id="@+id/rc_msg_iv_reference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:RCMinShortSideSize="120dp"
+                android:layout_marginTop="@dimen/rc_dimen_size_3"
+                android:maxHeight="@dimen/rc_reference_dimen_size_300" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/rc_reference_horizontal_mark"
+        android:layout_width="@dimen/rc_reference_dimen_size_208"
+        android:layout_height="@dimen/rc_reference_dimen_size_1"
+        android:layout_marginTop="@dimen/rc_reference_dimen_size_9"
+        android:background="@color/rc_reference_sent_mark_bg" />
+
+    <io.rong.imkit.widget.RCMessageFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rc_reference_dimen_size_7">
+
+        <TextView
+            android:id="@+id/rc_msg_tv_reference_send_content"
+            style="@style/RCTheme.ReferenceMessage.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/rc_reference_dimen_size_208"
+            android:textColorLink="@color/rc_reference_text_link_color" />
+
+    </io.rong.imkit.widget.RCMessageFrameLayout>
+
+</LinearLayout>

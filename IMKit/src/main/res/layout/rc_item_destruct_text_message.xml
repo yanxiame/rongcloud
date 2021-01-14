@@ -16,17 +16,15 @@
         android:visibility="gone"
         android:text="@string/rc_click_to_view" />
 
-    <io.rong.imkit.widget.AutoLinkTextView
+    <TextView
         android:id="@android:id/text1"
         style="@style/RCTheme.Message.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:autoLink="none"
         android:gravity="center_vertical|left"
         android:paddingLeft="9dp"
-        android:textColorLink="#297211"
-        android:textColor="#297211"
-        app:RCMaxWidth="223dp" />
+        android:textColorLink="#2972ab"
+        android:maxWidth="223dp" />
     <FrameLayout
         android:id="@+id/fl_send_fire"
         android:layout_width="wrap_content"

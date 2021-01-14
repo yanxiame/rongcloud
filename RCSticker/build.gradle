@@ -5,10 +5,10 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 16
+       minSdkVersion 19
         targetSdkVersion 27
-        versionCode 2020021918
-        versionName "2.10.4 release"
+        versionCode 20201217
+        versionName "4.1.0_release"
 
     }
 
@@ -41,7 +41,7 @@ def OUTPUT_PATH = "build/libs/"
 //执行 gradle makeJar 后生成发布的 Sight.jar
 task makeJar(type: Jar) {
     //Sight.jar
-    from zipTree(file('build/intermediates/intermediate-jars/release/classes.jar'))
+    from zipTree(file('build/intermediates/packaged-classes/release/classes.jar'))
 
     //去除编译生成的临时文件
     exclude('**/BuildConfig.class')

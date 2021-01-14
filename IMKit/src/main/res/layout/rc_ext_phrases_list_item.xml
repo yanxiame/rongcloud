@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/rc_extension_phrase_item_height">
 
     <TextView
         android:id="@+id/rc_phrases_tv"
@@ -11,11 +12,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
-        android:gravity="left"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="left|center"
         android:textColor="@color/rc_common_phrases_list_item_color"
-        android:textSize="16sp"
-        android:maxLines="2"
-        android:maxLength="50"
-        android:maxEms="20" />
+        android:textSize="16sp" />
 
 </RelativeLayout>

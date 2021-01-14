@@ -5,15 +5,7 @@
     android:clipChildren="false"
     android:layout_height="fill_parent">
 
-    <TextView
-        android:id="@id/rc_msg"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_gravity="center"
-        android:background="#75000000"
-        android:gravity="center"
-        android:textColor="@android:color/white"
-        android:textSize="11sp" />
+
 
     <io.rong.imkit.widget.AsyncImageView
         android:id="@id/rc_img"
@@ -88,4 +80,14 @@
             android:textSize="11sp"
             android:visibility="gone" />
     </FrameLayout>
+
+    <TextView
+        android:id="@id/rc_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#75000000"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="11sp" />
 </io.rong.imkit.widget.RCMessageFrameLayout>

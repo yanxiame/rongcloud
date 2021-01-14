@@ -214,7 +214,7 @@
     <string name="rc_fr_file_category_title_sd">SD Card</string>
     <string name="rc_fr_file_category_title_ram">Phone Memory</string>
     <string name="rc_ac_file_preview_can_not_open_file">Unable to open file</string>
-    <string name="rc_ac_file_preview_begin_download">Start download</string>
+    <string name="rc_ac_file_preview_begin_download">Download</string>
     <string name="rc_ac_file_preview_downloaded">Downloaded</string>
     <string name="rc_ac_file_preview_download_error">Download failed</string>
     <string name="rc_ac_file_preview_download_cancel">Download has been canceled</string>
@@ -280,9 +280,32 @@
     <string name="rc_combine_group_chat">Group Chat History</string>
     <string name="rc_combine_the_group_chat_of">Chat History for %s</string>
     <string name="rc_combine_and">and</string>
-    <string name="rc_combine_unsupported">Failed to send、red packets、burn message,cannot be forwarded</string>
+    <string name="rc_combine_unsupported">Failed to send, burn, quote message cannot be forwarded</string>
+    <string name="rc_combine_unsupported_step">Failed to send, burn, audio and video message, cannot be forwarded</string>
     <string name="rc_combine_webview_loading">Chat history loading...</string>
     <string name="rc_combine_webview_download_failed">Chat history download failed</string>
     <string name="rc_combine_history_deleted">Chat history deleted</string>
 
+    <!--Reference Message-->
+    <string name="rc_reference">Quote</string>
+    <string name="rc_reference_link">[RichContent]</string>
+    <string name="rc_reference_file">[file]</string>
+    <string name="rc_search_file_prefix">[File]&#160;</string>
+
+    <string name="rc_recall_overtime">This message has passed the recall time limit. Unable to recall.</string>
+
+    <string name="rc_cs_evaluate">appraise</string>
+    <string name="rc_cs_evaluate_title">Please evaluate the service of this for us</string>
+    <string name="rc_cs_very_satisfactory">very satisfied</string>
+    <string name="rc_cs_satisfactory">satisfied</string>
+    <string name="rc_cs_average">general</string>
+    <string name="rc_cs_unsatisfactory">not satisfied</string>
+    <string name="rc_cs_very_unsatisfactory">very dissatisfied</string>
+    <string name="rc_cs_resolved_or_not">Whether to solve your problem?</string>
+    <string name="rc_cs_submit_evaluate_content">submit</string>
+    <string name="rc_cs_please_comment">Welcome to give advice to our service</string>
+    <string name="rc_cs_please_leave_message">Please leave a message, we will reply you as soon as possible.</string>
+    <string name="rc_cs_leave_message">message</string>
+    <string name="rc_cs_submit_message">submit</string>
+    <string name="rc_cs_message_submited">Your message has been submitted</string>
 </resources>
